@@ -1,18 +1,19 @@
-export default function Widget({ status, src }) {
+export default function Widget({ status, source, forWhat, num, percentage }) {
   return (
     <div className="widgetBox">
       <div className="d-flex flex-column">
         <p>
-          <span className="status">Active</span>Subscribes
+          <span className="status">Active</span>
+          {forWhat}
         </p>
-        <h3>486</h3>
+        <h3>{num}</h3>
         <p>
-          <span className={status}>+10%</span>
+          <span className={status}>{percentage}</span>
           <span className="status">from the</span>last month
         </p>
       </div>
       <div className="d-flex align-items-center justify-content-center">
-        <img src={src} />
+        {source}
       </div>
     </div>
   );

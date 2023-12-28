@@ -12,7 +12,7 @@ function Header() {
       <nav className="navbar">
         <div className="headerContainer d-flex justify-content-between">
           <div className="navBarLogo">
-            <a href="#">
+            <Link href="/dashboard">
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ function Header() {
                   fill="#E20075"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="searchBox">
             <div class="input-group">
@@ -68,8 +68,7 @@ function Header() {
             </div>
           </div>
           <div className="headerInfoItem">
-            <a href="#">
-              {" "}
+            <Link href="#">
               <span className="infoItem">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,8 +86,8 @@ function Header() {
                   />
                 </svg>
               </span>
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="#">
               <span className="infoItem">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +105,7 @@ function Header() {
                   />
                 </svg>
               </span>
-            </a>
+            </Link>
             <span className="infoItem imageItem">
               <Image src={person} className="avatarImage" />
             </span>
@@ -115,8 +114,8 @@ function Header() {
       </nav>
       <div className="offerBox d-flex align-items-center justify-content-center ">
         <p>
-          <a href="#">Upgrade now</a> and take advantage of our annual discounts
-          (up to 20% off)
+          <Link href="#">Upgrade now</Link> and take advantage of our annual
+          discounts (up to 20% off)
         </p>
       </div>
     </header>

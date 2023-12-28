@@ -6,44 +6,67 @@ import imports from "../../assets/images/Imports.png";
 import orders from "../../assets/images/Orders.png";
 import products from "../../assets/images/Products.png";
 import tracking from "../../assets/images/Group.png";
+import Link from "next/link";
+import { NavLink } from "react-bootstrap";
 
 function AccordionSideBar() {
+  const navigation = [
+    { name: "dashboard", to: "/dashboard", imageSrc: { dashboard } },
+    { name: "orders", to: "/orders", imageSrc: { orders } },
+    { name: "tracking", to: "/tracking", imageSrc: { tracking } },
+    { name: "imports", to: "/imports", imageSrc: { imports } },
+    { name: "products", to: "/products", imageSrc: { products } },
+  ];
+
   return (
     <div>
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>All Stores</Accordion.Header>
           <ul className="AccordionSideBarList">
-            <a href="#">
+            <Link href="/dashboard">
               <li className="AccordionSideBarListItem">
                 <Image src={dashboard} />
                 <p>dashboard</p>
               </li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="/orders">
               <li className="AccordionSideBarListItem">
                 <Image src={orders} />
                 <p>Orders</p>
               </li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="/tracking">
               <li className="AccordionSideBarListItem">
                 <Image src={tracking} />
                 <p>Tracking</p>
               </li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="/imports">
               <li className="AccordionSideBarListItem">
                 <Image src={imports} />
                 <p>Imports</p>
               </li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="/products">
               <li className="AccordionSideBarListItem">
                 <Image src={products} />
                 <p>Products</p>
               </li>
-            </a>
+            </Link>
+            {/* 
+            
+              {navigation.map((item) => (
+              <NavLink key={item.name} href={item.to}>
+                <li className="AccordionSideBarListItem">
+                  <Image src={item.imageSrc} />
+                  <p>{item.name}</p>
+                </li>
+              </NavLink>
+            ))}
+            
+            
+            */}
           </ul>
         </Accordion.Item>
       </Accordion>
