@@ -1,11 +1,11 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Image from "next/image";
-import dashboard from "../../assets/images/Dashboard.png";
-import imports from "../../assets/images/Imports.png";
-import orders from "../../assets/images/Orders.png";
-import products from "../../assets/images/Products.png";
-import tracking from "../../assets/images/Group.png";
+import dashboard from "../../assets/icons/Dashboard.png";
+import imports from "../../assets/icons/Imports.png";
+import orders from "../../assets/icons/Orders.png";
+import products from "../../assets/icons/Products.png";
+import tracking from "../../assets/icons/Group.png";
 import Link from "next/link";
 import { NavLink } from "react-bootstrap";
 
@@ -20,41 +20,42 @@ function AccordionSideBar() {
 
   return (
     <div>
-      <Accordion>
+      <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>All Stores</Accordion.Header>
-          <ul className="AccordionSideBarList">
-            <Link href="/dashboard">
-              <li className="AccordionSideBarListItem">
-                <Image src={dashboard} />
-                <p>dashboard</p>
-              </li>
-            </Link>
-            <Link href="/orders">
-              <li className="AccordionSideBarListItem">
-                <Image src={orders} />
-                <p>Orders</p>
-              </li>
-            </Link>
-            <Link href="/tracking">
-              <li className="AccordionSideBarListItem">
-                <Image src={tracking} />
-                <p>Tracking</p>
-              </li>
-            </Link>
-            <Link href="/imports">
-              <li className="AccordionSideBarListItem">
-                <Image src={imports} />
-                <p>Imports</p>
-              </li>
-            </Link>
-            <Link href="/products">
-              <li className="AccordionSideBarListItem">
-                <Image src={products} />
-                <p>Products</p>
-              </li>
-            </Link>
-            {/* 
+          <Accordion.Body>
+            <ul className="AccordionSideBarList">
+              <Link href="/dashboard">
+                <li className="AccordionSideBarListItem">
+                  <Image src={dashboard} />
+                  <p>dashboard</p>
+                </li>
+              </Link>
+              <Link href="/orders">
+                <li className="AccordionSideBarListItem">
+                  <Image src={orders} />
+                  <p>Orders</p>
+                </li>
+              </Link>
+              <Link href="/tracking">
+                <li className="AccordionSideBarListItem">
+                  <Image src={tracking} />
+                  <p>Tracking</p>
+                </li>
+              </Link>
+              <Link href="/imports">
+                <li className="AccordionSideBarListItem">
+                  <Image src={imports} />
+                  <p>Imports</p>
+                </li>
+              </Link>
+              <Link href="/products">
+                <li className="AccordionSideBarListItem">
+                  <Image src={products} />
+                  <p>Products</p>
+                </li>
+              </Link>
+              {/* 
             
               {navigation.map((item) => (
               <NavLink key={item.name} href={item.to}>
@@ -67,7 +68,8 @@ function AccordionSideBar() {
             
             
             */}
-          </ul>
+            </ul>
+          </Accordion.Body>
         </Accordion.Item>
       </Accordion>
     </div>

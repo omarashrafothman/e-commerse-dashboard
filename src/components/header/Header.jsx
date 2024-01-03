@@ -1,19 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import logo from "../../assets/images/logo.png";
-import helpImage from "../../assets/images/help-circle.png";
-import inpox from "../../assets/images/inbox.png";
+// import logo from "../../assets/images/logo.png";
+// import helpImage from "../../assets/icons/help-circle.png";
+// import inpox from "../../assets/icons/inbox.png";
 import person from "../../assets/images/Dropdown.png";
-import me from "../../assets/images/379858993_1077203513297084_7070056361759594293_n-removebg-preview (1).png";
+// import me from "../../assets/images/379858993_1077203513297084_7070056361759594293_n-removebg-preview (1).png";
 import Image from "next/image";
+import OfferBox from "../offerBox/OfferBox";
 function Header() {
   return (
-    <header>
+    <header className="mainHeader">
       <nav className="navbar">
         <div className="headerContainer d-flex justify-content-between">
           <div className="navBarLogo">
             <Link href="/dashboard">
-              {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="45"
@@ -112,12 +112,7 @@ function Header() {
           </div>
         </div>
       </nav>
-      <div className="offerBox d-flex align-items-center justify-content-center ">
-        <p>
-          <Link href="#">Upgrade now</Link> and take advantage of our annual
-          discounts (up to 20% off)
-        </p>
-      </div>
+      <OfferBox />
     </header>
   );
 }

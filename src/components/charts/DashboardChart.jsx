@@ -15,44 +15,74 @@ import {
 
 const data = [
   {
-    name: "Page A",
+    name: "Jan",
     uv: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: "Page B",
+    name: "Feb",
     uv: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: "Page C",
+    name: "Mar",
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: "Page D",
+    name: "Apr",
     uv: 2780,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: "Page E",
+    name: "May",
     uv: 1890,
     pv: 4800,
     amt: 2181,
   },
   {
-    name: "Page F",
+    name: "Jun",
     uv: 2390,
     pv: 3800,
     amt: 2500,
   },
   {
-    name: "Page G",
+    name: "Jul",
     uv: 3490,
+    pv: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Aug",
+    uv: 3490,
+    pv: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Sep",
+    uv: 3990,
+    pv: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Oct",
+    uv: 2490,
+    pv: 4300,
+    amt: 2100,
+  },
+  {
+    name: "Nov",
+    uv: 3290,
+    pv: 300,
+    amt: 2100,
+  },
+  {
+    name: "Dec",
+    uv: 3990,
     pv: 4300,
     amt: 2100,
   },
@@ -64,9 +94,7 @@ export default class Example extends PureComponent {
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <h4>A demo of synchronized AreaCharts</h4>
-
-        <ResponsiveContainer width="100%" height={200}>
+        <ResponsiveContainer width="100%" height={280}>
           <LineChart
             width={500}
             height={200}
@@ -79,9 +107,9 @@ export default class Example extends PureComponent {
               bottom: 0,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
+            {/** <CartesianGrid strokeDasharray="3 3" /> */}
             <XAxis dataKey="name" />
-            <YAxis />
+            {/** <YAxis /> */}
             <Tooltip />
             <Line
               type="monotone"

@@ -181,7 +181,24 @@ export default function dashboard() {
             percentage={"-1%"}
           />
         </div>
-        <div>{/** <Example /> */}</div>
+
+        <div className="tablesContainer">
+          <div className="chartNameAndFilter d-flex align-items-center justify-content-between mb-4">
+            <div>
+              <h5>New Signups</h5>
+            </div>
+            <div>
+              <select class="form-select" aria-label="Default select example">
+                <option value="1" selected>
+                  30 Days
+                </option>
+                <option value="2">30 - 60 Days</option>
+                <option value="3">All Time</option>
+              </select>
+            </div>
+          </div>
+          <Example />
+        </div>
       </div>
     </div>
   );

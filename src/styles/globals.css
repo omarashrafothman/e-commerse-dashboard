@@ -5,6 +5,7 @@
   --pay-color: #c4320a;
   --traking-color: #026aa2;
   --danger-color: red;
+  --price-color: #e31b54;
   --pink-color: #dd2590;
   --white-color: #fff;
   --gray-color: #eaecf0;
@@ -17,33 +18,46 @@ ul {
 li {
   list-style: none;
 }
+button {
+  border-radius: 8px;
+}
 /*main style start*/
 .main {
   width: 83%;
-
+  min-height: 100vh;
   background-color: #f4f9f8;
-  position: fixed;
+  margin-left: 17%;
+  position: absolute;
   right: 0;
 }
 .container1 {
   width: 93%;
-
+  margin-top: 9rem;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 576px) {
   .main {
     width: 90%;
+    margin-left: 10%;
   }
 }
 @media (max-width: 768px) {
   .main {
     width: 90%;
+    margin-left: 10%;
   }
 }
 /*main style end*/
 
 /*header style start*/
+.mainHeader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
 .navbar {
   background-color: var(--white-color);
   padding: 1.5rem 4rem;
@@ -74,6 +88,7 @@ li {
   width: 100%;
   padding-top: 0.6rem;
   padding: 0.6rem 1rem 0 1rem;
+  position: relative !important;
 }
 .offerBox p {
   font-size: 16px;
@@ -104,12 +119,23 @@ li {
 .sideBar {
   width: 17%;
   position: fixed;
-  top: 14.6%;
-  height: 100%;
+  margin-top: 7rem;
+  left: 0;
+
   background-color: var(--white-color);
   border-right: 1px solid #eaecf0;
 }
-
+.sideBar .setting {
+  position: fixed;
+  bottom: 0;
+  width: inherit;
+}
+.accordion-body {
+  padding: 0 !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--white-color) !important;
+}
 .AccordionSideBarList {
   width: 100%;
   margin: 0;
@@ -185,8 +211,8 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 12px;
-  width: 260px;
-  height: 120px;
+  width: 24%;
+  height: 130px;
   border: 1.5px solid #eaecf0;
   margin-bottom: 1rem;
 }
@@ -213,6 +239,22 @@ li {
   color: red;
 }
 
+@media (max-width: 576px) {
+  .widgetBox {
+    width: 49%;
+  }
+}
+@media (max-width: 768px) {
+  .widgetBox {
+    width: 49%;
+  }
+}
+@media (max-width: 999px) {
+  .widgetBox {
+    width: 49%;
+  }
+}
+
 /* widget style end*/
 
 /* titleHeader style start*/
@@ -227,6 +269,10 @@ li {
   padding: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #eaecf0;
+  position: sticky;
+  top: 14%;
+  right: 0;
+  z-index: 10;
 }
 .titleHeaderp h4 {
   font-size: 25px;
@@ -416,6 +462,323 @@ form,
 }
 
 /* orderPage style end*/
+
+/* importsPage style start*/
+/* product style start*/
+.productBox {
+  width: 22%;
+  background-color: var(--white-color);
+  margin-bottom: 3rem;
+}
+.productBox .productImage {
+  width: 100%;
+
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.productBox .productImage img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+  height: 155px;
+}
+.productBox .productContent h3 {
+  font-size: 17px;
+
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 0.5rem;
+}
+.productBox .productContent p.price {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.productBox .productContent p.sale {
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: strikethrough;
+}
+.productReview {
+  margin-top: -1rem;
+}
+.productReview p {
+  font-size: 15px;
+
+  font-weight: 400;
+  color: var(--black-color);
+  line-height: 35px;
+  margin-left: 0.5rem;
+}
+.addBtnBox button {
+}
+.addBtnBox {
+  width: 100%;
+}
+.addBtnBox button {
+  font-size: 15px;
+  width: 98%;
+  font-weight: 500;
+  line-height: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #d0d5dd;
+}
+.addBtnBox button:hover {
+  border: 1px solid #d0d5dd;
+}
+.saleBox {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  background-color: var(--pink-color);
+  color: var(--white-color);
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  transform: rotate(-15deg);
+  border-radius: 10px;
+  margin-left: 14.5rem;
+  margin-top: -1.2rem;
+}
+.saleBox p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.catIcon {
+  position: absolute;
+  margin-top: 8px;
+}
+.catIcon a svg {
+}
+.productIcons span a img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 576px) {
+  .productBox {
+    width: 85% !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+  }
+  .productBox .saleBox {
+    margin-left: 20rem !important;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding: 0.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .productBox {
+    width: 48%;
+    margin-bottom: 4rem;
+  }
+  .productBox .saleBox {
+    margin-left: 17rem;
+  }
+}
+
+/* product style end*/
+
+/* navigationFooter style start*/
+
+.navigationFooter {
+  background-color: var(--white-color);
+  border-top: 1px solid var(--gray-color);
+  width: 99%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 2rem 0;
+}
+.navigationFooter .navsBtns button {
+  background-color: white;
+  border-color: #ccc;
+}
+.navigationFooter .navsBtns button:hover {
+  border-color: #ccc;
+}
+.navigationFooter .pagesNumbers p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* navigationFooter style end*/
+
+/* productDetails style start*/
+
+.productDetailsContainer {
+  margin-top: 2rem;
+}
+.productDetailsContainer .productDetailsMedia {
+  width: 35%;
+}
+.productDetailsContainer .productDetailsMedia .bigMediaBox {
+  width: 426px;
+  height: 406px;
+}
+.productDetailsContainer .productDetailsMedia .bigMediaBox img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.productDetailsContainer .productDetailsMedia .smallMediaBox {
+  width: 70px;
+  height: 66px;
+  cursor: pointer;
+}
+.productDetailsContainer .productDetailsMedia .smallMediaBox img {
+  width: 100%;
+  height: 100%;
+}
+.productDetailsContainer .productDetailsContent {
+  padding: 2rem 2rem;
+}
+.productDetailsContainer .productDetailsContent h3 {
+  color: var(--price-color);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+  margin-right: 1rem;
+}
+.productDetailsContainer .productDetailsContent p.salePrice {
+  font-size: 19px;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 1rem;
+}
+.productDetailsContainer .productDetailsContent p.salePer {
+  font-size: 19px;
+  color: var(--danger-color);
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 0.5rem;
+}
+.productDetail {
+  width: 84%;
+}
+.productDetail h4 {
+  color: var(--black-color);
+
+  font-size: 22px;
+
+  font-weight: 600;
+  line-height: 30px;
+}
+.productReview {
+}
+.productReview p,
+.stockBox .stockStatus {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.productReview .rateValue p {
+  color: var(--pay-color);
+  margin-top: 1.5rem;
+}
+.productReview .reviewValue p {
+  color: var(--black-color);
+  margin-top: 1.5rem;
+}
+.stockBox {
+}
+.statisticOfProduct a {
+  color: var(--black-color);
+
+  margin-left: 0.4rem;
+}
+.statisticOfProduct hr {
+  width: 15px;
+  transform: rotate(90deg);
+  margin-left: -0.7rem;
+}
+.productStattistics {
+  margin-right: 1rem;
+}
+.importedBox {
+  margin-top: 1rem;
+}
+.importedBox p {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.importedBox img {
+  margin-top: -1rem;
+  margin-right: 0.5rem;
+}
+.importsBtns {
+}
+.importsBtns button {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--white-color);
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+.importsBtns button.editBtn {
+  background-color: var(--main-color);
+}
+.importsBtns button.editBtn:active {
+  background-color: var(--main-color);
+}
+.importsBtns button.editBtn:hover {
+  color: var(--white-color);
+}
+.importsBtns button.removeBtn {
+  background-color: var(--danger-color);
+}
+.importsBtns button.removeBtn:active {
+  background-color: var(--danger-color);
+}
+.importsBtns button.removeBtn img {
+  margin-right: 0.5rem;
+}
+.importsBtns button.removeBtn:hover {
+  color: var(--white-color);
+}
+.productBrand {
+  margin-top: 2rem;
+}
+.productBrand h5 {
+  font-size: 16px;
+
+  font-weight: 500;
+  line-height: 20px;
+  margin-right: 1rem;
+}
+.brendColorImages {
+  margin-left: 3.5rem;
+}
+.brendColorImages img {
+  width: 70px;
+  height: 66px;
+  max-height: 100px;
+  margin: 0 0.5rem;
+}
+/* productDetails style end*/
+.accordion-button:focus {
+  background-color: var(--white-color) !important;
+  border-color: var(--white-color) !important;
+}
+/* importsPage style end*/
 .btnBox button {
   background-color: var(--main-color);
   color: var(--white-color);

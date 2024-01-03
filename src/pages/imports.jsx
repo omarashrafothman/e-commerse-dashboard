@@ -1,6 +1,8 @@
 import React from "react";
 import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Input from "@/components/inputs/Input";
+import Product from "@/components/product/Product";
+import NavigationFooter from "@/components/navFooter/NavigationFooter";
 
 function imports() {
   return (
@@ -8,7 +10,7 @@ function imports() {
       <div className="main">
         <TitleHeader title={"Imports"} />
         <div className="container1">
-          <div className="mainContent">
+          <div className="mainContent ">
             <div className="orderSearchBox d-flex  align-items-center ">
               <Input holder={"Search for orders or products"} type={"text"} />
               <button className="btn">
@@ -29,6 +31,25 @@ function imports() {
                 </svg>
               </button>
             </div>
+            <div className="productsContainer w-100 d-flex align-items-center justify-content-between my-4 flex-wrap">
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+            </div>
+            <NavigationFooter />
           </div>
         </div>
       </div>
