@@ -4,7 +4,32 @@ import logo from "../../assets/images/logo.png";
 import Input from "@/components/inputs/Input";
 import arrow from "../../assets/icons/arrow-left.png";
 import Link from "next/link";
+import { object, string } from "yup";
+import * as Yup from "yup";
+import { Formik, useFormik } from "formik";
 export default function ResetPassword() {
+  const formik = useFormik({
+    enableReinitialize: true,
+    initialValues: {
+      newPassword: "",
+      confirmnewPassword: "",
+    },
+    onSubmit: {},
+    initialErrors: {
+      errrors: {},
+    },
+    validationSchema: object({
+      newPassword: string().required("New password is requierd field").min(8),
+      confirmnewPassword: string()
+        .required("confirm password must match new password")
+        .min(8)
+        .oneOf(
+          [Yup.ref("newPassword"), null],
+          "confirm password must match password"
+        ),
+    }),
+  });
+
   return (
     <div className="login">
       <div className="loginCaontainer">
@@ -19,9 +44,24 @@ export default function ResetPassword() {
           <Input
             type={"password"}
             holder={""}
+            classes={
+              formik.errors.newPassword && formik.touched.newPassword
+                ? "form-control is-invalid"
+                : "form-control "
+            }
             name={"newPassword"}
             label={"New password"}
+            value={formik.values.newPassword}
+            change={formik.handleChange}
+            blur={formik.handleBlur}
+            isInvalid={
+              !!formik.errors.newPassword && !!formik.touched.newPassword
+            }
+            isValid={formik.touched.newPassword && !formik.errors.newPassword}
           />
+          {formik.errors.newPassword && formik.touched.newPassword ? (
+            <div className="text-danger mb-3 ">{formik.errors.newPassword}</div>
+          ) : null}
         </form>
         <div className="regList">
           <ul className="d-flex justify-content-between align-items-center">
@@ -39,9 +79,32 @@ export default function ResetPassword() {
           <Input
             type={"password"}
             holder={""}
+            classes={
+              formik.errors.confirmnewPassword &&
+              formik.touched.confirmnewPassword
+                ? "form-control is-invalid"
+                : "form-control "
+            }
             name={"confirmnewPassword"}
             label={"Confirom New password"}
+            value={formik.values.confirmnewPassword}
+            change={formik.handleChange}
+            blur={formik.handleBlur}
+            isInvalid={
+              !!formik.errors.confirmnewPassword &&
+              !!formik.touched.confirmnewPassword
+            }
+            isValid={
+              formik.touched.confirmnewPassword &&
+              !formik.errors.confirmnewPassword
+            }
           />
+          {formik.errors.confirmnewPassword &&
+          formik.touched.confirmnewPassword ? (
+            <div className="text-danger mb-3 ">
+              {formik.errors.confirmnewPassword}
+            </div>
+          ) : null}
         </form>
         <div className="submitBtn w-100 my-3">
           <button className={"btn w-100"}>Reset</button>
