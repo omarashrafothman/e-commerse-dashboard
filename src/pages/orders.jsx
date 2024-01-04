@@ -27,7 +27,11 @@ export default function orders() {
             </div>
             <div className="tablesContainer">
               <div className="orderSearchBox d-flex  align-items-center ">
-                <Input holder={"Search for orders or products"} type={"text"} />
+                <Input
+                  holder={"Search for orders or products"}
+                  type={"text"}
+                  classes={"form-control"}
+                />
                 <button className="btn">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

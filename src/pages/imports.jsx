@@ -12,7 +12,11 @@ function imports() {
         <div className="container1">
           <div className="mainContent ">
             <div className="orderSearchBox d-flex  align-items-center ">
-              <Input holder={"Search for orders or products"} type={"text"} />
+              <Input
+                holder={"Search for orders or products"}
+                type={"text"}
+                classes={"form-control"}
+              />
               <button className="btn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
