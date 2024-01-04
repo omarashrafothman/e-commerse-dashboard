@@ -7,6 +7,10 @@ import { useEffect } from "react";
 
 // import "bootstrap/dist/js/bootstrap.js";
 export default function App({ Component, pageProps }) {
+  if (Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />);
+  }
+
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.min.js");
   }, []);
