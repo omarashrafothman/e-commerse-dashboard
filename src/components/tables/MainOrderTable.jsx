@@ -3,7 +3,7 @@ import Image from "next/image";
 import bag from "../../assets/icons/icons8-aliexpress 1.png";
 import product from "../../assets/images/product.png";
 import { Select } from "@mui/material";
-function MainOrderTable() {
+function MainOrderTable({ selected }) {
   return (
     <div className="">
       <thead>

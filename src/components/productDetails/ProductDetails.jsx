@@ -7,7 +7,6 @@ import cart from "../../assets/icons/icons8-aliexpress 1.png";
 import bag from "../../assets/icons/Vector.png";
 import close from "../../assets/icons/x.png";
 import Link from "next/link";
-import RightOffcanvas from "../offcanvas/RightOffcanvas";
 import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import productImage from "../../assets/icons/Featured icon.png";

@@ -5,7 +5,10 @@ import Input from "../components/inputs/Input";
 import Image from "next/image";
 import FilterButton from "@/components/filterButton/FilterButton";
 import OrderBox from "@/components/orderBox/orderBox";
+import { useState } from "react";
 export default function orders() {
+  const [allSelected, setAllSelected] = useState(false);
+
   return (
     <div>
       <div className="main">
@@ -22,7 +25,16 @@ export default function orders() {
                   <p>Save time by processing up to 1000 orders at once</p>
                 </div>
               </div>
-              <div className="btnBox">
+              <div
+                className="btnBox"
+                onClick={() => {
+                  if (allSelected == false) {
+                    setAllSelected(true);
+                  } else {
+                    setAllSelected(false);
+                  }
+                }}
+              >
                 <Button content={"Order all products"} classes={"btn"} />
               </div>
             </div>
@@ -51,7 +63,7 @@ export default function orders() {
                   </svg>
                 </button>
               </div>
-              <OrderBox />
+              <OrderBox selected={allSelected} />
             </div>
           </div>
         </div>
