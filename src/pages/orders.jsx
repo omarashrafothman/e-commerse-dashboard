@@ -4,6 +4,7 @@ import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Input from "../components/inputs/Input";
 import Image from "next/image";
 import FilterButton from "@/components/filterButton/FilterButton";
+import OrderBox from "@/components/orderBox/orderBox";
 export default function orders() {
   return (
     <div>
@@ -50,6 +51,7 @@ export default function orders() {
                   </svg>
                 </button>
               </div>
+              <OrderBox />
             </div>
           </div>
         </div>

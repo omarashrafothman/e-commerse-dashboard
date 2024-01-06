@@ -570,6 +570,170 @@ p.forgetpassworddescription {
 .orderSearchBox .inputBox button {
   margin-top: 1rem !important;
 }
+/* order table style start*/
+.orderBox {
+  padding: 12px;
+  background-color: #fcfcfd;
+  border: 1px solid #eaecf0;
+  margin-top: 20px;
+}
+.orderBox p {
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 7px;
+}
+.orderBox .orderBoxHeading {
+  margin-bottom: 16px;
+}
+.orderBox .ordersCustomer {
+  background-color: #eef4ff;
+  display: flex;
+  align-items: center;
+  padding: 7px 5px 1px 4px;
+
+  border-radius: 16px;
+}
+.orderBox .ordersCustomer h5 {
+  color: #3538cd;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-left: 0.4rem;
+}
+.orderBox .orderBoxHeading .ordersNumber label span {
+  color: var(--btn-bg);
+  margin-left: 0.5rem;
+  margin-top: 7px;
+}
+.orderBox .orderBoxHeading .ordersNumber .form-check input {
+  margin-top: 9px;
+}
+.orderBoxHeadingLeft {
+  width: 60%;
+  align-items: center;
+  justify-content: space-between;
+}
+.orderAllProducts button {
+  background-color: #c11574;
+  color: #fff;
+
+  font-size: 14px;
+  transition: var(--transition);
+  font-weight: 600;
+  line-height: 20px;
+}
+.orderAllProducts button:hover {
+  background-color: #c11574;
+  color: #fff;
+}
+
+/*table style start*/
+.mainOrderTable {
+  width: 100%;
+}
+.mainOrderTable p {
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 20px;
+}
+.lifeStore img {
+  margin-right: 16px;
+}
+.mainOrderTable p {
+  margin-top: 15px;
+}
+
+.toprow div {
+  margin-right: 32px;
+}
+.toprow .statusBox {
+  display: flex;
+  padding: 5px 5px 0px 5px;
+  justify-content: center;
+  border-radius: 16px;
+  align-items: center;
+}
+.toOrder {
+  color: #c11574;
+}
+.toOrder2 {
+  background-color: #c11574;
+}
+
+.toprow .statusBox p {
+  font-size: 12px;
+  margin-top: 7px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.toprow .statusBox span {
+  margin-top: -0.4rem;
+}
+.toprow .statusBox .statusFlag {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  margin-right: 0.5rem;
+}
+
+table {
+}
+thead {
+  width: 100%;
+}
+
+tr td {
+  width: 25%;
+  padding: 14px 22px;
+}
+tr td div {
+  width: 100%;
+}
+tr td div {
+  margin-right: 0.5rem;
+}
+tr td div .orderImage {
+  width: 60px;
+  height: 45px;
+  margin: 0 1rem;
+}
+tr td div select {
+  width: 65% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+tr td div .orderImage img {
+  width: 100%;
+  height: 100%;
+}
+.tableProductDetails h6 {
+  font-size: 13px;
+  font-weight: 500;
+}
+.tableProductDetails p {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  color: #667085;
+}
+.country p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.orderPrice p {
+  font-size: 14px;
+  color: #389f8a;
+  font-weight: 400;
+  line-height: 20px;
+}
+/*table style end*/
+
+/* order table style end*/
 
 /* orderPage style end*/
 
