@@ -3,8 +3,10 @@ import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Input from "@/components/inputs/Input";
 import Product from "@/components/product/Product";
 import NavigationFooter from "@/components/navFooter/NavigationFooter";
+import products from "../../local-json/products.json";
+import Link from "next/link";
 
-function imports() {
+function index() {
   return (
     <div>
       <div className="main">
@@ -36,22 +38,19 @@ function imports() {
               </button>
             </div>
             <div className="productsContainer w-100 d-flex align-items-center justify-content-between my-4 flex-wrap">
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
+              {products &&
+                products.map((product) => (
+                  <Product
+                    name={product.name}
+                    price={product.price}
+                    sale={product.sale}
+                    rate={product.rate}
+                    reviews={product.reviews}
+                    offerPercent={product.offerPercent}
+                    imgSrc={product.mainImagSrc}
+                    id={product.id}
+                  />
+                ))}
             </div>
             <NavigationFooter />
           </div>
@@ -61,4 +60,4 @@ function imports() {
   );
 }
 
-export default imports;
+export default index;

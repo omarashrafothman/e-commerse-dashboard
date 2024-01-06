@@ -80,7 +80,7 @@ export default function login() {
           Back
         </Link>
         <p className="dontHave mb-1">
-          Don’t have an account? <Link href="/auth/signup">Sign up</Link>
+          Don’t have an account? <Link href="/auth/register">Sign up</Link>
         </p>
         <Link href="/auth/forgetpassword">Forget your password?</Link>
       </div>

@@ -7,13 +7,64 @@ import cart from "../../assets/icons/icons8-aliexpress 1.png";
 import bag from "../../assets/icons/Vector.png";
 import close from "../../assets/icons/x.png";
 import Link from "next/link";
+import RightOffcanvas from "../offcanvas/RightOffcanvas";
+import { useState } from "react";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import productImage from "../../assets/icons/Featured icon.png";
 
-export default function ProductDetails() {
+export default function ProductDetails({ paramsId }) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div>
       <div className="main">
         <div className="container1">
           <div className="mainContent ">
+            <div className=" ">
+              <Offcanvas
+                show={show}
+                onHide={handleClose}
+                placement={"end"}
+                className="w-50 "
+              >
+                <div>
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title></Offcanvas.Title>
+                  </Offcanvas.Header>
+                </div>
+                <Offcanvas.Body>
+                  <div className="ProductStatisticsContainer">
+                    <div className="ProductStatisticsIcon">
+                      <Image src={productImage} />
+                    </div>
+                    <div>
+                      <h3 className="ProductStatisticsHeading">
+                        Product statistics
+                      </h3>
+                    </div>
+                    <div className="d-flex align-items-center justify-content-between">
+                      <div className="ProductStatisticsReview d-flex ">
+                        <StarRating rating={5} Dimension={16} spacing={2} />
+                        <p className="my-2 mx-2">5.0</p>
+                      </div>
+                      <div className="ProductStatisticsImports d-flex">
+                        <p>Imports</p>
+                        <p className="mx-1">529</p>
+                      </div>
+                      <div className="ProductStatisticsOrders d-flex">
+                        <p>Orders</p>
+                        <p className="mx-1">529</p>
+                      </div>
+                    </div>
+                    <div className="my-3">
+                      <p>Read 256 reviews on AliExpress</p>
+                    </div>
+                  </div>
+                </Offcanvas.Body>
+              </Offcanvas>
+            </div>
             <div className="productDetailsContainer d-flex">
               <div className="productDetailsMedia">
                 <div className="bigMediaBox">
@@ -73,7 +124,9 @@ export default function ProductDetails() {
                     <div className="statisticOfProduct d-flex align-items-center">
                       <div className="productStattistics">
                         <Image src={barChart} />
-                        <Link href="#">View product statistics</Link>
+                        <Link href="#" onClick={handleShow}>
+                          View product statistics
+                        </Link>
                       </div>
                       <hr />
                       <div className="productStattistics">
@@ -105,6 +158,32 @@ export default function ProductDetails() {
                           <Image src={product} />
                           <Image src={product} />
                           <Image src={product} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="shippingDetails productBrand">
+                      <div className="brandName d-flex">
+                        <h5>Shipping to:</h5>
+                        <div className="d-flex flex-column">
+                          <p className="brandType">
+                            Free to Australia via ePacket
+                          </p>
+                          <p className="brandType deliveryTime">
+                            Estimated delivery time 13 - 20 days
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="supplierDetails productBrand">
+                      <div className="brandName d-flex">
+                        <h5>Supplier</h5>
+                        <div className="d-flex flex-column">
+                          <p className="brandType">
+                            <Link href="#">Genkent Official Store</Link>
+                          </p>
+                          <p className="brandType text-danger">
+                            98.63% positive feedback Open 9 years
+                          </p>
                         </div>
                       </div>
                     </div>
