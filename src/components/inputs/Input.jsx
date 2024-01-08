@@ -1,9 +1,19 @@
 import React from "react";
 
-function Input({ type, holder, name, label, value, change, blur, classes }) {
+function Input({
+  type,
+  holder,
+  name,
+  label,
+  value,
+  change,
+  blur,
+  classes,
+  accept,
+}) {
   return (
-    <div class="input-group mb-2 d-flex flex-column mainInput">
-      <div class="input-group-prepend my-2">
+    <div class="input-group  d-flex flex-column mainInput">
+      <div class="input-group-prepend mb-2">
         <label for={name}>{label}</label>
       </div>
 
@@ -18,6 +28,7 @@ function Input({ type, holder, name, label, value, change, blur, classes }) {
           value={value}
           onChange={change}
           onBlur={blur}
+          accept={accept}
         />
       </div>
     </div>

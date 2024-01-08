@@ -32,36 +32,36 @@ export default function ProductDetails({ paramsId }) {
                   <Offcanvas.Header closeButton>
                     <Offcanvas.Title></Offcanvas.Title>
                   </Offcanvas.Header>
+                  <Offcanvas.Body>
+                    <div className="ProductStatisticsContainer d-flex flex-wrap">
+                      <div className="ProductStatisticsIcon">
+                        <Image src={productImage} />
+                      </div>
+                      <div>
+                        <h3 className="ProductStatisticsHeading">
+                          Product statistics
+                        </h3>
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between">
+                        <div className="ProductStatisticsReview d-flex ">
+                          <StarRating rating={5} Dimension={16} spacing={2} />
+                          <p className="my-2 mx-2">5.0</p>
+                        </div>
+                        <div className="ProductStatisticsImports d-flex">
+                          <p>Imports</p>
+                          <p className="mx-1">529</p>
+                        </div>
+                        <div className="ProductStatisticsOrders d-flex">
+                          <p>Orders</p>
+                          <p className="mx-1">529</p>
+                        </div>
+                      </div>
+                      <div className="my-3">
+                        <p>Read 256 reviews on AliExpress</p>
+                      </div>
+                    </div>
+                  </Offcanvas.Body>
                 </div>
-                <Offcanvas.Body>
-                  <div className="ProductStatisticsContainer">
-                    <div className="ProductStatisticsIcon">
-                      <Image src={productImage} />
-                    </div>
-                    <div>
-                      <h3 className="ProductStatisticsHeading">
-                        Product statistics
-                      </h3>
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between">
-                      <div className="ProductStatisticsReview d-flex ">
-                        <StarRating rating={5} Dimension={16} spacing={2} />
-                        <p className="my-2 mx-2">5.0</p>
-                      </div>
-                      <div className="ProductStatisticsImports d-flex">
-                        <p>Imports</p>
-                        <p className="mx-1">529</p>
-                      </div>
-                      <div className="ProductStatisticsOrders d-flex">
-                        <p>Orders</p>
-                        <p className="mx-1">529</p>
-                      </div>
-                    </div>
-                    <div className="my-3">
-                      <p>Read 256 reviews on AliExpress</p>
-                    </div>
-                  </div>
-                </Offcanvas.Body>
               </Offcanvas>
             </div>
             <div className="productDetailsContainer d-flex">

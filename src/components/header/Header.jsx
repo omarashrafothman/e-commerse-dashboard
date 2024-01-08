@@ -106,9 +106,11 @@ function Header() {
                 </svg>
               </span>
             </Link>
-            <span className="infoItem imageItem">
-              <Image src={person} className="avatarImage" />
-            </span>
+            <Link href="/profile">
+              <span className="infoItem imageItem">
+                <Image src={person} className="avatarImage" />
+              </span>
+            </Link>
           </div>
         </div>
       </nav>

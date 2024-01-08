@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Image from "next/image";
 import dashboard from "../../assets/icons/Dashboard.png";
@@ -8,6 +8,7 @@ import products from "../../assets/icons/Products.png";
 import tracking from "../../assets/icons/Group.png";
 import Link from "next/link";
 import { NavLink } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 function AccordionSideBar() {
   const navigation = [
@@ -17,7 +18,9 @@ function AccordionSideBar() {
     { name: "imports", to: "/imports", imageSrc: { imports } },
     { name: "products", to: "/products", imageSrc: { products } },
   ];
-
+  const route = useRouter();
+  console.log(route.pathname);
+  const [isActive, setIsactive] = useState(false);
   return (
     <div>
       <Accordion defaultActiveKey="0">
@@ -25,36 +28,25 @@ function AccordionSideBar() {
           <Accordion.Header>All Stores</Accordion.Header>
           <Accordion.Body>
             <ul className="AccordionSideBarList">
-              <Link href="/dashboard">
-                <li className="AccordionSideBarListItem">
-                  <Image src={dashboard} />
-                  <p>dashboard</p>
-                </li>
-              </Link>
-              <Link href="/orders">
-                <li className="AccordionSideBarListItem">
-                  <Image src={orders} />
-                  <p>Orders</p>
-                </li>
-              </Link>
-              <Link href="/tracking">
-                <li className="AccordionSideBarListItem">
-                  <Image src={tracking} />
-                  <p>Tracking</p>
-                </li>
-              </Link>
-              <Link href="/imports">
-                <li className="AccordionSideBarListItem">
-                  <Image src={imports} />
-                  <p>Imports</p>
-                </li>
-              </Link>
-              <Link href="/products">
-                <li className="AccordionSideBarListItem">
-                  <Image src={products} />
-                  <p>Products</p>
-                </li>
-              </Link>
+              {navigation.map((item) => {
+                return (
+                  <Link href={item.to} key={item.name}>
+                    <li
+                      className={
+                        route.pathname === item.to
+                          ? "AccordionSideBarListItem active"
+                          : "AccordionSideBarListItem"
+                      }
+                    >
+                      <Image src={item.imageSrc} />
+                      <p className={route.pathname === item.to ? "active" : ""}>
+                        {item.name}
+                      </p>
+                    </li>
+                  </Link>
+                );
+              })}
+
               {/* 
             
               {navigation.map((item) => (

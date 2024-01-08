@@ -10,8 +10,8 @@ export default function orders() {
   const [allSelected, setAllSelected] = useState(false);
 
   return (
-    <div>
-      <div className="main">
+    <div className="main">
+      <div className="container3">
         <TitleHeader title={"Orders"} />
         <div className="container1">
           <div className="mainContent">
@@ -63,6 +63,7 @@ export default function orders() {
                   </svg>
                 </button>
               </div>
+
               <OrderBox selected={allSelected} />
             </div>
           </div>

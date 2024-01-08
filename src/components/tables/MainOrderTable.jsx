@@ -2,8 +2,9 @@ import React from "react";
 import Image from "next/image";
 import bag from "../../assets/icons/icons8-aliexpress 1.png";
 import product from "../../assets/images/product.png";
-import { Select } from "@mui/material";
+
 function MainOrderTable({ selected }) {
+  console.log(selected);
   return (
     <div className="">
       <thead>
@@ -38,8 +39,8 @@ function MainOrderTable({ selected }) {
               <input
                 className="form-check-input"
                 type="checkbox"
-                value=""
                 id="flexCheckDefault"
+                checked={selected}
               />
               <div className="orderImage">
                 <Image src={product} />
@@ -79,6 +80,7 @@ function MainOrderTable({ selected }) {
                 className="form-check-input"
                 type="checkbox"
                 value=""
+                checked={selected}
                 id="flexCheckDefault"
               />
               <div className="orderImage">

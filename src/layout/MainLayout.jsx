@@ -6,8 +6,10 @@ export default function MainLayout({ children }) {
   return (
     <div>
       <Header />
-      {children}
-      <SideBar />
+      <div className="w-100 d-flex">
+        {children}
+        <SideBar />
+      </div>
     </div>
   );
 }

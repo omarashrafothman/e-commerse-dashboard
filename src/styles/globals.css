@@ -24,23 +24,77 @@ button {
 }
 /*main style start*/
 .main {
-  width: 83%;
+  width: 100%;
   min-height: 100vh;
   background-color: #f4f9f8;
-  margin-left: 17%;
-  position: absolute;
-  right: 0;
+  display: flex;
+  justify-content: end;
 }
 .container1 {
-  width: 93%;
-  margin-top: 9rem;
-  margin-left: auto;
-  margin-right: auto;
+  flex-basis: 100%;
+  padding: 0 42px;
+}
+.container2 {
+  flex-basis: 83%;
+
+  background-color: #fff;
+}
+.container3 {
+  flex-basis: 83%;
+}
+
+input[type="checkbox"]:checked {
+  appearance: none;
+  -webkit-appearance: none;
+  border-color: #53d2b7;
+  border-radius: 6px;
+  background-color: #fff;
+}
+input[type="checkbox"]:focus {
+  box-shadow: none;
+}
+input[type="checkbox"]:checked::before {
+  /* content: "\2713"; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+
+  background-size: contain;
+  background-color: #fff;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  box-shadow: none !important;
+  border-color: #bcfff1 !important;
+  box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
+}
+button.accordion-button:focus {
+  box-shadow: none !important;
+}
+label {
+  font-size: 14px;
+  color: #344054;
+  font-weight: 500;
+  line-height: 20px;
+}
+.input-group-text {
+  background-color: var(--white-color) !important;
+  color: #667085 !important;
 }
 @media (max-width: 576px) {
   .main {
     width: 90%;
     margin-left: 10%;
+  }
+  .container1 {
+    padding: 0 15px;
+
+    flex-basis: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -48,15 +102,26 @@ button {
     width: 90%;
     margin-left: 10%;
   }
+  .container1 {
+    padding: 0 15px;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 999px) {
+  .main {
+  }
+  .container1 {
+  }
 }
 /*main style end*/
 
 /*header style start*/
 .mainHeader {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
+  width: 100%;
   z-index: 1000;
 }
 .navbar {
@@ -120,15 +185,13 @@ button {
 .sideBar {
   width: 17%;
   position: fixed;
-  margin-top: 7rem;
+  min-height: 85.5vh;
   left: 0;
-
+  z-index: 1;
   background-color: var(--white-color);
   border-right: 1px solid #eaecf0;
 }
 .sideBar .setting {
-  position: fixed;
-  bottom: 0;
   width: inherit;
 }
 .accordion-body {
@@ -163,12 +226,18 @@ button {
 
   font-weight: 500;
 }
-.AccordionSideBarList .AccordionSideBarListItem:hover p {
+.AccordionSideBarList .AccordionSideBarListItem:hover p,
+.AccordionSideBarList .AccordionSideBarListItem p.active {
   color: var(--main-color);
 }
-.AccordionSideBarList .AccordionSideBarListItem:hover {
+
+.AccordionSideBarList .AccordionSideBarListItem:hover,
+.AccordionSideBarList .AccordionSideBarListItem.active {
   background-color: #f4f9f8;
   border-left: 3px solid var(--main-color);
+}
+.AccordionSideBarList .AccordionSideBarListItem a.active {
+  color: var(--main-color);
 }
 
 @media (max-width: 576px) {
@@ -264,19 +333,21 @@ button {
   align-items: center;
   justify-content: start;
   width: 100%;
+
   margin-left: auto;
   margin-right: auto;
   background-color: var(--white-color);
-  padding: 1rem;
+  padding: 0.4rem 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #eaecf0;
-  position: sticky;
+
   top: 14%;
   right: 0;
-  z-index: 10;
+  position: static;
+  z-index: 1000000;
 }
 .titleHeaderp h4 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 30px;
 }
@@ -539,10 +610,10 @@ p.forgetpassworddescription {
   border-radius: 7px;
 }
 .orderSearchBox {
-  margin-top: -1.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  align-items: center;
 }
+
 .orderSearchBox input {
   margin-top: -1.2rem;
   border-radius: 4px !important;
@@ -570,12 +641,56 @@ p.forgetpassworddescription {
 .orderSearchBox .inputBox button {
   margin-top: 1rem !important;
 }
+
+@media (max-width: 576px) {
+  .orderSearchBox {
+    width: 90%;
+  }
+  .orderNumber h4 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .orderBigWidgetTextMain h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .orderBigWidgetTextMain p {
+    font-size: 14px;
+
+    font-weight: 400;
+    line-height: 15px;
+  }
+  .orderBigWidget {
+    padding: 1rem 0.7rem;
+  }
+  .orderBigWidget .btnBox {
+    width: 60%;
+    margin-left: 1.5rem;
+    text-align: end;
+  }
+  .orderBigWidget .btnBox button {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .orderSearchBox {
+    width: 90%;
+  }
+}
+
+/* orderPage style end*/
+
 /* order table style start*/
 .orderBox {
   padding: 12px;
   background-color: #fcfcfd;
   border: 1px solid #eaecf0;
   margin-top: 20px;
+  width: 100%;
 }
 .orderBox p {
   font-size: 14px;
@@ -742,6 +857,9 @@ tr td div .orderImage img {
 
 /* importsPage style start*/
 /* product style start*/
+.productsContainer {
+  width: 100%;
+}
 .productBox {
   width: 22%;
   background-color: var(--white-color);
@@ -849,7 +967,7 @@ tr td div .orderImage img {
 
 @media (max-width: 576px) {
   .productBox {
-    width: 85% !important;
+    width: 90% !important;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
@@ -866,9 +984,22 @@ tr td div .orderImage img {
   .productBox {
     width: 48%;
     margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   .productBox .saleBox {
-    margin-left: 17rem;
+    margin-left: 20rem;
+  }
+}
+@media (max-width: 999px) {
+  .productBox {
+    width: 46%;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .productBox .saleBox {
+    margin-left: 18rem;
   }
 }
 
@@ -903,6 +1034,9 @@ tr td div .orderImage img {
 
 .productDetailsContainer {
   margin-top: 2rem;
+
+  flex-wrap: wrap;
+  display: flex;
 }
 .productDetailsContainer .productDetailsMedia {
   width: 35%;
@@ -926,8 +1060,13 @@ tr td div .orderImage img {
   width: 100%;
   height: 100%;
 }
+.productDetailsContainer {
+  justify-content: space-between;
+}
 .productDetailsContainer .productDetailsContent {
-  padding: 2rem 2rem;
+  padding: 2rem 0;
+
+  width: 60%;
 }
 .productDetailsContainer .productDetailsContent h3 {
   color: var(--price-color);
@@ -1057,6 +1196,49 @@ tr td div .orderImage img {
 .brandType a {
   color: var(--black-color);
 }
+
+@media (max-width: 576px) {
+  .productDetailsContainer .productDetailsContent {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .productDetailsContainer .productDetailsMedia {
+    width: 100%;
+  }
+  .productDetailsContainer .productDetailsMedia .bigMediaBox {
+    width: 420px;
+    height: 406px;
+  }
+  .productDetailsContainer .productDetailsMedia .bigMediaBox img {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* object-fit: cover; */
+  }
+}
+@media (max-width: "768px") {
+  .productDetailsContainer .productDetailsContent {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .productDetailsContainer .productDetailsMedia {
+    width: 100%;
+  }
+  .productDetailsContainer .productDetailsMedia .bigMediaBox {
+    width: 420px;
+    height: 406px;
+  }
+  .productDetailsContainer .productDetailsMedia .bigMediaBox img {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* object-fit: cover; */
+  }
+}
 /* productDetails style end*/
 
 /* offcanvas style start*/
@@ -1097,6 +1279,503 @@ tr td div .orderImage img {
   border-color: var(--white-color) !important;
 }
 /* importsPage style end*/
+
+/* profile style start*/
+.profileContainer {
+  background-color: var(--white-color) !important;
+  width: 100%;
+}
+.profileCover {
+  width: 100%;
+  max-height: 240px;
+}
+.profileCover img {
+  width: 100%;
+  object-fit: cover;
+}
+.profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  border: 4px solid #fff;
+  position: absolute;
+  top: 19rem;
+  left: 19%;
+}
+.profileImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.profileNameAndDataContainer {
+  display: flex;
+  justify-content: end;
+  padding-top: 2rem;
+  width: 100%;
+}
+.profileNameAndData {
+  padding-right: 35px;
+  width: 85%;
+  margin-bottom: 50px;
+}
+.userAndEmail h3 {
+  font-size: 30px;
+
+  font-weight: 500;
+  line-height: 38px;
+}
+.userAndEmail p {
+  font-size: 16px;
+  color: #667085;
+  font-weight: 400;
+  line-height: 24px;
+}
+.infoWithForm {
+  width: 100%;
+  padding: 0 32px;
+  justify-content: space-between;
+}
+.infoWithForm .PersonalInfo {
+  width: 28%;
+  background-color: #fff;
+}
+.infoWithForm .PersonalInfo h5 {
+  font-size: 14px;
+  color: #344054;
+  font-weight: 500;
+  line-height: 20px;
+}
+.infoWithForm .PersonalInfo ul {
+  margin-left: -1.9rem;
+}
+.infoWithForm .PersonalInfo li {
+  margin-bottom: 16px;
+}
+.infoWithForm .PersonalInfo li a {
+  font-size: 14px;
+  color: #98a2b3;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+.infoWithForm .PersonalInfo li a.active {
+  color: #000;
+}
+.profileForm .upgradePlanTitle h4 {
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.profileForm .upgradePlanTitle p {
+  font-size: 14px;
+  color: #667085;
+  font-weight: 400;
+  line-height: 20px;
+}
+.profileForm form .topInput .inputBox {
+  width: 49%;
+}
+.profileForm .upgradePlanTitle p span {
+  font-size: 14px;
+  color: #000;
+
+  line-height: 20px;
+}
+.changePassword {
+  margin-top: 24px;
+}
+.changePassword .inputBox {
+  width: 49%;
+}
+.leftRightBtnBox {
+  display: flex;
+  margin-top: 24px;
+}
+.plansOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.plansOptions .planBox {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #f9fafb;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  padding: 24px 20px;
+  width: 260px;
+}
+
+.plansOptions .planBox .planBoxHeader {
+  margin-bottom: 24px;
+}
+.plansOptions .planBox .planBoxHeader h5 {
+  font-size: 24px;
+
+  font-weight: 500;
+  line-height: 32px;
+}
+.plansOptions .planBox .planBoxHeader p {
+  font-size: 14px;
+
+  font-weight: 400;
+  line-height: 20px;
+}
+.upgradeBtn {
+  width: 100%;
+  text-align: center;
+}
+.upgradeBtn button {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  width: 100%;
+
+  font-size: 14px;
+
+  font-weight: 600;
+  line-height: 20px;
+
+  border-radius: 8px;
+  padding: 8px, 14px, 8px, 14px;
+}
+.upgradeBtn button.current {
+  background-color: #fff;
+  border: 1px solid #d0d5dd;
+  color: #344054;
+}
+.upgradeBtn button.upgrade {
+  color: #fff;
+  border: 1px solid var(--btn-bg);
+  background-color: var(--btn-bg);
+}
+.plansOptions .planBox .planBoxPrice {
+  margin-bottom: 24px;
+}
+.plansOptions .planBox .planBoxPrice p {
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 24px;
+}
+.plansOptions .planBox .planBoxPrice p span {
+  font-size: 36px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.72px;
+}
+.plansOptions .planBox .planBoxFeatures {
+  margin-bottom: 20px;
+}
+.plansOptions .planBox .planBoxFeatures .option {
+  margin-bottom: 24px;
+}
+.plansOptions .planBox .planBoxFeatures .option p {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+}
+.plansOptions .planBox .planBoxFeatures .option div {
+  width: 20px;
+  height: 20px;
+  background-color: #e9fffa;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+.leftRightBtnBox button {
+  background-color: #fff;
+
+  border: 1px solid #d0d5dd;
+  display: flex;
+  padding: 10px 16px;
+  color: #344054;
+
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 20px;
+}
+.leftRightBtnBox button.leftBtn {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 0;
+}
+.leftRightBtnBox button.rightBtn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.infoWithForm .profileForm {
+  width: 70%;
+  padding: 24px;
+  border-radius: 6px;
+  border: 1px solid #f2f4f7;
+  background-color: #fff;
+}
+
+.profileForm .billingAddressHeader h5,
+.profileForm .billingAddressBox .billingAddressBoxHeader h5,
+.billingHistoryHeader h5 {
+  font-size: 16px;
+
+  font-weight: 500;
+  line-height: 24px;
+}
+.profileForm .billingAddressHeader {
+  margin-bottom: 24px;
+}
+.tableBox {
+  width: 100%;
+  margin-top: 24px;
+}
+.tableBox table {
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+}
+.billingHistoryTable {
+  background-color: #fff;
+  width: 100%;
+}
+.tableBox .billingHistoryTable thead {
+  border: 1px solid #eaecf0;
+}
+.tableBox .billingHistoryTable thead tr {
+}
+.tableBox .billingHistoryTable thead tr th {
+  color: #667085;
+
+  padding: 12px 24px;
+  align-items: center;
+  font-size: 12px;
+
+  font-weight: 500;
+  line-height: 18px;
+}
+table th:first-child {
+  border-radius: 8px 0 0 0;
+  -moz-border-radius: 8px 0 0 0;
+  -webkit-border-radius: 8px 0 0 0;
+}
+
+table th:last-child {
+  border-radius: 0 8px 0 0;
+  -moz-border-radius: 0 8px 0 0;
+  -webkit-border-radius: 0 8px 0 0;
+}
+.billingHistoryTable tbody {
+}
+.billingHistoryTable tbody tr {
+  height: 72px;
+  padding: 16px 24px;
+  background-color: #f9fafb;
+
+  border-bottom: 1px solid #eaecf0;
+}
+.billingHistoryTable tbody tr:last-child {
+  border-bottom: 0;
+}
+.billingHistoryTable tbody tr td {
+  color: #000;
+
+  font-size: 14px;
+
+  font-weight: 400;
+  line-height: 20px;
+}
+.billingHistoryTable tbody tr button {
+  border-radius: 8px;
+  border: 1px solid #f4fffd;
+  background: #f4fffd;
+  color: #5dbeaa;
+
+  font-size: 14px;
+
+  font-weight: 600;
+  line-height: 20px;
+
+  /* Shadow/xs */
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.billingHistoryTable tbody tr button.one {
+  margin-right: 2.5rem;
+}
+.billingHistoryTable tbody tr button:hover {
+  color: #5dbeaa;
+}
+.perviosAndNextBox {
+  padding: 12px 24px 16px 24px;
+  background-color: #026aa2;
+  border: 1px solid #eaecf0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  background-color: #fff;
+}
+
+.pageNumber a.active {
+  color: var(--btn-bg);
+  background-color: #f4fffd;
+}
+.profileForm .billingAddressBox,
+.profileForm .addNewAddressBox {
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  width: 546px;
+  padding: 20px;
+}
+.profileForm .billingAddressBox .billingAddressBoxHeader {
+  margin-bottom: 24px;
+}
+.profileForm .billingAddressBox {
+  border: 1px solid #f2f4f7;
+}
+.profileForm .billingAddressBox p,
+.addNewAddressBox p {
+  color: #98a2b3;
+
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.billingAddressBoxStatus {
+  border-radius: 16px;
+  background: #f4fffd;
+  margin-left: 1rem;
+  padding: 2px 8px;
+  color: #5dbeaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.deleteAndEdit button {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+  font-size: 14px;
+
+  font-weight: 600;
+  line-height: 20px;
+}
+.deleteAndEdit button.delete {
+  background-color: #d92d20;
+  margin-right: 12px;
+  color: #fff;
+}
+.deleteAndEdit button.edit {
+  background-color: var(--btn-bg);
+  color: #fff;
+}
+.profileForm .billingAddressBox .billingAddressBoxHeader {
+}
+.addNewAddressBox {
+  border-radius: 5px;
+  border: 1px dashed #53d2b7;
+  background: #f4fffd;
+  margin-top: 24px;
+}
+.profileForm form {
+  width: 100%;
+}
+.nameInputs {
+  width: 100%;
+}
+.nameInputs .inputBox {
+  width: 49%;
+}
+.uploadImageBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+.uploadImageBox .imageBoxBeforUpdate {
+  width: 70px;
+  height: 70px;
+}
+.uploadImageBox .imageBoxBeforUpdate img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+}
+.dragBox {
+  text-align: center;
+
+  width: 85%;
+  border: 1px solid #f2f4f7;
+  margin-bottom: 1rem;
+}
+.uploaderForm {
+  cursor: pointer;
+}
+p.charactersCount {
+  font-size: 14px;
+  color: #d0d5dd;
+  margin-top: 0.5rem;
+
+  font-weight: 400;
+  line-height: 20px;
+}
+input[type="file"] {
+  width: 100%;
+  height: 100%;
+}
+.saveChangesBox {
+  border-top: 1px solid #f2f4f7;
+}
+
+/* profile style end*/
+.btnWithIcon button {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition);
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 10px, 16px, 10px, 16px;
+}
+
+.btnWithIcon button img {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+}
+.btnWithIcon button img.rev {
+  width: 17px;
+  height: 17px;
+  margin-left: 8px;
+}
+.btnWithIcon button:hover {
+  border: 1px solid #d0d5dd;
+}
+
 .btnBox button {
   background-color: var(--btn-bg);
   color: var(--white-color);
@@ -1104,8 +1783,11 @@ tr td div .orderImage img {
   font-size: 14px;
   transition: var(--transition);
   border: 2px solid var(--btn-bg);
+  border-radius: 8px;
+  padding: 10px, 16px, 10px, 16px;
 }
 .btnBox button:hover {
   background-color: var(--primary-color);
   border: 2px solid var(--main-color);
+  color: #fff;
 }
