@@ -42,16 +42,37 @@ button {
 .container3 {
   flex-basis: 83%;
 }
-
+select.form-select {
+  font-size: 14px;
+  color: #344054;
+  font-weight: 600;
+  line-height: 20px;
+}
+/* input[type="checkbox"] {
+  border-color: #d0d5dd;
+  border-radius: 6px;
+}
 input[type="checkbox"]:checked {
   appearance: none;
   -webkit-appearance: none;
   border-color: #53d2b7;
   border-radius: 6px;
   background-color: #fff;
-}
-input[type="checkbox"]:focus {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+} */
+/* input[type="checkbox"]:focus {
   box-shadow: none;
+  border-radius: 6px;
+} */
+
+.form-switch input {
+  border-radius: 12px;
+  padding: 13px 25px;
+}
+
+input {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  /* padding: 10px 14px 10px 14px; */
 }
 input[type="checkbox"]:checked::before {
   /* content: "\2713"; */
@@ -76,6 +97,7 @@ select:focus {
 button.accordion-button:focus {
   box-shadow: none !important;
 }
+
 label {
   font-size: 14px;
   color: #344054;
@@ -911,8 +933,7 @@ tr td div .orderImage img {
   line-height: 35px;
   margin-left: 0.5rem;
 }
-.addBtnBox button {
-}
+
 .addBtnBox {
   width: 100%;
 }
@@ -1579,6 +1600,9 @@ table th:last-child {
 }
 .billingHistoryTable tbody {
 }
+.inboxItem table tbody tr {
+  background-color: red !important;
+}
 .billingHistoryTable tbody tr {
   height: 72px;
   padding: 16px 24px;
@@ -1597,7 +1621,7 @@ table th:last-child {
   font-weight: 400;
   line-height: 20px;
 }
-.billingHistoryTable tbody tr button {
+.billingHistoryTable tbody tr button.lastBtn {
   border-radius: 8px;
   border: 1px solid #f4fffd;
   background: #f4fffd;
@@ -1608,7 +1632,6 @@ table th:last-child {
   font-weight: 600;
   line-height: 20px;
 
-  /* Shadow/xs */
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 .billingHistoryTable tbody tr button.one {
@@ -1616,6 +1639,18 @@ table th:last-child {
 }
 .billingHistoryTable tbody tr button:hover {
   color: #5dbeaa;
+}
+tbody tr td input {
+}
+.tdInput1 {
+  width: 5rem;
+}
+.tdInput2 {
+  width: 8rem;
+}
+.tdInput1 input,
+.tdInput2 input {
+  margin-top: -2rem;
 }
 .perviosAndNextBox {
   padding: 12px 24px 16px 24px;
@@ -1646,6 +1681,39 @@ table th:last-child {
 .profileForm .billingAddressBox {
   border: 1px solid #f2f4f7;
 }
+.visaNumber {
+  margin-bottom: 24px;
+}
+.visaNumber img {
+  margin-right: 12px;
+}
+.visaNumber p {
+  color: #000 !important;
+
+  font-size: 16px !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+}
+.deactivateaccount .pOne {
+  color: #000;
+  font-size: 14px;
+  margin: 24px 0;
+  font-weight: 500;
+  line-height: 20px;
+}
+.deactivateaccount input {
+  margin-right: 0.5rem;
+
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 20px;
+}
+.deactivateaccount .p2 {
+  margin-top: 0.7rem;
+}
+
 .profileForm .billingAddressBox p,
 .addNewAddressBox p {
   color: #98a2b3;
@@ -1708,6 +1776,7 @@ table th:last-child {
 }
 .uploadImageBox {
   width: 100%;
+
   display: flex;
   justify-content: space-between;
   padding-top: 24px;
@@ -1720,6 +1789,7 @@ table th:last-child {
   width: 100%;
   border-radius: 50%;
   height: 100%;
+  margin-bottom: 12px;
 }
 .dragBox {
   text-align: center;
@@ -1727,6 +1797,25 @@ table th:last-child {
   width: 85%;
   border: 1px solid #f2f4f7;
   margin-bottom: 1rem;
+}
+.dragBox {
+}
+.dragBox .uploderBox input {
+  display: none;
+}
+.dragBox .uploderBox .input-group-prepend label {
+  width: 600px;
+  height: 50px;
+  text-align: center;
+  color: #667085;
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 18px;
+}
+.dragBox .uploderBox .input-group-prepend label div span {
+  color: var(--btn-bg);
+  font-weight: 600;
 }
 .uploaderForm {
   cursor: pointer;
@@ -1748,6 +1837,190 @@ input[type="file"] {
 }
 
 /* profile style end*/
+
+/*inbox style Start*/
+.inboxDataContainer {
+}
+.inboxDataContainer {
+  margin-top: 24px;
+
+  padding: 24px 0;
+}
+.inboxDataContainer .dayOfInbox {
+  margin-bottom: 70px;
+}
+.inboxDataContainer .dayOfInbox h5 {
+  font-size: 15px;
+
+  font-weight: 500;
+  line-height: 20px;
+}
+.inboxItemsBox {
+  margin-top: 1rem;
+}
+.inboxItemsBox .inboxItem {
+  margin: 24px 0;
+}
+.inboxItemsBox .inboxItem .productStatusAndName {
+}
+.inboxItemsBox .inboxItem .productStatusAndName .productStatus {
+  border-radius: 4px;
+
+  width: 24px;
+  height: 24px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  margin-right: 16px;
+}
+.inboxItemsBox .inboxItem .productStatusAndName .productStatus.success {
+  border: 1px solid #78eed5;
+  background: #f7fffd;
+}
+.inboxItemsBox .inboxItem .productStatusAndName .productStatus.warning {
+  border: 1px solid #fedf89;
+  background: #fef0c7;
+}
+.inboxItemsBox .inboxItem .productStatusAndName .productStatus.danger {
+  border: 1px solid #fecdca;
+  background: #fee4e2;
+}
+.inboxItemsBox .inboxItem .productStatusAndName .productData p {
+  margin: 0;
+  color: var(--Black, #000);
+
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 20px;
+}
+.viewPriceAndDelete a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #000;
+
+  font-size: 14px;
+
+  font-weight: 400;
+  line-height: 20px;
+}
+.updateBox {
+  width: 100%;
+  border-radius: 4px;
+  background: #ecfdf3;
+  mix-blend-mode: multiply;
+  padding: 8px 10px 8px 8px;
+  margin-top: -20px;
+}
+.updateBox div img {
+  margin-right: 0.3rem;
+}
+.updateBox .updateBoxContent {
+  color: #027a48;
+
+  font-size: 12px;
+  margin: 0;
+  font-weight: 500;
+  line-height: 18px;
+}
+.moreActionsBtn {
+  margin: 24px 0;
+}
+
+.moreActionsBtn div {
+  width: 150px;
+}
+.cancelAndDelete {
+  margin-top: 28rem;
+}
+/*inbox style end*/
+
+/*setting style start */
+
+.settingContent {
+  background-color: var(--white-color);
+  border-radius: 4px;
+  border: 1px solid #eaecf0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+.settingContent .settingNav {
+  width: 100%;
+  display: flex;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #eaecf0;
+  margin-bottom: 40px;
+}
+.settingContent .settingNav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.settingContent .settingNav ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 24px;
+}
+.settingContent .settingNav ul li a {
+  text-decoration: none;
+  color: #667085;
+
+  font-size: 12px;
+
+  font-weight: 500;
+  line-height: 18px;
+}
+.settingContent .settingNav ul li a:hover {
+  color: #000;
+}
+.settingContent .settingNav ul li a.active {
+  color: #000;
+}
+
+.generalContent input[type="radio"] {
+  margin-right: 14px;
+  width: 20px;
+  height: 20px;
+}
+.radioBox {
+  margin-bottom: 24px;
+}
+.generalContent .generalOrderContainer {
+  width: 65%;
+}
+.generalContent .generalOrderContainer h3 {
+  color: #000;
+
+  font-size: 24px;
+
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+.generalContent .generalOrderContainer .generalOrderItem h4 {
+  font-size: 16px;
+  color: #344054;
+  font-weight: 500;
+  line-height: 24px;
+}
+.generalContent .generalOrderContainer .generalOrderItem p {
+  font-size: 16px;
+  color: #667085;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+.generalOrderItem {
+  margin-bottom: 35px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f2f4f7;
+}
+.generalOrderItem input {
+  margin-right: 12px;
+}
+
+/*setting style end */
+
 .btnWithIcon button {
   background-color: var(--white-color);
   color: var(--black-color);

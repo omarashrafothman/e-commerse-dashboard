@@ -10,17 +10,19 @@ function Input({
   blur,
   classes,
   accept,
+  id,
 }) {
   return (
     <div class="input-group  d-flex flex-column mainInput">
       <div class="input-group-prepend mb-2">
-        <label for={name}>{label}</label>
+        <label for={id}>{label}</label>
       </div>
 
       <div>
         <input
           type={type}
           name={name}
+          id={id}
           placeholder={holder}
           className={classes}
           aria-label="Default"

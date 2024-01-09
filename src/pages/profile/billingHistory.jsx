@@ -37,9 +37,9 @@ function BillingHistory() {
                 <td>Invoice for October 2023</td>
                 <td>$123.79</td>
                 <td className="d-flex">
-                  <button className="btn one">PDF</button>
+                  <button className="btn one lastBtn">PDF</button>
 
-                  <button className="btn ">View</button>
+                  <button className="btn lastBtn">View</button>
                 </td>
               </tr>
               <tr className="w-100">
@@ -47,9 +47,9 @@ function BillingHistory() {
                 <td>Invoice for October 2023</td>
                 <td>$123.79</td>
                 <td className="d-flex">
-                  <button className="btn one">PDF</button>
+                  <button className="btn one lastBtn ">PDF</button>
 
-                  <button className="btn ">View</button>
+                  <button className="btn lastBtn ">View</button>
                 </td>
               </tr>
               <tr className="w-100">
@@ -57,9 +57,9 @@ function BillingHistory() {
                 <td>Invoice for October 2023</td>
                 <td>$123.79</td>
                 <td className="d-flex">
-                  <button className="btn one">PDF</button>
+                  <button className="btn one lastBtn">PDF</button>
 
-                  <button className="btn ">View</button>
+                  <button className="btn lastBtn">View</button>
                 </td>
               </tr>
               <tr className="w-100">
@@ -67,9 +67,9 @@ function BillingHistory() {
                 <td>Invoice for October 2023</td>
                 <td>$123.79</td>
                 <td className="d-flex">
-                  <button className="btn one">PDF</button>
+                  <button className="btn one lastBtn">PDF</button>
 
-                  <button className="btn ">View</button>
+                  <button className="btn lastBtn">View</button>
                 </td>
               </tr>
               <tr className="w-100">
@@ -77,23 +77,23 @@ function BillingHistory() {
                 <td>Invoice for October 2023</td>
                 <td>$123.79</td>
                 <td className="d-flex">
-                  <button className="btn one">PDF</button>
+                  <button className="btn one lastBtn">PDF</button>
 
-                  <button className="btn ">View</button>
+                  <button className="btn lastBtn">View</button>
                 </td>
               </tr>
             </tbody>
           </table>
           <div className="perviosAndNextBox d-flex align-items-center justify-content-between ">
             <div className="btnWithIcon mx-1">
-              <button className="btn">
+              <button className="btn ">
                 <Image src={arrowLeft} />
                 Previous
               </button>
             </div>
             <div className="d-flex align-items-center ">
               <div className="pageNumber d-flex align-items-center justify-content-center mx-3">
-                <NavLink className="w-100 " to="/" activeClassName="active">
+                <NavLink className="w-100 " to="/">
                   <span className="w-100">1</span>
                 </NavLink>
               </div>

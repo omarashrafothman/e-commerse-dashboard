@@ -17,7 +17,7 @@ function SideBar() {
       <AccordionSideBar />
       <div className="setting">
         <ul className="AccordionSideBarList w-100">
-          <Link href="/dashboard" className="w-100">
+          <Link href="/setting" className="w-100">
             <li className="AccordionSideBarListItem">
               <Image src={setting} />
               <p>settings</p>

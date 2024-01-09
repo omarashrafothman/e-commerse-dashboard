@@ -87,7 +87,7 @@ function Header() {
                 </svg>
               </span>
             </Link>
-            <Link href="#">
+            <Link href="/inbox">
               <span className="infoItem">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

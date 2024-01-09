@@ -14,8 +14,9 @@ const Layout = ({ children }) => {
     { name: "Change password", to: "/profile/changePassword" },
     { name: "Plan", to: "/profile/plan" },
     { name: "Billing address", to: "/profile/billingAddress" },
-    { name: "Payment method", to: "/profile/payment" },
-    { name: "Deactive account", to: "/profile/deactiveaccount" },
+    { name: "Billing history", to: "/profile/billingHistory" },
+    { name: "Payment method", to: "/profile/paymentMethod" },
+    { name: "Deactive account", to: "/profile/deactivateaccount" },
   ];
   const route = useRouter();
 

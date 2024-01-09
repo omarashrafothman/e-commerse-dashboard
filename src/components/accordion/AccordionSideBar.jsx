@@ -18,6 +18,7 @@ function AccordionSideBar() {
     { name: "imports", to: "/imports", imageSrc: { imports } },
     { name: "products", to: "/products", imageSrc: { products } },
   ];
+  console.log(navigation[0].imageSrc.dashboard);
   const route = useRouter();
   console.log(route.pathname);
   const [isActive, setIsactive] = useState(false);

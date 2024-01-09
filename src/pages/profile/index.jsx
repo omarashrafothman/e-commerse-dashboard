@@ -6,20 +6,15 @@ import profileImage from "../../assets/images/379858993_1077203513297084_7070056
 import userPlus from "../../assets/icons/user-plus.png";
 import Link from "next/link";
 import Input from "@/components/inputs/Input";
-import InputWithIcon from "@/components/inputs/InputWithIcon";
-import emailIcon from "../../assets/icons/mail (1).png";
 import featureIcon from "../../assets/icons/Featured icon (1).png";
 import Uploader from "@/components/uploader/Uploader";
-import { useFormik } from "formik";
-import { useRouter } from "next/router";
-import { Changa_One } from "next/font/google";
-import ChangePassword from "./changePassword";
+
 import ProfileLayout from "./layout";
 
 function index() {
   return (
     <ProfileLayout>
-      <div className="profileForm">
+      <div className="profileForm ">
         <form>
           <div className="nameInputs d-flex align-items-center justify-content-between w-100">
             <div className="inputBox">
@@ -63,12 +58,13 @@ function index() {
               <Image src={featureIcon} />
               <div className="dragBoxTextContent">
                 <Uploader />
+                <div className="dragBoxContent"></div>
               </div>
             </div>
           </div>
           <div className="d-flex justify-content-end align-items-center my-2 py-3 saveChangesBox">
             <div className="btnWithIcon  mx-1">
-              <button className="btn">Cancel</button>
+              <button className="btn ">Cancel</button>
             </div>
             <div className="btnBox mx-1">
               <button className="btn">View profile</button>
