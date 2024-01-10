@@ -77,11 +77,57 @@ function Index() {
             </div>
           </div>
         </div>
-        <div className="d-flex flex-column">
-          <h4>Fulfillment</h4>
+        <div className="d-flex flex-column boxWithRadio">
+          <h4 className="">Fulfillment</h4>
           <div className="d-flex align-items-center radioBox">
             <input type="radio" className="" />
             <label>Fulfill order and upload tracking number after</label>
+          </div>
+          <div className="d-flex align-items-center radioBox">
+            <input type="radio" className="" />
+            <label>Fulfill order and upload tracking number after</label>
+            <div className="selectBox m-3">
+              <select class="form-select" aria-label="Default select example">
+                <option value="1" selected>
+                  12 Hours
+                </option>
+                <option value="2">11 Hours</option>
+                <option value="3">10 Hours</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="d-flex flex-column boxWithRadio">
+          <h5 className="">Auto fulfill delay</h5>
+          <p>When the purchase order is shipped from the supplier:</p>
+          <div className="d-flex  radioBox">
+            <input type="radio" className="" />
+            <div className="d-flex flex-column">
+              <label>Fulfill order and upload tracking number after</label>
+              <p>
+                After activating this feature, DSers will fulfill each product
+                in the orders separately and trigger Shopify sipping
+                confirmation email with the following rules: when a product in
+                DSers order has a tracking number, we will fulfill that item in
+                the order and then Shopify will send an email to your customer.
+                Shopify will send email multiple times for the same order.
+              </p>
+            </div>
+          </div>
+
+          <div className="d-flex  radioBox">
+            <input type="radio" className="" />
+            <div className="d-flex flex-column">
+              <label>Fulfill order and upload tracking number after</label>
+              <p>
+                After activating this feature, DSers will fulfill each product
+                in the orders separately and trigger Shopify sipping
+                confirmation email with the following rules: when a product in
+                DSers order has a tracking number, we will fulfill that item in
+                the order and then Shopify will send an email to your customer.
+                Shopify will send email multiple times for the same order.
+              </p>
+            </div>
           </div>
         </div>
       </div>

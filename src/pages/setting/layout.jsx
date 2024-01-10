@@ -7,14 +7,35 @@ const Layout = ({ children }) => {
   const route = useRouter();
 
   const settingNavigation = [
-    { name: "General", to: "/setting" },
-    { name: "Channels", to: "/setting/channel" },
-    { name: "Suppliers", to: "/setting/Suppliers" },
-    { name: "Shipping", to: "/setting/Shipping" },
-    { name: "Pricing rules", to: "/setting/Pricingrule" },
-    { name: "Notification", to: "/setting/Notification" },
-    { name: "Staff", to: "/setting/Staff" },
+    { name: "General", to: "/setting", nestedPath: "/setting/*" },
+    {
+      name: "Channels",
+      to: "/setting/channels",
+      nestedPath: "/setting/channels/*",
+    },
+    {
+      name: "Suppliers",
+      to: "/setting/suppliers",
+      nestedPath: "/setting/suppliers/suppliersetting",
+    },
+    {
+      name: "Shipping",
+      to: "/setting/shipping",
+      nestedPath: "/setting/Shipping/*",
+    },
+    {
+      name: "Pricing rules",
+      to: "/setting/Pricingrule",
+      nestedPath: "/setting/Pricingrule/*",
+    },
+    {
+      name: "Notification",
+      to: "/setting/Notification",
+      nestedPath: "/setting/Notification/*",
+    },
+    { name: "Staff", to: "/setting/Staff", nestedPath: "/setting/Staff/*" },
   ];
+
   return (
     <div className="main">
       <div className="container3">

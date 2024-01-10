@@ -22,6 +22,70 @@ li {
 button {
   border-radius: 8px;
 }
+
+.phoneNumberInbutBox {
+  width: 356px;
+  margin-bottom: 24px;
+}
+.phoneNumberInbutBox .toolipBox {
+  position: absolute;
+  margin-top: -5.3rem;
+  margin-left: 20rem;
+}
+.phoneNumberInbutBox a {
+  color: var(--danger-color);
+
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.phoneNumberInbutBox .phoneNumberLabel {
+  margin-bottom: 6px;
+  color: #344054;
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 20px;
+}
+.phoneNumberInbutBox .PhoneInputCountry {
+  padding: 10px 14px 10px 14px;
+  text-align: center;
+
+  border: 1px solid #d0d5dd;
+  border-right: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.phoneNumberInbutBox .PhoneInputCountry:focus {
+  border-color: #bcfff1 !important;
+  box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
+}
+.phoneNumberInbutBox .PhoneInputCountrySelect {
+}
+
+.phoneNumberInbutBox input {
+  width: 320px;
+
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  border-left: 0;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 10px 14px 10px 0px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-left: -0.7rem;
+}
+.phoneNumberInbutBox input:focus {
+  border-color: #bcfff1 !important;
+  box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
+}
+.phoneNumberInbutBox input:active {
+  border-color: #bcfff1 !important;
+  box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
+}
+
 /*main style start*/
 .main {
   width: 100%;
@@ -90,7 +154,6 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  box-shadow: none !important;
   border-color: #bcfff1 !important;
   box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
 }
@@ -1527,6 +1590,13 @@ tr td div .orderImage img {
   font-weight: 500;
   line-height: 20px;
 }
+.leftRightBtnBox button a {
+  color: #000;
+  text-decoration: none;
+}
+.btnactive {
+  background-color: #d0d5dd !important;
+}
 .leftRightBtnBox button.leftBtn {
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
@@ -1985,6 +2055,21 @@ input[type="file"] {
 .radioBox {
   margin-bottom: 24px;
 }
+.boxWithRadio h4 {
+  margin-bottom: 24px;
+}
+.boxWithRadio h5 {
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 24px;
+}
+.boxWithRadio p {
+  color: #667085;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
 .generalContent .generalOrderContainer {
   width: 65%;
 }
@@ -2017,6 +2102,94 @@ input[type="file"] {
 }
 .generalOrderItem input {
   margin-right: 12px;
+}
+.channelTabelHeading .selectBox {
+  margin-right: 0.5rem;
+}
+.tableBox .channelTable {
+  margin-bottom: 50px;
+}
+.tableBox .channelTable thead tr th {
+}
+
+.billingHistoryTable {
+  background-color: #fff;
+  width: 100%;
+}
+.tableBox .channelTable thead {
+  border: 1px solid #eaecf0;
+}
+.tableBox .channelTable thead tr {
+}
+.tableBox .channelTable thead tr th {
+  color: #667085;
+
+  padding: 13px 24px;
+  align-items: center;
+  font-size: 12px;
+
+  font-weight: 500;
+  line-height: 18px;
+}
+.tableBox .channelTable tbody tr td {
+  height: 72px;
+  padding: 16px 24px;
+  align-self: stretch;
+
+  align-items: center;
+
+  background-color: #f9fafb;
+}
+.tableBox .channelTable tbody tr td input[type="checkbox"] {
+  margin-right: 12px;
+}
+table th:first-child {
+  border-radius: 8px 0 0 0;
+  -moz-border-radius: 8px 0 0 0;
+  -webkit-border-radius: 8px 0 0 0;
+  padding: 13px 24px 13px 50px !important;
+}
+.accesstokenStatusSuccess {
+  color: #12b76a;
+}
+.accesstokenStatusDanger {
+  color: var(--danger-color);
+}
+td.expiryDate {
+  color: #101828;
+  padding: 16px 24px;
+  font-size: 14px !important;
+
+  font-weight: 500 !important;
+  line-height: 20px;
+}
+.supplierSettingOptions {
+  margin: 35px 0;
+}
+
+.supplierSettingOptions h4 {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  line-height: 24px;
+}
+.supplierSettingOptions p {
+  font-size: 14px;
+  color: #667085;
+  font-weight: 400;
+  line-height: 20px;
+}
+.addBox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px dashed #d0d5dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin-left: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 /*setting style end */
