@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import bag from "../../assets/icons/icons8-aliexpress 1.png";
-import product from "../../assets/images/product.png";
+import product from "../../assets/images/webp/product.webp";
 
 function MainOrderTable({ selected }) {
   console.log(selected);

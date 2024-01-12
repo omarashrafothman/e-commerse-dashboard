@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import product from "../../assets/images/product.png";
+import product from "../../assets/images/webp/product.webp";
 import StarRating from "../starRating/StarRating";
 import barChart from "../../assets/icons/bar-chart-2.png";
 import cart from "../../assets/icons/icons8-aliexpress 1.png";

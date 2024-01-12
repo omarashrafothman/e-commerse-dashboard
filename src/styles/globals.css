@@ -103,6 +103,9 @@ button {
 
   background-color: #fff;
 }
+@media (max-width: 576px) {
+}
+
 .container3 {
   flex-basis: 83%;
 }
@@ -129,15 +132,16 @@ input[type="checkbox"]:checked {
   border-radius: 6px;
 } */
 
+/*global inputs style start*/
+input[type="radio"] {
+  accent-color: var(--btn-bg);
+  border-color: #fff !important;
+}
 .form-switch input {
-  border-radius: 12px;
+  border-radius: 12px !important;
   padding: 13px 25px;
 }
 
-input {
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  /* padding: 10px 14px 10px 14px; */
-}
 input[type="checkbox"]:checked::before {
   /* content: "\2713"; */
   position: absolute;
@@ -171,6 +175,9 @@ label {
   background-color: var(--white-color) !important;
   color: #667085 !important;
 }
+
+/*global inputs style end*/
+
 @media (max-width: 576px) {
   .main {
     width: 90%;
@@ -181,6 +188,15 @@ label {
 
     flex-basis: 100%;
   }
+  .container2 {
+    flex-basis: 100%;
+  }
+  .container3 {
+    flex-basis: 100%;
+  }
+  .tablesContainer {
+    width: 100% !important;
+  }
 }
 @media (max-width: 768px) {
   .main {
@@ -189,6 +205,9 @@ label {
   }
   .container1 {
     padding: 0 15px;
+    flex-basis: 100%;
+  }
+  .container2 {
     flex-basis: 100%;
   }
 }
@@ -436,7 +455,18 @@ label {
   font-weight: 600;
   line-height: 30px;
 }
-
+@media (max-width: 576px) {
+  .titleHeaderp {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
+@media (max-width: 576px) {
+  .titleHeaderp {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
 /* titleHeader style end*/
 
 /* signup style start*/
@@ -749,6 +779,8 @@ p.forgetpassworddescription {
   }
   .orderBigWidget {
     padding: 1rem 0.7rem;
+    width: 68% !important;
+    margin-left: 32%;
   }
   .orderBigWidget .btnBox {
     width: 60%;
@@ -1365,6 +1397,88 @@ tr td div .orderImage img {
 /* importsPage style end*/
 
 /* profile style start*/
+
+@media (max-width: 576px) {
+  .profileNameAndData {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    width: 90% !important;
+    text-align: center;
+  }
+  .userAndEmail h3 {
+    font-size: 30px !important;
+    margin-top: 1rem;
+
+    font-weight: 500;
+  }
+  .userAndEmail p {
+    font-size: 14px !important;
+  }
+  .profileImage {
+    width: 150px !important;
+    height: 150px !important;
+    top: 17rem !important;
+    left: 38% !important;
+  }
+  .infoWithForm {
+    flex-direction: column;
+  }
+  .profileForm {
+    width: 100% !important;
+    padding-left: 35% !important;
+  }
+  .PersonalInfo {
+    width: 90% !important;
+    margin-left: 10%;
+    text-align: center !important;
+    margin-top: -2rem;
+  }
+  .infoWithForm .PersonalInfo ul {
+    width: 100%;
+    text-align: center;
+  }
+  .infoWithForm .PersonalInfo ul li {
+    display: inline;
+    margin: 0 0.5rem;
+  }
+  .infoWithForm .PersonalInfo ul li a {
+    font-size: 10px;
+  }
+  .uploadImageBox img {
+    display: none;
+  }
+  .profileForm {
+    width: 100% !important;
+    margin-left: -1%;
+    margin-bottom: 2rem;
+  }
+  .upgradePlanTitle {
+    margin-left: -5rem;
+  }
+  .plansOptions {
+  }
+  .plansOptions .planBox {
+    margin-left: -5rem;
+    margin-right: auto;
+  }
+  .billingAddressBox {
+    margin-left: -54%;
+    width: 370px !important;
+  }
+  .addNewAddressBox {
+    margin-left: -54%;
+    width: 370px !important;
+  }
+  .deactivateaccount {
+    width: 100% !important;
+
+    padding-left: 1rem !important;
+  }
+}
+
 .profileContainer {
   background-color: var(--white-color) !important;
   width: 100%;
@@ -1418,6 +1532,7 @@ tr td div .orderImage img {
 }
 .infoWithForm {
   width: 100%;
+
   padding: 0 32px;
   justify-content: space-between;
 }
@@ -1495,6 +1610,7 @@ tr td div .orderImage img {
     0px 1px 3px 0px rgba(16, 24, 40, 0.1);
   padding: 24px 20px;
   width: 260px;
+  margin-bottom: 1rem;
 }
 
 .plansOptions .planBox .planBoxHeader {
@@ -2191,7 +2307,36 @@ td.expiryDate {
   margin-left: 0.5rem;
   margin-top: 1.5rem;
 }
+.selectInside {
+  margin-right: -32px;
+  margin-left: 32px;
+}
+.deleteSelect {
+  margin-left: 1rem;
+}
+.addStuffMember {
+  width: 30% !important;
+}
+.addStuffMemberHeading {
+  margin-bottom: 46px;
+}
+.addStuffMemberHeading h4 {
+  font-size: 18px;
+  color: #101828;
+  font-weight: 600;
+  line-height: 28px;
+}
+.addStuffMemberHeading p {
+  color: #667085;
 
+  font-size: 14px;
+
+  font-weight: 400;
+  line-height: 20px;
+}
+.cancelAndInviteBox {
+  margin-top: 14rem;
+}
 /*setting style end */
 
 .btnWithIcon button {

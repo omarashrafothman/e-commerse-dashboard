@@ -1,10 +1,9 @@
-import React from "react";
 import Image from "next/image";
-import cover from "../../assets/images/profileCover.png";
-import profileImage from "../../assets/images/379858993_1077203513297084_7070056361759594293_n-removebg-preview (1).png";
+import cover from "../../assets/images/webp/profileCover.webp";
+import profileImage from "../../assets/images/webp/379858993_1077203513297084_7070056361759594293_n-removebg-preview (1).webp";
 import userPlus from "../../assets/icons/user-plus.png";
 import Link from "next/link";
-import Input from "@/components/inputs/Input";
+
 import { useFormik } from "formik";
 import { useRouter } from "next/router";
 
@@ -52,6 +51,7 @@ const Layout = ({ children }) => {
             </div>
           </div>
         </div>
+
         <div className="infoWithForm d-flex">
           <div className="PersonalInfo">
             <ul>

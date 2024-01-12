@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Widget({ status, source, forWhat, num, percentage }) {
   return (
     <div className="widgetBox">
@@ -13,7 +14,7 @@ export default function Widget({ status, source, forWhat, num, percentage }) {
         </p>
       </div>
       <div className="d-flex align-items-center justify-content-center">
-        {source}
+        <Image src={source} />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import ProfileLayout from "./layout";
 import Image from "next/image";
 import masterCard from "../../assets/images/mastercard.png";

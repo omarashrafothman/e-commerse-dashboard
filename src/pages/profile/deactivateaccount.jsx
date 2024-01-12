@@ -1,6 +1,5 @@
-import React from "react";
 import ProfileLayout from "./layout";
-import { Input } from "@mui/base";
+
 function Deactivateaccount() {
   return (
     <ProfileLayout>

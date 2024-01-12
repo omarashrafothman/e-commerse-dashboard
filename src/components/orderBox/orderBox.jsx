@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import au from "../../assets/images/AU.png";
 import MainOrderTable from "../tables/MainOrderTable";

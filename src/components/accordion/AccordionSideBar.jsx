@@ -12,15 +12,15 @@ import { useRouter } from "next/router";
 
 function AccordionSideBar() {
   const navigation = [
-    { name: "dashboard", to: "/dashboard", imageSrc: { dashboard } },
-    { name: "orders", to: "/orders", imageSrc: { orders } },
-    { name: "tracking", to: "/tracking", imageSrc: { tracking } },
-    { name: "imports", to: "/imports", imageSrc: { imports } },
-    { name: "products", to: "/products", imageSrc: { products } },
+    { name: "dashboard", to: "/dashboard", imageSrc: dashboard },
+    { name: "orders", to: "/orders", imageSrc: orders },
+    { name: "tracking", to: "/tracking", imageSrc: tracking },
+    { name: "imports", to: "/imports", imageSrc: imports },
+    { name: "products", to: "/products", imageSrc: products },
   ];
-  console.log(navigation[0].imageSrc.dashboard);
+  console.log(navigation.imageSrc);
   const route = useRouter();
-  console.log(route.pathname);
+
   const [isActive, setIsactive] = useState(false);
   return (
     <div>

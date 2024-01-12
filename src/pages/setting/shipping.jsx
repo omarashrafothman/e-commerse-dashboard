@@ -1,7 +1,8 @@
 import React from "react";
 import Layout from "./layout";
 import Link from "next/link";
-
+import Image from "next/image";
+import trash from "../../assets/icons/trash.png";
 function shipping() {
   return (
     <Layout>
@@ -39,6 +40,60 @@ function shipping() {
                   while placing orders. Option 1 will be your first choice
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="inputsBox">
+        <div className="d-flex flex-column w-25">
+          <div className="selectBox d-flex align-items-center ">
+            <select class="form-select" aria-label="Default select example">
+              <option value="1" selected>
+                Global
+              </option>
+              <option value="2">11 Hours</option>
+              <option value="3">10 Hours</option>
+            </select>
+            <div className="deleteSelect">
+              <Image src={trash} />
+            </div>
+          </div>
+          <div className="selectInside my-2">
+            <div className="selectBox my-2 d-flex align-items-center">
+              <select class="form-select" aria-label="Default select example">
+                <option value="1" selected>
+                  4PXRT72-PACKET-PACKET
+                </option>
+                <option value="2">11 Hours</option>
+                <option value="3">10 Hours</option>
+              </select>{" "}
+              <div className="deleteSelect">
+                <Image src={trash} />
+              </div>
+            </div>
+            <div className="selectBox my-2 d-flex align-items-center">
+              <select class="form-select" aria-label="Default select example">
+                <option value="1" selected>
+                  Add more shipping method
+                </option>
+                <option value="2">11 Hours</option>
+                <option value="3">10 Hours</option>
+              </select>{" "}
+              <div className="deleteSelect">
+                <Image src={trash} />
+              </div>
+            </div>
+          </div>
+          <div className="selectBox d-flex align-items-center">
+            <select class="form-select" aria-label="Default select example">
+              <option value="1" selected>
+                Choose country
+              </option>
+              <option value="2">11 Hours</option>
+              <option value="3">10 Hours</option>
+            </select>{" "}
+            <div className="deleteSelect">
+              <Image src={trash} />
             </div>
           </div>
         </div>

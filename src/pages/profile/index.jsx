@@ -1,10 +1,7 @@
-import React from "react";
-import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Image from "next/image";
-import cover from "../../assets/images/profileCover.png";
-import profileImage from "../../assets/images/379858993_1077203513297084_7070056361759594293_n-removebg-preview (1).png";
-import userPlus from "../../assets/icons/user-plus.png";
-import Link from "next/link";
+
+import profileImage from "../../assets/images/webp/379858993_1077203513297084_7070056361759594293_n-removebg-preview (1).webp";
+
 import Input from "@/components/inputs/Input";
 import featureIcon from "../../assets/icons/Featured icon (1).png";
 import Uploader from "@/components/uploader/Uploader";
@@ -14,8 +11,8 @@ import ProfileLayout from "./layout";
 function index() {
   return (
     <ProfileLayout>
-      <div className="profileForm ">
-        <form>
+      <div className="profileForm">
+        <form className="">
           <div className="nameInputs d-flex align-items-center justify-content-between w-100">
             <div className="inputBox">
               <Input

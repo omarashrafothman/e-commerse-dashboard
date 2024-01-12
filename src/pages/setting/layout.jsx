@@ -30,10 +30,10 @@ const Layout = ({ children }) => {
     },
     {
       name: "Notification",
-      to: "/setting/Notification",
+      to: "/setting/notification",
       nestedPath: "/setting/Notification/*",
     },
-    { name: "Staff", to: "/setting/Staff", nestedPath: "/setting/Staff/*" },
+    { name: "Staff", to: "/setting/staff", nestedPath: "/setting/Staff/*" },
   ];
 
   return (
