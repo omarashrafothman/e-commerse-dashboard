@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../../assets/images/logo.png";
-import Input from "@/components/inputs/Input";
+import { useEffect } from "react";
 import arrow from "../../assets/icons/arrow-left.png";
 import Link from "next/link";
 export default function SendMail() {
+  useEffect(() => {
+    document.title = "Send Mail";
+  }, []);
   return (
     <div className="login">
       <div className="loginCaontainer">

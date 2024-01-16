@@ -3,12 +3,14 @@ import Button from "../components/Buttons/Button";
 import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Input from "../components/inputs/Input";
 import Image from "next/image";
-import FilterButton from "@/components/filterButton/FilterButton";
 import OrderBox from "@/components/orderBox/orderBox";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 export default function orders() {
   const [allSelected, setAllSelected] = useState(false);
-
+  useEffect(() => {
+    document.title = "Orders";
+  }, []);
   return (
     <div className="main">
       <div className="container3">

@@ -14,7 +14,7 @@ function Input({
 }) {
   return (
     <div class="input-group  d-flex flex-column mainInput">
-      <div class="input-group-prepend mb-2">
+      <div class="input-group-prepend ">
         <label for={id}>{label}</label>
       </div>
 
@@ -24,7 +24,6 @@ function Input({
           name={name}
           id={id}
           placeholder={holder}
-          className={classes}
           aria-label="Default"
           aria-describedby="inputGroup-sizing-default"
           value={value}

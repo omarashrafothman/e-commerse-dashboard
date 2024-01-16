@@ -1,10 +1,12 @@
-import React from "react";
 import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import { useEffect } from "react";
 const Layout = ({ children }) => {
   const route = useRouter();
+  useEffect(() => {
+    document.title = "Settings";
+  }, []);
 
   const settingNavigation = [
     { name: "General", to: "/setting", nestedPath: "/setting/*" },
@@ -25,7 +27,7 @@ const Layout = ({ children }) => {
     },
     {
       name: "Pricing rules",
-      to: "/setting/Pricingrule",
+      to: "/setting/pricingrules",
       nestedPath: "/setting/Pricingrule/*",
     },
     {

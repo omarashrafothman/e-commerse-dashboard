@@ -4,9 +4,13 @@ import Input from "@/components/inputs/Input";
 import Product from "@/components/product/Product";
 import NavigationFooter from "@/components/navFooter/NavigationFooter";
 import products from "../../local-json/products.json";
-import Link from "next/link";
+
+import { useEffect } from "react";
 
 function index() {
+  useEffect(() => {
+    document.title = "Imports";
+  }, []);
   return (
     <div>
       <div className="main">

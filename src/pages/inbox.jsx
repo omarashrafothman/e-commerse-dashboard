@@ -1,14 +1,16 @@
 import React from "react";
 import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Input from "@/components/inputs/Input";
-import Image from "next/image";
 import dolarSign from "../assets/icons/dollar-sign.png";
 import help from "../assets/icons/help-circle (1).png";
-import close from "../assets/icons/x (1).png";
+
 import alert from "../assets/icons/alert-circle.png";
-import Link from "next/link";
+import { useEffect } from "react";
 import InboxItem from "@/components/inboxitem/InboxItem";
 function inbox() {
+  useEffect(() => {
+    document.title = "Inbox";
+  }, []);
   return (
     <div className="main">
       <div className="container3">

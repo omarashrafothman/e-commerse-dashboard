@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../../assets/images/logo.png";
-import Input from "@/components/inputs/Input";
-import arrow from "../../assets/icons/arrow-left.png";
+import { useEffect } from "react";
 import Link from "next/link";
 export default function Success() {
+  useEffect(() => {
+    document.title = "Success";
+  }, []);
   return (
     <div className="login">
       <div className="loginCaontainer">

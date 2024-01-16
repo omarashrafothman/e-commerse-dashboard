@@ -5,8 +5,8 @@ import Input from "@/components/inputs/Input";
 import arrow from "../../assets/icons/arrow-left.png";
 import Link from "next/link";
 import { object, string } from "yup";
-import * as Yup from "yup";
-import { Formik, useFormik } from "formik";
+import { useEffect } from "react";
+import { useFormik } from "formik";
 export default function ForgetPassword() {
   const formik = useFormik({
     enableReinitialize: true,
@@ -21,6 +21,9 @@ export default function ForgetPassword() {
       email: string().required().email(),
     }),
   });
+  useEffect(() => {
+    document.title = "Forget Password";
+  }, []);
   return (
     <div className="login">
       <div className="loginCaontainer">

@@ -5,8 +5,8 @@ import Input from "@/components/inputs/Input";
 import arrow from "../../assets/icons/arrow-left.png";
 import Link from "next/link";
 import { object, string } from "yup";
-import * as Yup from "yup";
-import { Formik, useFormik } from "formik";
+import { useEffect } from "react";
+import { useFormik } from "formik";
 export default function login() {
   const formik = useFormik({
     enableReinitialize: true,
@@ -24,6 +24,9 @@ export default function login() {
       password: string().required(),
     }),
   });
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
 
   return (
     <div className="login">

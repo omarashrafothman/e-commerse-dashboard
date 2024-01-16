@@ -4,8 +4,12 @@ import decrease from "../assets/images/webp/Group 42.webp";
 import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Example from "@/components/charts/DashboardChart";
 import Input from "@/components/inputs/Input";
+import { useEffect } from "react";
 
 export default function dashboard() {
+  useEffect(() => {
+    document.title = "Dashboard";
+  }, []);
   return (
     <div className="main">
       <div className="container3">

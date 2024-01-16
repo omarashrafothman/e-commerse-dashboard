@@ -37,7 +37,7 @@ function staff() {
               classes={"form-control"}
             />
             <br />
-            <br />
+
             <div className="generalContent">
               <div className="d-flex flex-column boxWithRadio">
                 <div className="d-flex  radioBox">

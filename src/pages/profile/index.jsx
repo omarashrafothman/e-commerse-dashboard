@@ -7,67 +7,89 @@ import featureIcon from "../../assets/icons/Featured icon (1).png";
 import Uploader from "@/components/uploader/Uploader";
 
 import ProfileLayout from "./layout";
+import Link from "next/link";
 
 function index() {
   return (
     <ProfileLayout>
-      <div className="profileForm">
-        <form className="">
-          <div className="nameInputs d-flex align-items-center justify-content-between w-100">
-            <div className="inputBox">
-              <Input
-                type={"text"}
-                holder={""}
-                name={"firstName"}
-                label={"First name"}
-                value={"Smiths"}
-                classes={"form-control"}
-              />
-            </div>
-            <div className="inputBox">
-              <Input
-                type={"text"}
-                holder={""}
-                name={"lasttName"}
-                label={"Last name"}
-                value={"Rhye"}
-                classes={"form-control"}
-              />
-            </div>
-          </div>
-          <div>
-            <div className="w-100">
-              <Input
-                type={"email"}
-                holder={""}
-                name={"email"}
-                label={"Email"}
-                value={"olivia@untitledui.com"}
-                classes={"form-control"}
-              />
-            </div>
-          </div>
-          <div className="uploadImageBox">
-            <div className="imageBoxBeforUpdate">
-              <Image src={profileImage} />
-            </div>
-            <div className="dragBox d-flex flex-column align-items-center py-3">
-              <Image src={featureIcon} />
-              <div className="dragBoxTextContent">
-                <Uploader />
-                <div className="dragBoxContent"></div>
+      <div className="d-flex flex-column w-100  align-items-center">
+        <div className="profileForm w-100 ">
+          <form className="w-100">
+            <div className="nameInputs d-flex align-items-center justify-content-between w-100">
+              <div className="inputBox">
+                <Input
+                  type={"text"}
+                  holder={""}
+                  name={"firstName"}
+                  label={"First name"}
+                  value={"Smiths"}
+                  classes={"form-control"}
+                />
+              </div>
+              <div className="inputBox">
+                <Input
+                  type={"text"}
+                  holder={""}
+                  name={"lasttName"}
+                  label={"Last name"}
+                  value={"Rhye"}
+                  classes={"form-control"}
+                />
               </div>
             </div>
-          </div>
-          <div className="d-flex justify-content-end align-items-center my-2 py-3 saveChangesBox">
-            <div className="btnWithIcon  mx-1">
-              <button className="btn ">Cancel</button>
+            <div>
+              <div className="w-100">
+                <Input
+                  type={"email"}
+                  holder={""}
+                  name={"email"}
+                  label={"Email"}
+                  value={"olivia@untitledui.com"}
+                  classes={"form-control"}
+                />
+              </div>
             </div>
-            <div className="btnBox mx-1">
-              <button className="btn">View profile</button>
+            <div className="uploadImageBox">
+              <div className="imageBoxBeforUpdate">
+                <Image src={profileImage} />
+              </div>
+              <div className="dragBox d-flex flex-column align-items-center py-3">
+                <Image src={featureIcon} />
+                <div className="dragBoxTextContent">
+                  <Uploader />
+                  <div className="dragBoxContent"></div>
+                </div>
+              </div>
             </div>
-          </div>
-        </form>
+            <div className="d-flex justify-content-end align-items-center my-2 py-3 saveChangesBox">
+              <div className="btnWithIcon  mx-1">
+                <button className="btn ">Cancel</button>
+              </div>
+              <div className="btnBox mx-1">
+                <button className="btn">View profile</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div className="profileForm w-100">
+          <form>
+            <div class="input-group mb-3 d-flex flex-column">
+              <label>username</label>
+              <div className="d-flex">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    untitledui.com/
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Username"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </ProfileLayout>
   );

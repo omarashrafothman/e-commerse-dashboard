@@ -7,7 +7,8 @@ import Button from "../../components/Buttons/Button";
 import { object, string } from "yup";
 import * as Yup from "yup";
 import Link from "next/link";
-import { Formik, useFormik } from "formik";
+import { useFormik } from "formik";
+import { useEffect } from "react";
 
 export default function signup() {
   const steps = [
@@ -30,6 +31,9 @@ export default function signup() {
       id: 3,
     },
   ];
+  useEffect(() => {
+    document.title = "Register";
+  }, []);
 
   const [activeStepIndex, setActiveStepIndex] = useState(1);
   const isFirstStep = activeStepIndex === 1;

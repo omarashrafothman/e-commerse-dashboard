@@ -10,6 +10,7 @@
   --pink-color: #dd2590;
   --white-color: #fff;
   --gray-color: #eaecf0;
+  --warning-color: #b54708;
   --transition: all 0.2s ease-in-out;
 }
 
@@ -21,6 +22,26 @@ li {
 }
 button {
   border-radius: 8px;
+}
+h4 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 28px !important;
+}
+p {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+p.gray {
+  color: #667085 !important;
+}
+p.warning {
+  color: var(--warning-color);
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  margin-top: 0.1rem;
 }
 
 .phoneNumberInbutBox {
@@ -103,7 +124,11 @@ button {
 
   background-color: #fff;
 }
-@media (max-width: 576px) {
+
+@media (max-width: 765px) {
+  .container3 {
+    flex-basis: 100% !important;
+  }
 }
 
 .container3 {
@@ -115,6 +140,7 @@ select.form-select {
   font-weight: 600;
   line-height: 20px;
 }
+
 /* input[type="checkbox"] {
   border-color: #d0d5dd;
   border-radius: 6px;
@@ -133,25 +159,30 @@ input[type="checkbox"]:checked {
 } */
 
 /*global inputs style start*/
-input[type="radio"] {
-  accent-color: var(--btn-bg);
-  border-color: #fff !important;
-}
-.form-switch input {
-  border-radius: 12px !important;
-  padding: 13px 25px;
-}
 
-input[type="checkbox"]:checked::before {
-  /* content: "\2713"; */
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 10px;
-  height: 10px;
-
-  background-size: contain;
-  background-color: #fff;
+.input-group-prepend {
+  margin-bottom: 10px;
+}
+.input-group-prepend label {
+  font-size: 14px;
+  color: #344054;
+  font-weight: 500;
+  line-height: 20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  padding: 7px 14px;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border-radius: var(--2, 8px);
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  font-weight: 400;
+  color: #667085;
+  width: 100%;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -160,20 +191,38 @@ textarea:focus,
 select:focus {
   border-color: #bcfff1 !important;
   box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
+  outline: none;
 }
 button.accordion-button:focus {
   box-shadow: none !important;
 }
-
-label {
-  font-size: 14px;
-  color: #344054;
-  font-weight: 500;
-  line-height: 20px;
+.mainInput {
+  margin-bottom: 12px;
 }
+
+input[type="radio"] {
+  accent-color: var(--btn-bg);
+  border-color: #fff !important;
+}
+.form-switch input {
+  border-radius: 12px !important;
+  padding: 12px 22px;
+}
+
+input[type="checkbox"]:checked::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-size: contain;
+  background-color: #fff;
+}
+
 .input-group-text {
   background-color: var(--white-color) !important;
   color: #667085 !important;
+  padding: 10px 12px 10px 14px;
 }
 
 /*global inputs style end*/
@@ -271,16 +320,23 @@ label {
 
 @media (max-width: 576px) {
   .searchBox {
-    width: 280px;
+    width: 240px !important;
   }
   .offerBox p {
     font-size: 13px;
     font-weight: 400;
   }
   .avatarImage {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .searchBox {
+    width: 290px;
+  }
+  .offerBox p {
   }
 }
 /*header style end*/
@@ -359,6 +415,9 @@ label {
   .sideBar {
     width: 10%;
   }
+  .accordion-button {
+    display: none !important;
+  }
 }
 @media (max-width: 768px) {
   .AccordionSideBarList .AccordionSideBarListItem {
@@ -374,6 +433,9 @@ label {
   }
   .sideBar {
     width: 10%;
+  }
+  .accordion-button {
+    display: none !important;
   }
 }
 /* sideBar style end*/
@@ -450,21 +512,24 @@ label {
   position: static;
   z-index: 1000000;
 }
-.titleHeaderp h4 {
+.titleHeaderp h2 {
   font-size: 20px;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 32px;
 }
 @media (max-width: 576px) {
   .titleHeaderp {
-    width: 70%;
-    margin-left: 30%;
+    width: 100% !important;
   }
 }
 @media (max-width: 576px) {
   .titleHeaderp {
-    width: 70%;
-    margin-left: 30%;
+    width: 100%;
+  }
+}
+@media (max-width: 999px) {
+  .titleHeaderp {
+    width: 100%;
   }
 }
 /* titleHeader style end*/
@@ -1216,8 +1281,7 @@ tr td div .orderImage img {
   font-weight: 600;
   line-height: 30px;
 }
-.productReview {
-}
+
 .productReview p,
 .stockBox .stockStatus {
   font-weight: 400;
@@ -1232,11 +1296,9 @@ tr td div .orderImage img {
   color: var(--black-color);
   margin-top: 1.5rem;
 }
-.stockBox {
-}
+
 .statisticOfProduct a {
   color: var(--black-color);
-
   margin-left: 0.4rem;
 }
 .statisticOfProduct hr {
@@ -1259,8 +1321,7 @@ tr td div .orderImage img {
   margin-top: -1rem;
   margin-right: 0.5rem;
 }
-.importsBtns {
-}
+
 .importsBtns button {
   font-size: 14px;
   font-weight: 600;
@@ -1458,8 +1519,7 @@ tr td div .orderImage img {
   .upgradePlanTitle {
     margin-left: -5rem;
   }
-  .plansOptions {
-  }
+
   .plansOptions .planBox {
     margin-left: -5rem;
     margin-right: auto;
@@ -1562,6 +1622,9 @@ tr td div .orderImage img {
 .infoWithForm .PersonalInfo li a.active {
   color: #000;
 }
+.profileForm {
+  margin-bottom: 40px;
+}
 .profileForm .upgradePlanTitle h4 {
   font-size: 16px;
   color: black;
@@ -1624,7 +1687,6 @@ tr td div .orderImage img {
 }
 .plansOptions .planBox .planBoxHeader p {
   font-size: 14px;
-
   font-weight: 400;
   line-height: 20px;
 }
@@ -1635,12 +1697,9 @@ tr td div .orderImage img {
 .upgradeBtn button {
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   width: 100%;
-
   font-size: 14px;
-
   font-weight: 600;
   line-height: 20px;
-
   border-radius: 8px;
   padding: 8px, 14px, 8px, 14px;
 }
@@ -1659,15 +1718,12 @@ tr td div .orderImage img {
 }
 .plansOptions .planBox .planBoxPrice p {
   font-size: 16px;
-
   font-weight: 400;
   line-height: 24px;
 }
 .plansOptions .planBox .planBoxPrice p span {
   font-size: 36px;
-
   font-weight: 500;
-
   letter-spacing: -0.72px;
 }
 .plansOptions .planBox .planBoxFeatures {
@@ -2336,6 +2392,62 @@ td.expiryDate {
 }
 .cancelAndInviteBox {
   margin-top: 14rem;
+}
+.dsNinjaHead {
+  margin-bottom: 1rem;
+}
+.dsNinjaContainer .generalOrderItem {
+  margin-bottom: 1rem;
+}
+.warningBox {
+  padding: 8px 10px 8px 8px;
+  background-color: var(--white-color);
+}
+.helpIconBox {
+  margin-right: 1rem;
+}
+.productCostBox {
+  width: 55%;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  margin-top: 2rem;
+}
+.productCostBox .productCostBoxItem .productItemCost,
+.productItemInput,
+.productItemPrice {
+  padding: 16px 20px;
+  text-align: center;
+}
+.productCostBoxItem {
+  border-bottom: 1px solid #eaecf0;
+}
+.productCostBox .productCostBoxItem div p {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #101828 !important;
+}
+.assignBoxContainer {
+  width: 63%;
+}
+.assignBoxContainer .assignBox {
+  width: 47%;
+}
+.assignBoxContainer .assignBox .assignBoxLeft {
+  margin-bottom: 1rem;
+}
+.assignBoxContainer .assignBox .assignBoxLeft input {
+  margin-right: 15px;
+}
+.assignBoxContainer .assignBox .assignBoxLeft p {
+  font-size: 16px !important;
+  color: #344054;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  margin: 0;
 }
 /*setting style end */
 

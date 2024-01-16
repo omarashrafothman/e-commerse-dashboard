@@ -10,7 +10,7 @@ function Header() {
         <div className="headerContainer d-flex justify-content-between">
           <div className="navBarLogo">
             <Link href="/dashboard">
-              <Image src={logo} />
+              <Image src={logo} alt="logo" />
             </Link>
           </div>
           <div className="searchBox">
@@ -65,7 +65,7 @@ function Header() {
             </Link>
             <Link href="/profile">
               <span className="infoItem imageItem">
-                <Image src={person} className="avatarImage" />
+                <Image src={person} className="avatarImage" alt="avatar" />
               </span>
             </Link>
           </div>

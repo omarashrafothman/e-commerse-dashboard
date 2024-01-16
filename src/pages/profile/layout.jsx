@@ -3,7 +3,7 @@ import cover from "../../assets/images/webp/profileCover.webp";
 import profileImage from "../../assets/images/webp/379858993_1077203513297084_7070056361759594293_n-removebg-preview (1).webp";
 import userPlus from "../../assets/icons/user-plus.png";
 import Link from "next/link";
-
+import { useEffect } from "react";
 import { useFormik } from "formik";
 import { useRouter } from "next/router";
 
@@ -18,7 +18,9 @@ const Layout = ({ children }) => {
     { name: "Deactive account", to: "/profile/deactivateaccount" },
   ];
   const route = useRouter();
-
+  useEffect(() => {
+    document.title = "Profile";
+  }, []);
   const formik = useFormik({
     initialValues: { bio: [] },
   });
@@ -52,7 +54,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
 
-        <div className="infoWithForm d-flex">
+        <div className="infoWithForm d-flex ">
           <div className="PersonalInfo">
             <ul>
               {ProfileNavigation.map((item) => {
