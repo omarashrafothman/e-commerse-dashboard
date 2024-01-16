@@ -7,6 +7,14 @@ import Link from "next/link";
 import { object, string } from "yup";
 import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 export default function ResetPassword() {
   const formik = useFormik({
     enableReinitialize: true,

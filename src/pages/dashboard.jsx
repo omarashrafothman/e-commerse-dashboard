@@ -6,10 +6,18 @@ import Example from "@/components/charts/DashboardChart";
 import Input from "@/components/inputs/Input";
 import { useEffect } from "react";
 
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+
 export default function dashboard() {
   useEffect(() => {
     document.title = "Dashboard";
   }, []);
+
   return (
     <div className="main">
       <div className="container3">

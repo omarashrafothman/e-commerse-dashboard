@@ -5,6 +5,14 @@ import arrowLeft from "../../assets/icons/arrow-left black.png";
 import arrowRight from "../../assets/icons/arrow-right black.png";
 import Link from "next/link";
 import { NavLink } from "react-bootstrap";
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 function BillingHistory() {
   return (
     <ProfileLayout>

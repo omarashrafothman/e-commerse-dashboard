@@ -3,10 +3,17 @@ import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Input from "@/components/inputs/Input";
 import dolarSign from "../assets/icons/dollar-sign.png";
 import help from "../assets/icons/help-circle (1).png";
-
 import alert from "../assets/icons/alert-circle.png";
 import { useEffect } from "react";
 import InboxItem from "@/components/inboxitem/InboxItem";
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 function inbox() {
   useEffect(() => {
     document.title = "Inbox";

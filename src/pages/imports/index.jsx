@@ -4,9 +4,15 @@ import Input from "@/components/inputs/Input";
 import Product from "@/components/product/Product";
 import NavigationFooter from "@/components/navFooter/NavigationFooter";
 import products from "../../local-json/products.json";
-
 import { useEffect } from "react";
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
 
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 function index() {
   useEffect(() => {
     document.title = "Imports";

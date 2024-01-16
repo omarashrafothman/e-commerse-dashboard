@@ -7,7 +7,14 @@ import { useRouter } from "next/router";
 import PhoneNumberInput from "@/components/phoneNumberInput/PhoneNumberInput";
 import plus from "../../../assets/icons/plus.png";
 import TextEditor from "@/components/textEditor/TextEditor";
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
 
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 function Suppliersetting() {
   const route = useRouter();
   return (

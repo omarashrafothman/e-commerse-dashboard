@@ -3,6 +3,14 @@ import Image from "next/image";
 import logo from "../../assets/images/logo.png";
 import { useEffect } from "react";
 import Link from "next/link";
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 export default function Success() {
   useEffect(() => {
     document.title = "Success";

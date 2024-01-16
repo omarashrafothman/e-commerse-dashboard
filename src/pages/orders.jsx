@@ -4,8 +4,17 @@ import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Input from "../components/inputs/Input";
 import Image from "next/image";
 import OrderBox from "@/components/orderBox/orderBox";
-
 import { useState, useEffect } from "react";
+
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
+
 export default function orders() {
   const [allSelected, setAllSelected] = useState(false);
   useEffect(() => {

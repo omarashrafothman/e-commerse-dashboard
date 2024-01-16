@@ -1,11 +1,17 @@
 import "@/styles/Home.module.css";
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/js/bootstrap.bundle";
 import MainLayout from "@/layout/MainLayout";
-import { useEffect } from "react";
-export const runtime = "edge";
-// import "bootstrap/dist/js/bootstrap.js";
+
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
+
 export const metadata = {
   icons: {
     icon: ["../assets/images/logo.png"],

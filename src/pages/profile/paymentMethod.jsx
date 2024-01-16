@@ -1,7 +1,14 @@
 import ProfileLayout from "./layout";
 import Image from "next/image";
 import masterCard from "../../assets/images/mastercard.png";
+// edge  start
+export const runtime = "edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
 
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 function paymentMethod() {
   return (
     <ProfileLayout>
