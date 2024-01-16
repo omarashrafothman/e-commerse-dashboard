@@ -79,23 +79,7 @@ function index() {
           </form>
         </div>
         <div className="profileForm w-100">
-          <form>
-            <div class="input-group mb-3 d-flex flex-column">
-              <label>username</label>
-              <div className="d-flex">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">
-                    untitledui.com/
-                  </span>
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Username"
-                />
-              </div>
-            </div>
-          </form>
+          <form></form>
         </div>
       </div>
     </ProfileLayout>
