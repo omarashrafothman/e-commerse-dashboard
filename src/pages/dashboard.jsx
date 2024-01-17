@@ -6,7 +6,7 @@ import Example from "@/components/charts/DashboardChart";
 import Input from "@/components/inputs/Input";
 import { useEffect } from "react";
 
-export const runtime = "edge"; // 'nodejs' is the default
+export const runtime = "experimental-edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request
 
 export function GET(request) {
@@ -19,7 +19,7 @@ export default function dashboard() {
   }, []);
 
   return (
-    <div className="main">
+    <div className="main grayBgColor">
       <div className="container3">
         <TitleHeader title={"Dashboard"} />
         <div className="container1">

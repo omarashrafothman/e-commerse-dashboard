@@ -5,7 +5,7 @@ import StarRating from "../starRating/StarRating";
 import Link from "next/link";
 import editIcon from "../../assets/icons/editIcon.png";
 import trashIcon from "../../assets/icons/trashIcon.png";
-import CartIcon from "../../assets/icons/cartIcon.png";
+
 import shareIcon from "../../assets/icons/shareIcon.png";
 import tagIcon from "../../assets/icons/tagIcon.png";
 

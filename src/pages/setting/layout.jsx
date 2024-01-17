@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
   ];
 
   return (
-    <div className="main">
+    <div className="main grayBgColor">
       <div className="container3">
         <TitleHeader title={"Setting"} />
         <div className="container1">

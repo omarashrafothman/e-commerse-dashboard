@@ -111,13 +111,16 @@ p.warning {
 .main {
   width: 100%;
   min-height: 100vh;
-  background-color: #f4f9f8;
+
   display: flex;
   justify-content: end;
 }
+.grayBgColor {
+  background-color: #f4f9f8 !important;
+}
 .container1 {
   flex-basis: 100%;
-  padding: 0 42px;
+  padding: 0 22px;
 }
 .container2 {
   flex-basis: 83%;
@@ -2450,7 +2453,202 @@ td.expiryDate {
   margin: 0;
 }
 /*setting style end */
+/***********************************************************************************************************************************************/
+/*tracking style start*/
 
+.shipmentsBox {
+  background-color: var(--white-color);
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #eaecf0;
+}
+.shipmentsBox .TotalShipments {
+}
+.shipmentsBox .TotalShipments h5,
+.shipmentsBox .TotalShipments p {
+  color: #000 !important;
+
+  font-size: 16px !important;
+
+  font-weight: 600 !important;
+  line-height: 24px !important;
+}
+.shipmentsBox .statusBox {
+  margin-bottom: 0.5rem;
+}
+.statusBox {
+  display: flex;
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4fffd !important;
+  border-radius: 9999px;
+}
+.statusBox p {
+  text-align: center !important;
+  margin: 0;
+  font-size: 12px !important;
+  text-transform: capitalize;
+  font-weight: 500 !important;
+  line-height: 18px 1;
+}
+.statusBox.success {
+  color: #5dbeaa !important;
+}
+.statusBox.pickup {
+  color: #175cd3 !important;
+}
+.statusBox.danger {
+  color: var(--danger-color) !important;
+}
+.statusBox.gray2 {
+  background: #f2f4f7 !important;
+  color: #344054 !important;
+}
+.shipmentsItemPercentage p,
+.shipmentsItemCount p {
+  color: #000 !important;
+
+  font-size: 14px !important;
+
+  font-weight: 500 !important;
+  line-height: 20px !important;
+}
+.trackingContainer {
+  background-color: var(--white-color);
+  border-radius: 4px;
+  border: 1px solid #eaecf0;
+  padding: 0px 24px 24px 24px;
+  margin-top: 16px;
+}
+.trackingOrdersContainer {
+  margin-top: 20px;
+}
+.trackingOrdersBox {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f4f7;
+  padding: 20px 0;
+
+  align-self: stretch;
+}
+.trachingFirstDetail {
+}
+.trachingFirstDetail p {
+  color: #000;
+
+  font-size: 12px !important;
+
+  font-weight: 400 !important;
+  line-height: 18px !important;
+  margin: 0;
+}
+.trachingFirstDetail img {
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+}
+.trachingSecondDetail p {
+  margin: 0;
+}
+.trachingSecondDetail {
+}
+.trachingSecondDetail .topBox div {
+  margin: 0 1rem;
+}
+.trachingSecondDetail .topBox p.num {
+  text-decoration: underline;
+}
+.trachingSecondDetail .moreDetail {
+  color: #000;
+
+  font-size: 14px !important;
+
+  font-weight: 500 !important;
+  line-height: 20px !important;
+}
+.trachingSecondDetail span {
+  margin-right: 1rem;
+}
+.trachingSecondDetail span p {
+  margin: 0 !important;
+}
+.trachingSecondDetail span a {
+  color: #000;
+
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 400;
+}
+.trachingSecondDetail span a.two {
+  text-decoration-line: underline;
+}
+.trachingFourthDetail h5 {
+  color: var(--Black, #000);
+
+  font-size: 14px;
+
+  font-weight: 500;
+  line-height: 20px;
+}
+.backLink {
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d0d5dd;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.orderNumber {
+  margin-top: 24px;
+  background-color: #f9fafb;
+
+  padding: 16px 0;
+}
+.orderNumber p {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 16px !important;
+
+  font-weight: 400 !important;
+  line-height: 24px !important;
+}
+.orderId {
+  margin: 0.5rem 0 1rem 0;
+}
+.orderId p {
+  font-size: 16px !important;
+
+  font-weight: 500 !important;
+  line-height: 24px !important;
+}
+.orderId span {
+  color: var(--btn-bg);
+}
+.setTrackingStatus div {
+  width: 7rem;
+}
+.setTrackingStatus p {
+  font-weight: 500 !important;
+  line-height: 20px !important;
+}
+.setTrackingStatus div select {
+  background-color: #f9fafb;
+  color: #475467;
+  margin-left: 1rem;
+}
+.orderTrackingStatusDiagram {
+  border-radius: 4px;
+  padding: 20px 24px;
+  border: 1px solid #eaecf0;
+  background: #fcfcfd;
+  margin-top: 2rem;
+}
+/*tracking style end*/
+/***********************************************************************************************************************************************/
 .btnWithIcon button {
   background-color: var(--white-color);
   color: var(--black-color);

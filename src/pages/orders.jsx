@@ -21,7 +21,7 @@ export default function orders() {
     document.title = "Orders";
   }, []);
   return (
-    <div className="main">
+    <div className="main grayBgColor">
       <div className="container3">
         <TitleHeader title={"Orders"} />
         <div className="container1">
