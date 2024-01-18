@@ -245,6 +245,8 @@ input[type="checkbox"]:checked::before {
   }
   .container3 {
     flex-basis: 100%;
+
+    width: 20%;
   }
   .tablesContainer {
     width: 100% !important;
@@ -262,11 +264,26 @@ input[type="checkbox"]:checked::before {
   .container2 {
     flex-basis: 100%;
   }
+  .container3 {
+    width: 20%;
+  }
 }
 @media (max-width: 999px) {
   .main {
   }
   .container1 {
+  }
+  .container3 {
+    width: 20%;
+  }
+}
+@media (max-width: 1600px) {
+  .main {
+  }
+  .container1 {
+  }
+  .container3 {
+    width: 20%;
   }
 }
 /*main style end*/
@@ -2708,6 +2725,79 @@ td.expiryDate {
 }
 .ablNotification p a {
   color: #000;
+}
+@media (max-width: 576px) {
+  .originCountry {
+    width: 100%;
+  }
+  .originStatus {
+    width: 100%;
+  }
+  .originStatus span p {
+    font-size: 14px !important;
+
+    font-weight: 400 !important;
+    line-height: 20px !important;
+  }
+  .orderTrackingStatusDiagram p {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .originCountry {
+    width: 100%;
+  }
+  .originStatus {
+    width: 100%;
+  }
+  .originStatus span p {
+    font-size: 16px;
+
+    font-weight: 400 !important;
+    line-height: 20px !important;
+  }
+  .orderTrackingStatusDiagram p {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 999px) {
+  .originCountry {
+    width: 100%;
+  }
+  .originStatus {
+    width: 100%;
+  }
+  .originStatus span p {
+    font-size: 16px;
+
+    font-weight: 400 !important;
+    line-height: 20px !important;
+  }
+  .orderTrackingStatusDiagram p {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 999px) {
+  .originCountry {
+    width: 100%;
+  }
+  .originStatus {
+    width: 100%;
+  }
+  .originStatus span p {
+    font-size: 16px;
+  }
+  .orderTrackingStatusDiagram p {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 1600px) {
+  .originCountry {
+    width: 100%;
+  }
+  .originStatus {
+    width: 100%;
+  }
 }
 
 /*tracking style end*/
