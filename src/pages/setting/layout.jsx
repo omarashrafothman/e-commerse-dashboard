@@ -1,6 +1,7 @@
 import TitleHeader from "@/components/titleHeader/TitleHeader";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 // edge  start
 export const runtime = "edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request

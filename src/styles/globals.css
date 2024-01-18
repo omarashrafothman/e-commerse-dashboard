@@ -2647,6 +2647,69 @@ td.expiryDate {
   background: #fcfcfd;
   margin-top: 2rem;
 }
+.orderTrackingStatusDiagram p {
+  font-size: 12px !important;
+
+  font-weight: 500 !important;
+  line-height: 18px !important;
+}
+.orderStutsWhen {
+  background-color: #f2f4f7;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.orderTrackingStatusDiagramItem {
+  position: relative;
+}
+.loaded {
+  width: 330px;
+  height: 1px;
+  background-color: #eaecf0;
+}
+.loaded.ok {
+  background-color: #389f8a !important;
+}
+
+.originCountry {
+  border-radius: 8px;
+  border: 1px solid #eaecf0;
+  background: #fcfcfd;
+  margin: 60px 0 15px 0;
+  padding: 20px;
+  width: 50%;
+}
+.originCountry h4 {
+  margin-bottom: 20px;
+
+  font-size: 18px !important;
+
+  font-weight: 500 !important;
+  line-height: 28px !important;
+}
+.originStatus {
+  width: 80%;
+  margin-bottom: 1rem;
+}
+.originStatus span p {
+  font-size: 16px !important;
+  color: #475467;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+}
+.originStatus span p.arrive {
+  color: #000 !important;
+}
+.ablNotification p {
+  font-size: 16px !important;
+
+  font-weight: 400 !important;
+  line-height: 24px !important;
+}
+.ablNotification p a {
+  color: #000;
+}
+
 /*tracking style end*/
 /***********************************************************************************************************************************************/
 .btnWithIcon button {
