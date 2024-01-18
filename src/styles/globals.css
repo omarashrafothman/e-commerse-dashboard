@@ -2777,7 +2777,7 @@ td.expiryDate {
 }
 @media (max-width: 999px) {
   .originCountry {
-    width: 100%;
+    width: 100% !important;
   }
   .originStatus {
     width: 100%;
@@ -2791,7 +2791,7 @@ td.expiryDate {
 }
 @media (max-width: 1600px) {
   .originCountry {
-    width: 100%;
+    width: 50%;
   }
   .originStatus {
     width: 100%;
