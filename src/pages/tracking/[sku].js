@@ -4,6 +4,16 @@ import Link from "next/link";
 import arrowLeft from "../../assets/icons/arrow-left black.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
+
+// edge  start
+export const runtime = "experimental-edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
+
 function TrackingItem({ id }) {
   const router = useRouter();
   const [orderd, setOrderd] = useState(true);
