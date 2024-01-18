@@ -22,9 +22,9 @@ export default function orders() {
   }, []);
   return (
     <div className="main grayBgColor">
-      <div className="container3">
+      <div className="container3 ">
         <TitleHeader title={"Orders"} />
-        <div className="container1">
+        <div className="container1 ">
           <div className="mainContent">
             <div className="orderBigWidget d-flex align-items-center  justify-content-between">
               <div className="orderBigWidgetText d-flex align-items-center flex-wrap">
