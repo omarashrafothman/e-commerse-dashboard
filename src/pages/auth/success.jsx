@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo.png";
 import { useEffect } from "react";
 import Link from "next/link";
 // edge  start
-export const runtime = "edge"; // 'nodejs' is the default
+export const runtime = "experimental-edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request
 
 export function GET(request) {

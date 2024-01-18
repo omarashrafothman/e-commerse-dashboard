@@ -5,6 +5,11 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+
+  experimental: {
+    reactRoot: true,
+    edge: true,
+  },
 };
 
 module.exports = nextConfig;

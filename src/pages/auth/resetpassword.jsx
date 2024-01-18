@@ -8,7 +8,7 @@ import { object, string } from "yup";
 import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
 // edge  start
-export const runtime = "edge"; // 'nodejs' is the default
+export const runtime = "experimental-edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request
 
 export function GET(request) {
