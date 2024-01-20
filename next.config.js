@@ -8,7 +8,7 @@ const nextConfig = {
 
   experimental: {
     reactRoot: true,
-    edge: true,
+    experimental: true,
   },
 };
 

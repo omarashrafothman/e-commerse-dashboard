@@ -7,7 +7,7 @@ import orders from "../../assets/icons/Orders.png";
 import products from "../../assets/icons/Products.png";
 import tracking from "../../assets/icons/Group.png";
 import Link from "next/link";
-import { NavLink } from "react-bootstrap";
+
 import { useRouter } from "next/router";
 
 function AccordionSideBar() {
@@ -18,7 +18,7 @@ function AccordionSideBar() {
     { name: "imports", to: "/imports", imageSrc: imports },
     { name: "products", to: "/products", imageSrc: products },
   ];
-  console.log(navigation.imageSrc);
+
   const route = useRouter();
 
   const [isActive, setIsactive] = useState(false);
@@ -34,7 +34,7 @@ function AccordionSideBar() {
                   <Link href={item.to} key={item.name}>
                     <li
                       className={
-                        route.pathname === item.to
+                        route.pathname.split("/")[1] === item.name
                           ? "AccordionSideBarListItem active"
                           : "AccordionSideBarListItem"
                       }
