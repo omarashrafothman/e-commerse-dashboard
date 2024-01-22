@@ -83,12 +83,9 @@ p.warning {
   border-color: #bcfff1 !important;
   box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
 }
-.phoneNumberInbutBox .PhoneInputCountrySelect {
-}
 
 .phoneNumberInbutBox input {
   width: 320px;
-
   border: 1px solid #d0d5dd;
   background: #fff;
   border-left: 0;
@@ -106,12 +103,10 @@ p.warning {
   border-color: #bcfff1 !important;
   box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
 }
-
 /*main style start*/
 .main {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   justify-content: end;
 }
@@ -124,16 +119,13 @@ p.warning {
 }
 .container2 {
   flex-basis: 83%;
-
   background-color: #fff;
 }
-
 @media (max-width: 765px) {
   .container3 {
     flex-basis: 100% !important;
   }
 }
-
 .container3 {
   flex-basis: 83%;
 }
@@ -166,15 +158,18 @@ input[type="checkbox"]:checked {
 .input-group-prepend {
   margin-bottom: 10px;
 }
-.input-group-prepend label {
+.input-group-prepend label,
+.form-group label {
   font-size: 14px;
   color: #344054;
   font-weight: 500;
   line-height: 20px;
+  margin-bottom: 0.2rem;
 }
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="number"],
 textarea,
 select {
   padding: 7px 14px;
@@ -186,6 +181,9 @@ select {
   font-weight: 400;
   color: #667085;
   width: 100%;
+}
+.form-select {
+  border-radius: 8px !important;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -227,7 +225,20 @@ input[type="checkbox"]:checked::before {
   color: #667085 !important;
   padding: 10px 12px 10px 14px;
 }
-
+.dataWithImage input {
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+.dataWithImage label {
+  width: 40px;
+  height: 40px;
+}
+.dataWithImage label img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
 /*global inputs style end*/
 
 @media (max-width: 576px) {
@@ -746,25 +757,20 @@ p.forgetpassworddescription {
 /*login style END*/
 
 /* input style start*/
-.mainInput {
-}
+
 .mainInput label {
   font-size: 14px;
-
   font-weight: 500;
   line-height: 20px;
 }
-
 /* input style end*/
 /* mainbutton style end*/
-
 .mainButton {
   font-size: 16px;
   color: #fff;
   font-weight: 600;
   line-height: 24px;
 }
-
 /* mainbutton style end*/
 
 /* orderPage style start*/
@@ -774,7 +780,6 @@ p.forgetpassworddescription {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-
   color: var(--white-color);
   border-radius: 7px;
   margin-top: -1rem;
@@ -795,7 +800,6 @@ p.forgetpassworddescription {
 }
 .orderBigWidgetTextMain p {
   font-size: 17px;
-
   font-weight: 400;
   line-height: 18px;
 }
@@ -1375,7 +1379,6 @@ tr td div .orderImage img {
 }
 .productBrand h5 {
   font-size: 16px;
-
   font-weight: 500;
   line-height: 20px;
   margin-right: 1rem;
@@ -2337,7 +2340,7 @@ table th:first-child {
   border-radius: 8px 0 0 0;
   -moz-border-radius: 8px 0 0 0;
   -webkit-border-radius: 8px 0 0 0;
-  padding: 13px 24px 13px 50px !important;
+  padding: 13px 24px 13px 50px;
 }
 .accesstokenStatusSuccess {
   color: #12b76a;
@@ -3027,6 +3030,310 @@ button.deleteVariant:hover {
   color: var(--danger-color) !important;
 }
 /*productpage style end*/
+/* edit product start */
+.leftRightBtnBox :first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.leftRightBtnBox :last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.leftRightBtnBox button a p {
+  margin-right: 1rem;
+}
+.productUpdateBox {
+  margin-top: 40px;
+}
+.productUpdateBox .editProductImage {
+  width: 190px;
+  height: 190px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.productUpdateBox .editProductImage img {
+  width: 100%;
+  border-radius: 10px;
+}
+.productUpdateBox .editProductForm {
+  width: 83%;
+}
+.productUpdateBox .editProductForm form {
+  width: 80%;
+  margin-bottom: 3rem;
+}
+.otherInputsForUpdate .inputItem {
+  width: 45%;
+}
+.otherInputsForUpdate .inputItem .form-select {
+  padding: 10px 0px 10px 14px !important;
+  margin-top: 1rem;
+}
+
+.selecAllOrNone .allNoneBox {
+  border-radius: 8px;
+  border: 1px solid #f4fffd;
+  background: #f4fffd;
+  padding: 8px 14px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  margin-right: 1rem;
+}
+.selecAllOrNone .allNoneBox input {
+  margin-right: 0.5rem;
+  outline: #5dbeaa;
+}
+.selecAllOrNone .allNoneBox label {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  color: #5dbeaa;
+}
+.variantTableHead table th:first-child {
+  padding: 13px 24px 13px 30px !important;
+}
+td p.profit {
+  color: var(--btn-bg);
+}
+td p {
+  margin: 0;
+}
+
+.autoUpdate .generalOrderItem {
+  margin: 1rem 0 0 0;
+}
+.productGallery {
+  width: 100%;
+}
+.productGalleryImage {
+  width: 19%;
+  min-height: 150px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.productGalleryImage .selectedFlag {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 500;
+  display: none;
+}
+
+.productGalleryImage input {
+  padding: 0;
+  border: none;
+  outline: none;
+  border-color: #fff;
+}
+.productGalleryImage label {
+  padding: 0;
+  width: 100%;
+  background-color: #fff !important;
+}
+.btn-check:checked + .btn {
+  border-color: transparent !important;
+}
+
+.btn-check:checked + .btn img {
+}
+.productGalleryImage img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.btn-check:checked + .btn .blurBox,
+.btn-check:checked + .btn .selectedFlag {
+  display: block;
+}
+.productGalleryImage .blurBox {
+  width: 100%;
+  height: 100%;
+  background-color: #00000077;
+  display: none;
+  position: absolute;
+  z-index: 501;
+  border-radius: 8px;
+}
+.paymenFeature {
+  border-radius: 50%;
+  border-radius: 28px;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 8px solid #f4fffd;
+  background: #e9fffa;
+}
+.shippingMethods p {
+  color: #667085;
+  margin: 0 !important;
+  font-weight: 400 !important;
+}
+.shippingDataBodyItem {
+  margin-bottom: 1rem;
+}
+.shippingBtns {
+  display: flex;
+  justify-content: end;
+  margin-top: 18rem;
+}
+.numberOfItems {
+  background-color: #f2f4f7;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 2px 10px;
+}
+.numberOfItems p {
+  margin: 0 0.5rem 0 0 !important;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 567px) {
+  .productUpdateBox {
+    flex-wrap: wrap;
+  }
+  .productUpdateBox .editProductImage {
+    width: 100%;
+    height: 15rem;
+    margin-right: -1rem !important;
+  }
+  .productUpdateBox .editProductImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .productUpdateBox .editProductForm {
+    width: 100%;
+  }
+
+  .productUpdateBox .editProductForm form {
+    width: 100%;
+  }
+  .otherInputsForUpdate .inputItem {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .editProductNavigationBtns .leftRightBtnBox button {
+    width: 25% !important;
+    padding: 10px 10px !important;
+  }
+  .editProductNavigationBtns .leftRightBtnBox button a {
+    font-size: 12px !important;
+    text-align: center;
+  }
+  .editProductNavigationSelect {
+    width: 100%;
+  }
+  .editProductNavigationSelect .selectBox {
+    width: 50%;
+  }
+  .productGalleryImage {
+    width: 49% !important;
+  }
+}
+
+@media (max-width: 786px) {
+  .productUpdateBox {
+    flex-wrap: wrap;
+  }
+  .productUpdateBox .editProductImage {
+    width: 100%;
+    height: 15rem;
+    margin-right: -1rem !important;
+  }
+  .productUpdateBox .editProductImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .productUpdateBox .editProductForm {
+    width: 100%;
+  }
+
+  .productUpdateBox .editProductForm form {
+    width: 100%;
+  }
+  .otherInputsForUpdate .inputItem {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .editProductNavigationBtns .leftRightBtnBox button {
+    width: 25%;
+  }
+  .editProductNavigationBtns .leftRightBtnBox button a {
+    font-size: 14px;
+    text-align: center;
+  }
+  .editProductNavigationSelect {
+    width: 100%;
+  }
+  .editProductNavigationSelect .selectBox {
+    width: 50%;
+  }
+  .productGalleryImage {
+    width: 32%;
+  }
+}
+
+@media (max-width: 999px) {
+  .productUpdateBox {
+    flex-wrap: wrap;
+  }
+  .productUpdateBox .editProductImage {
+    width: 100%;
+    height: 20rem;
+    margin-right: -1rem !important;
+  }
+  .productUpdateBox .editProductImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .productUpdateBox .editProductForm {
+    width: 100%;
+  }
+
+  .productUpdateBox .editProductForm form {
+    width: 100%;
+  }
+  .otherInputsForUpdate .inputItem {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .editProductNavigationBtns .leftRightBtnBox button {
+    width: 25%;
+  }
+  .editProductNavigationBtns .leftRightBtnBox button a {
+    font-size: 14px;
+    text-align: center;
+  }
+  .editProductNavigationSelect {
+    width: 100%;
+  }
+  .editProductNavigationSelect .selectBox {
+    width: 50%;
+  }
+  .productGalleryImage {
+    width: 24%;
+  }
+}
+@media (max-width: 1500px) {
+  .productUpdateBox .editProductImage {
+    margin-right: 1rem;
+  }
+}
+/* edit product  end */
 
 /***********************************************************************************************************************************************/
 .btnWithIcon button {

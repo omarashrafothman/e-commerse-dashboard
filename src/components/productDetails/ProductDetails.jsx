@@ -11,11 +11,12 @@ import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import productImage from "../../assets/icons/Featured icon.png";
 
-export default function ProductDetails({ paramsId }) {
+export default function ProductDetails({ paramsId, segment }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  var link = "/imports/" + segment + "/editproduct";
   return (
     <div>
       <div className="main">
@@ -138,9 +139,11 @@ export default function ProductDetails({ paramsId }) {
                         <p>Imported to store</p>
                       </div>
                       <div className="importsBtns d-flex">
-                        <button className="editBtn btn">
-                          Edit on import list
-                        </button>
+                        <Link href={link}>
+                          <button className="editBtn btn">
+                            Edit on import list
+                          </button>
+                        </Link>
                         <button className="removeBtn btn">
                           <Image src={close} />
                           Remove import list

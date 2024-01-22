@@ -18,7 +18,7 @@ function Index() {
                 : "leftBtn"
             }
           >
-            <Link href="/setting/suppliers/suppliersetting/">Setting</Link>
+            <Link href="/setting/suppliers/suppliersetting">Setting</Link>
           </button>
           <button
             className={

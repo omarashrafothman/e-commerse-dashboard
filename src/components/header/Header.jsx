@@ -17,7 +17,7 @@ function Header() {
             <div class="input-group">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="basic-addon2"
