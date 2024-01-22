@@ -2621,8 +2621,7 @@ td.expiryDate {
   height: 2.5rem;
 }
 .orderNumber {
-  margin-top: 24px;
-  background-color: #f9fafb;
+  margin-top: 10px;
 
   padding: 16px 0;
 }

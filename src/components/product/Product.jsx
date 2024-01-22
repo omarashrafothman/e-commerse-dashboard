@@ -56,7 +56,7 @@ export default function Product({
             </svg>
           </Link>
         </div>
-        <div className="saleBox">
+        <div className="saleBox d-flex align-items-center justify-content-center ">
           <p>{offerPercent}</p>
         </div>
         <div className="productImage">
