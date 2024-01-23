@@ -70,7 +70,7 @@ export default function ProductDetails({ paramsId, segment }) {
                   <div className="bigMediaBox">
                     <Image src={product} />
                   </div>
-                  <div className="d-flex align-items-center justify-content-evenly  my-4">
+                  <div className="d-flex align-items-center justify-content-evenly flex-wrap  my-4">
                     <span className="smallMediaBox">
                       <Image src={product} />
                     </span>

@@ -351,16 +351,22 @@ input[type="checkbox"]:checked::before {
 
 @media (max-width: 576px) {
   .searchBox {
-    width: 240px !important;
+    width: 190px !important;
   }
   .offerBox p {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
   }
   .avatarImage {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
+  }
+  .headerInfoItem {
+    padding-top: 0.5rem;
+  }
+  .headerInfoItem a {
+    margin: -0.4rem;
   }
 }
 @media (max-width: 768px) {
@@ -439,9 +445,9 @@ input[type="checkbox"]:checked::before {
     display: none;
   }
   .AccordionSideBarList .AccordionSideBarListItem img {
-    width: 1.1rem;
-    height: 1.1rem;
-    margin-left: 1rem !important;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem !important;
   }
   .sideBar {
     width: 10%;
@@ -509,6 +515,10 @@ input[type="checkbox"]:checked::before {
 @media (max-width: 576px) {
   .widgetBox {
     width: 49%;
+  }
+  .widgetBox img {
+    width: 3rem;
+    margin-left: -3rem;
   }
 }
 @media (max-width: 768px) {
@@ -1069,6 +1079,7 @@ tr td div .orderImage img {
   width: 22%;
   background-color: var(--white-color);
   margin-bottom: 3rem;
+  position: relative;
 }
 .productBox a {
   color: black;
@@ -1151,12 +1162,12 @@ tr td div .orderImage img {
   text-align: center;
   transform: rotate(-15deg);
   border-radius: 10px;
-  margin-left: 14.5rem;
-  margin-top: -1.2rem;
+  top: -4%;
+  left: 90%;
 }
 .saleBox p {
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 400 !important;
+  font-size: 16px !important;
 }
 .catIcon {
   position: absolute;
@@ -1177,7 +1188,7 @@ tr td div .orderImage img {
     margin-bottom: 3rem;
   }
   .productBox .saleBox {
-    margin-left: 20rem !important;
+    left: 87%;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -1192,7 +1203,6 @@ tr td div .orderImage img {
     margin-right: auto;
   }
   .productBox .saleBox {
-    margin-left: 20rem;
   }
 }
 @media (max-width: 999px) {
@@ -1203,7 +1213,6 @@ tr td div .orderImage img {
     margin-right: auto;
   }
   .productBox .saleBox {
-    margin-left: 18rem;
   }
 }
 
@@ -1406,8 +1415,10 @@ tr td div .orderImage img {
     width: 100%;
   }
   .productDetailsContainer .productDetailsMedia .bigMediaBox {
-    width: 420px;
-    height: 406px;
+    width: 95%;
+
+    margin-left: auto;
+    margin-right: auto;
   }
   .productDetailsContainer .productDetailsMedia .bigMediaBox img {
     width: 100%;
@@ -1415,6 +1426,9 @@ tr td div .orderImage img {
     margin-left: auto;
     margin-right: auto;
     /* object-fit: cover; */
+  }
+  .smallMediaBox {
+    margin-bottom: 0.7rem;
   }
 }
 @media (max-width: "768px") {

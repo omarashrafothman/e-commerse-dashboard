@@ -2,6 +2,14 @@ import Layout from "./layout";
 import Image from "next/image";
 import productImage from "../../../../assets/images/product.png";
 import Input from "@/components/inputs/Input";
+// edge  start
+export const runtime = "experimental-edge"; // 'nodejs' is the default
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+
+export function GET(request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+}
+// edge  end
 function index() {
   return (
     <Layout>
