@@ -39,24 +39,27 @@ function InboxItem({ statusClases, statusImage, data }) {
               <div>
                 <h3 className="ProductStatisticsHeading">Delete product</h3>
               </div>
-              <div className="my-3">
+              <div className="my-2">
                 <p className="m-0">
                   Are you sure you want to delete product blackhead remover
                   pimple remover tool Skin Tag Nose Cleansing Instrument Vacuum
                   Skin Care Tools black head remover patch from Oberlo?
                 </p>
               </div>
-              <div className=" d-flex align-items-center my-3">
+              <div className=" d-flex align-items-center ">
                 <input
                   className="form-check-input "
                   type="checkbox"
                   id="checkBeforDelete"
                 />
-                <label for="checkBeforDelete " className="mx-2">
+                <label for="checkBeforDelete " className="mx-3">
                   Delete this product from my Shopify store too.
                 </label>
               </div>
             </div>
+
+            <br />
+            <br />
             <div className="d-flex justify-content-end cancelAndDelete">
               <div className="deleteAndEdit d-flex align-items-center">
                 <div className="btnWithIcon  mx-2">

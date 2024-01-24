@@ -14,29 +14,36 @@ export function GET(request) {
 
 function Layout({ children }) {
   const route = useRouter();
+  // const { productId } = route.query;
+
+  // route.push(
+  //   `/imports/[productId]/editproduct/description`,
+  //   `/imports/${route.query}/editproduct/description`
+  // );
 
   const editProductgNavigation = [
-    { name: "Product", to: "/imports/1/editproduct" },
+    { name: "product", to: "/imports/[productId]/editproduct/product" },
     {
-      name: "Description",
-      to: "/imports/1/editproduct/description",
+      name: "description",
+      to: "/imports/[productId]/editproduct/description",
       count: "",
       haveCount: false,
     },
 
     {
-      name: "Variants",
-      to: "/imports/1/editproduct/variants",
+      name: "variants",
+      to: "/imports/[productId]/editproduct/variants",
       count: "5",
       haveCount: true,
     },
     {
-      name: "Images",
-      to: "/imports/1/editproduct/images",
+      name: "images",
+      to: "/imports/[productId]/editproduct/images",
       count: "10",
       haveCount: true,
     },
   ];
+
   return (
     <div className="main">
       <div className="container3 ">
@@ -50,14 +57,19 @@ function Layout({ children }) {
             <div className="editProductNavigationBtns">
               <div className="leftRightBtnBox my-3">
                 {editProductgNavigation.map((item) => (
-                  <button className="">
+                  <button
+                    className={
+                      route.pathname.split("/")[4] === item.name
+                        ? "btnactive"
+                        : ""
+                    }
+                  >
                     <Link
-                      href={item.to}
-                      className="d-flex justify-content-between"
+                      href={`/imports/${route.query}/editproduct/${item.name}`}
+                      className="d-flex justify-content-between itemName"
                     >
                       {item.haveCount ? (
                         <div className="numberOfItems">
-                          {" "}
                           <p className="my-0 ">{item.count}</p>
                         </div>
                       ) : (
