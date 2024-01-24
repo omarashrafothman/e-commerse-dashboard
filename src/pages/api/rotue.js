@@ -6,3 +6,10 @@ export function GET(request) {
   return new Response(`Hello from ${process.env.VERCEL_REGION}`);
 }
 // edge  end
+import React from "react";
+
+function rotue() {
+  return <div></div>;
+}
+
+export default rotue;
