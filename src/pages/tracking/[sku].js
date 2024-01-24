@@ -29,7 +29,7 @@ function TrackingItem({ id }) {
           <Link href="/tracking" className="backLink">
             <Image src={arrowLeft} />
           </Link>
-          <div className="d-flex justify-content-center align-items-center  orderNumber w-100">
+          <div className="d-flex justify-content-center align-items-center  orderNumber ordersNumberBox  w-100">
             <p className="m-0">TRACKING ORDER NO - #{router.query.sku}</p>
           </div>
           <div className="d-flex justify-content-start align-items-center orderId">
@@ -72,7 +72,7 @@ function TrackingItem({ id }) {
               <p className="m-0">Orderd</p>
             </div>
             <span className={orderd ? "loaded ok" : "loaded"}></span>
-            <div className="d-flex flex-column orderTrackingStatusDiagramItem">
+            <div className="d-flex flex-column orderTrackingStatusDiagramItem align-items-center justify-content-center">
               <div className="orderStutsWhen d-flex flex-column justify-content-center align-items-center">
                 <div>
                   <svg
@@ -107,7 +107,7 @@ function TrackingItem({ id }) {
               <p className="m-0">In transit</p>
             </div>
             <span className={inTransit ? "loaded ok" : "loaded"}></span>
-            <div className="d-flex flex-column orderTrackingStatusDiagramItem">
+            <div className="d-flex flex-column orderTrackingStatusDiagramItem align-items-center justify-content-center">
               <div className="orderStutsWhen d-flex flex-column justify-content-center align-items-center">
                 <div>
                   <svg
@@ -130,7 +130,7 @@ function TrackingItem({ id }) {
               <p className="m-0">Pick Up</p>
             </div>
             <span className={Delivered ? "loaded ok" : "loaded"}></span>
-            <div className="d-flex flex-column orderTrackingStatusDiagramItem">
+            <div className="d-flex flex-column orderTrackingStatusDiagramItem align-items-center justify-content-center">
               <div className="orderStutsWhen d-flex flex-column justify-content-center align-items-center">
                 <div>
                   <svg

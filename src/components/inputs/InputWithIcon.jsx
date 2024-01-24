@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 function InputWithIcon({
   type,
@@ -10,25 +9,31 @@ function InputWithIcon({
   change,
   blur,
   classes,
+  accept,
+  id,
   icon,
 }) {
   return (
-    <div class="input-group mb-3 d-flex flex-column">
-      <div class="input-group-prepend">
-        <label for={name}>{label}</label>
-
-        <span class="input-group-text" id="basic-addon1">
-          {icon}
-        </span>
+    <div className="input-group  d-flex flex-column mainInput withIcon">
+      <div className="input-group-prepend ">
+        <label for={id}>{label}</label>
       </div>
-      <input
-        type={type}
-        class={classes}
-        placeholder={holder}
-        aria-describedby="basic-addon1"
-        name={name}
-        value={value}
-      />
+
+      <div>
+        <span className="iconInInput">{icon}</span>
+        <input
+          classes={classes}
+          type={type}
+          name={name}
+          id={id}
+          placeholder={holder}
+          aria-label="Default"
+          value={value}
+          onChange={change}
+          onBlur={blur}
+          accept={accept}
+        />
+      </div>
     </div>
   );
 }

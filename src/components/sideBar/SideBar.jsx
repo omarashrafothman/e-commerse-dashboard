@@ -20,7 +20,7 @@ function SideBar() {
           <Link href="/setting" className="">
             <li className="AccordionSideBarListItem w-100">
               <Image src={setting} />
-              <p>settings</p>
+              <p>Settings</p>
             </li>
           </Link>
         </ul>

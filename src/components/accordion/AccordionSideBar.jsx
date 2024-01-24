@@ -40,7 +40,13 @@ function AccordionSideBar() {
                       }
                     >
                       <Image src={item.imageSrc} />
-                      <p className={route.pathname === item.to ? "active" : ""}>
+                      <p
+                        className={
+                          route.pathname.split("/")[1] === item.name
+                            ? "active"
+                            : ""
+                        }
+                      >
                         {item.name}
                       </p>
                     </li>

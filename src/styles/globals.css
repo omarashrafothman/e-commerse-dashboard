@@ -109,6 +109,13 @@ button:focus {
   -moz-box-shadow: 0px 1px 15px 6px rgba(16, 24, 40, 0.2);
   box-shadow: 0px 1px 15px 6px rgba(16, 24, 40, 0.2);
 }
+/* chart start*/
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line {
+  display: none;
+}
+
+/* chart end*/
 /*main style start*/
 .main {
   width: 100%;
@@ -306,7 +313,48 @@ input[type="checkbox"]:checked::before {
   }
 }
 /*main style end*/
+/*dashboard start*/
+.topItems {
+  margin-top: 1rem;
+  width: 100%;
+}
+.topItem {
+  padding: 0.2rem 0;
+  margin-bottom: 0.5rem;
+}
+.topItem .itemImageBox {
+  width: 30px;
+  height: 30px;
 
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.topItem .itemImageBox img {
+  width: 100% !important;
+  height: 100%;
+}
+.topItem p {
+  font-size: 14px !important;
+  margin: 0;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.itemRightSide {
+  width: 50%;
+
+  justify-content: space-between;
+}
+.itemIncrease {
+  color: #32d583;
+}
+.itemdecrease {
+  color: #ff6161;
+}
+.dashSelect {
+  border: none !important ;
+  outline: none !important ;
+}
+/*dashboard end*/
 /*header style start*/
 .mainHeader {
   position: sticky;
@@ -320,13 +368,29 @@ input[type="checkbox"]:checked::before {
   background-color: var(--white-color);
   padding: 1.5rem 4rem;
 }
+.navBarLogo {
+  padding-top: 0.5rem;
+}
 .headerContainer {
   width: 97%;
   margin-left: auto;
   margin-right: auto;
 }
+.mainHeader .searchBox {
+  margin-top: 0.2rem;
+}
 .searchBox {
   width: 500px;
+  position: relative;
+}
+.searchBox input {
+  padding-left: 2.5rem;
+}
+.searchSvgIcon {
+  position: absolute;
+  top: 10%;
+  left: 14px;
+  z-index: 1000;
 }
 .imageItem {
   width: 5rem;
@@ -366,8 +430,8 @@ input[type="checkbox"]:checked::before {
     font-weight: 400;
   }
   .avatarImage {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
   }
   .headerInfoItem {
@@ -552,19 +616,20 @@ input[type="checkbox"]:checked::before {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--white-color);
-  padding: 0.4rem 1rem;
+  padding: 0.6rem 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #eaecf0;
 
-  top: 14%;
+  top: 13.6%;
   right: 0;
-  position: static;
-  z-index: 1000000;
+  position: sticky;
+  z-index: 1000;
 }
 .titleHeaderp h2 {
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
+  margin: 0;
 }
 @media (max-width: 576px) {
   .titleHeaderp {
@@ -882,15 +947,19 @@ p.forgetpassworddescription {
   border: 1px solid #eaecf0;
   border-radius: 7px;
 }
+.tablesContainer h3 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
 .orderSearchBox {
   width: 100%;
   align-items: center;
 }
-
-.orderSearchBox input {
-  margin-top: -1.2rem;
-  border-radius: 4px !important;
+.orderSearchBox .searchBox {
+  width: 100%;
 }
+
 .orderSearchBox input::placeholder {
   font-size: 15px;
   font-weight: 500;
@@ -901,6 +970,7 @@ p.forgetpassworddescription {
   border: 1px solid #eaecf0;
   background-color: var(--white-color);
   margin-left: 0.5rem;
+  margin-top: 1.4rem;
 }
 .orderSearchBox button:hover {
   background-color: var(--white-color);
@@ -2195,8 +2265,9 @@ input[type="file"] {
   margin-top: 1rem;
 }
 .inboxItemsBox .inboxItem {
-  margin: 24px 0;
+  margin: 12px 0;
 }
+
 .inboxItemsBox .inboxItem .productStatusAndName {
 }
 .inboxItemsBox .inboxItem .productStatusAndName .productStatus {
@@ -2585,15 +2656,18 @@ td.expiryDate {
 }
 .statusBox.success {
   color: #5dbeaa !important;
+  background-color: #ecfdf3 !important;
 }
 .statusBox.pickup {
   color: #175cd3 !important;
+  background-color: #eff8ff !important;
 }
 .statusBox.danger {
   color: var(--danger-color) !important;
+  background-color: #fef3f2 !important;
 }
 .statusBox.gray2 {
-  background: #f2f4f7 !important;
+  background: #f8f9fc !important;
   color: #344054 !important;
 }
 .shipmentsItemPercentage p,
@@ -2618,7 +2692,7 @@ td.expiryDate {
 .trackingOrdersBox {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #f2f4f7;
+
   padding: 20px 0;
 
   align-self: stretch;
@@ -2718,8 +2792,16 @@ td.expiryDate {
 .orderId span {
   color: var(--btn-bg);
 }
+.ordersNumberBox {
+  background-color: #f9fafb !important;
+  border: 1px solid #eaecf0 !important;
+}
 .setTrackingStatus div {
   width: 7rem;
+}
+.setTrackingStatus select {
+  border: none !important;
+  outline: none !important;
 }
 .setTrackingStatus p {
   font-weight: 500 !important;
@@ -2739,9 +2821,10 @@ td.expiryDate {
 }
 .orderTrackingStatusDiagram p {
   font-size: 12px !important;
-
+  margin-top: 0.5rem !important;
   font-weight: 500 !important;
-  line-height: 18px !important;
+  line-height: 23px !important;
+  width: auto;
 }
 .orderStutsWhen {
   background-color: #f2f4f7;
@@ -2755,7 +2838,7 @@ td.expiryDate {
 .loaded {
   width: 330px;
   height: 1px;
-  background-color: #eaecf0;
+  background-color: #f2f4f7;
 }
 .loaded.ok {
   background-color: #389f8a !important;
@@ -2779,11 +2862,12 @@ td.expiryDate {
 }
 .originStatus {
   width: 80%;
-  margin-bottom: 1rem;
+  margin-bottom: 16px !important;
 }
 .originStatus span p {
   font-size: 16px !important;
   color: #475467;
+  margin: 0;
   font-weight: 500 !important;
   line-height: 24px !important;
 }

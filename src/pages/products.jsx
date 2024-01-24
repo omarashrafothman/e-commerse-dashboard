@@ -9,7 +9,7 @@ import info from "../assets/icons/info.png";
 import ProductImage from "../assets/images/product.png";
 import bag from "../assets/icons/icons8-aliexpress 1.png";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import infoCost from "../assets/icons/info (1).png";
 
@@ -23,6 +23,9 @@ export function GET(request) {
 // edge  end
 
 export default function products() {
+  useEffect(() => {
+    document.title = "products";
+  }, []);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

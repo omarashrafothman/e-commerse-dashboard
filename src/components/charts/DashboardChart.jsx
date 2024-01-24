@@ -111,12 +111,7 @@ export default class Example extends PureComponent {
             <XAxis dataKey="name" />
             {/** <YAxis /> */}
             <Tooltip />
-            <Line
-              type="monotone"
-              dataKey="uv"
-              stroke="#8884d8"
-              fill="#8884d8"
-            />
+            <Line type="monotone" dataKey="uv" stroke="#000" />
           </LineChart>
         </ResponsiveContainer>
       </div>
