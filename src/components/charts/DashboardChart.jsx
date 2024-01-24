@@ -94,24 +94,13 @@ export default class Example extends PureComponent {
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <ResponsiveContainer width="100%" height={280}>
-          <LineChart
-            width={500}
-            height={200}
-            data={data}
-            syncId="anyId"
-            margin={{
-              top: 10,
-              right: 30,
-              left: 0,
-              bottom: 0,
-            }}
-          >
+        <ResponsiveContainer width={1200} height={280}>
+          <LineChart width={600} height={200} data={data} syncId="anyId">
             {/** <CartesianGrid strokeDasharray="3 3" /> */}
-            <XAxis dataKey="name" />
-            {/** <YAxis /> */}
+            <XAxis dataKey="name" style={{ backgroundColor: "blue" }} />
+
             <Tooltip />
-            <Line type="monotone" dataKey="uv" stroke="#000" />
+            <Line type="monotone" dataKey="uv" stroke="#000" width={500} />
           </LineChart>
         </ResponsiveContainer>
       </div>
