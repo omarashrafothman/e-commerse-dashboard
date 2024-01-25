@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import PhoneNumberInput from "@/components/phoneNumberInput/PhoneNumberInput";
 import plus from "../../../assets/icons/plus.png";
-import TextEditor from "@/components/textEditor/TextEditor";
+// import TextEditor from "@/components/textEditor/TextEditor";
 
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
@@ -108,9 +108,7 @@ function Suppliersetting() {
             information.
           </p>
         </div>
-        <div className="my-5 w-75">
-          <TextEditor />
-        </div>
+        <div className="my-5 w-75">{/**  <TextEditor /> */}</div>
       </div>
     </Layout>
   );
