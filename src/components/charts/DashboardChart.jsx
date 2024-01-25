@@ -94,10 +94,10 @@ export default class Example extends PureComponent {
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <ResponsiveContainer width={1150} height={280}>
+        <ResponsiveContainer width={"100%"} height={280}>
           <LineChart width={500} height={200} data={data} syncId="anyId">
             {/** <CartesianGrid strokeDasharray="3 3" /> */}
-            <XAxis dataKey="name" style={{ backgroundColor: "blue" }} />
+            <XAxis dataKey="name" />
 
             <Tooltip />
             <Line type="monotone" dataKey="uv" stroke="#000" width={400} />

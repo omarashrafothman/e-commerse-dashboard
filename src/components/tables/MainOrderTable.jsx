@@ -36,12 +36,10 @@ function MainOrderTable({ selected }) {
         <tr>
           <td className="">
             <div className="d-flex align-items-center justify-content-between">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="flexCheckDefault"
-                checked={selected}
-              />
+              <label class="control control-checkbox  ">
+                <input type="checkbox" />
+                <div class="control_indicator"></div>
+              </label>
               <div className="orderImage">
                 <Image src={product} />
               </div>
@@ -76,13 +74,10 @@ function MainOrderTable({ selected }) {
         <tr>
           <td className="">
             <div className="d-flex align-items-center justify-content-between">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value=""
-                checked={selected}
-                id="flexCheckDefault"
-              />
+              <label class="control control-checkbox  ">
+                <input type="checkbox" />
+                <div class="control_indicator"></div>
+              </label>
               <div className="orderImage">
                 <Image src={product} />
               </div>

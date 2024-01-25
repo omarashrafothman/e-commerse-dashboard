@@ -29,17 +29,11 @@ function OrderBox({ selected }) {
       <div className="orderBoxHeading d-flex justify-content-between align-items-center">
         <div className="d-flex orderBoxHeadingLeft  ">
           <div className="ordersNumber">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value=""
-                id="flexCheckDefault"
-              />
-              <label className="form-check-label d-flex" for="flexCheckDefault">
-                <p> Order</p> <span>#1011</span>
-              </label>
-            </div>
+            <label class="control control-checkbox  d-flex align-items-center ">
+              <p className="m-0 mt-1"> Order</p> <span className="">#1011</span>
+              <input type="checkbox" />
+              <div class="control_indicator"></div>
+            </label>
           </div>
           <div className="orderSerial">
             <p> 03. 16.2020</p>

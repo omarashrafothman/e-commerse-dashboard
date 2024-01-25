@@ -20,13 +20,12 @@ function Deactivateaccount() {
         </p>
         <div className="d-flex align-items-center">
           <div>
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="flexCheckDefault"
-            />
+            <label class="control control-checkbox  d-flex align-items-center ">
+              <p className="p2">I confirm my account deactivation</p>
+              <input type="checkbox" />
+              <div class="control_indicator"></div>
+            </label>
           </div>
-          <p className="p2">I confirm my account deactivation</p>
         </div>
         <div className="deleteAndEdit my-3">
           <button className="btn delete">Deactivate account</button>

@@ -315,12 +315,11 @@ function variant() {
             <tr>
               <th scope="col" className="dataWithImage">
                 <div className="d-flex align-items-center">
-                  <input
-                    type="checkbox"
-                    id="productCheck"
-                    className="form-check-input"
-                  />
-                  Use all
+                  <label class="control control-checkbox m-0 ">
+                    Use all
+                    <input type="checkbox" />
+                    <div class="control_indicator"></div>
+                  </label>
                 </div>
               </th>
               <th scope="col">SKU</th>
@@ -338,11 +337,10 @@ function variant() {
             <tr className="w-100">
               <td className="dataWithImage">
                 <div className="d-flex align-items-center">
-                  <input
-                    type="checkbox"
-                    id="productCheck"
-                    className="form-check-input"
-                  />
+                  <label class="control control-checkbox m-0 ">
+                    <input type="checkbox" />
+                    <div class="control_indicator"></div>
+                  </label>
                   <label>
                     <Image src={ProductImage} htmlFor="productCheck" />
                   </label>
@@ -379,11 +377,10 @@ function variant() {
             <tr className="w-100">
               <td className="dataWithImage">
                 <div className="d-flex align-items-center">
-                  <input
-                    type="checkbox"
-                    id="productCheck"
-                    className="form-check-input"
-                  />
+                  <label class="control control-checkbox m-0 ">
+                    <input type="checkbox" />
+                    <div class="control_indicator"></div>
+                  </label>
                   <label>
                     <Image src={ProductImage} htmlFor="productCheck" />
                   </label>
