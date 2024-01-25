@@ -1,4 +1,4 @@
-import TextEditor from "@/components/textEditor/TextEditor";
+// import TextEditor from "@/components/textEditor/TextEditor";
 import Layout from "./layout";
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
@@ -11,10 +11,7 @@ export function GET(request) {
 function Description() {
   return (
     <Layout>
-      <div className="w-75">
-        <TextEditor />
-        {/* */}
-      </div>
+      <div className="w-75">{/* <TextEditor /> */}Description</div>
     </Layout>
   );
 }

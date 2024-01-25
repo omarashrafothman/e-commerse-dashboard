@@ -14,7 +14,7 @@ export function GET(request) {
 
 function Layout({ children }) {
   const route = useRouter();
-  // const { productId } = route.query;
+  const { productId } = route.query;
 
   // route.push(
   //   `/imports/[productId]/editproduct/description`,
@@ -65,7 +65,7 @@ function Layout({ children }) {
                     }
                   >
                     <Link
-                      href={`/imports/${route.query}/editproduct/${item.name}`}
+                      href={`/imports/${productId}/editproduct/${item.name}`}
                       className="d-flex justify-content-between itemName"
                     >
                       {item.haveCount ? (
