@@ -22,23 +22,23 @@ function Layout({ children }) {
   // );
 
   const editProductgNavigation = [
-    { name: "product", to: "/imports/[productId]/editproduct/product" },
+    { name: "product", to: `/imports/${productId}/editproduct` },
     {
       name: "description",
-      to: "/imports/[productId]/editproduct/description",
+      to: `/imports/${productId}/editproduct/description`,
       count: "",
       haveCount: false,
     },
 
     {
       name: "variants",
-      to: "/imports/[productId]/editproduct/variants",
+      to: `/imports/${productId}/editproduct/variants`,
       count: "5",
       haveCount: true,
     },
     {
       name: "images",
-      to: "/imports/[productId]/editproduct/images",
+      to: `/imports/${productId}/editproduct/images`,
       count: "10",
       haveCount: true,
     },
@@ -65,7 +65,7 @@ function Layout({ children }) {
                     }
                   >
                     <Link
-                      href={`/imports/${productId}/editproduct/${item.name}`}
+                      href={item.to}
                       className="d-flex justify-content-between itemName"
                     >
                       {item.haveCount ? (
