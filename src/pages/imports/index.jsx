@@ -25,11 +25,37 @@ function index() {
           <div className="container1">
             <div className="mainContent">
               <div className="orderSearchBox d-flex  align-items-center ">
-                <Input
-                  holder={"Search for orders or products"}
-                  type={"text"}
-                  classes={"form-control"}
-                />
+                <div className="searchBox mt-4 ">
+                  <span className="searchSvgIcon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="16"
+                      viewBox="0 0 15 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.11144 11.0549C8.56604 11.0549 10.5559 9.06506 10.5559 6.61046C10.5559 4.15586 8.56604 2.16602 6.11144 2.16602C3.65684 2.16602 1.66699 4.15586 1.66699 6.61046C1.66699 9.06506 3.65684 11.0549 6.11144 11.0549Z"
+                        stroke="black"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.3332 13.8342L9.44434 9.94531"
+                        stroke="black"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Search for products"
+                    />
+                  </div>
+                </div>
                 <button className="btn">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

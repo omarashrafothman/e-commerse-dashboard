@@ -56,9 +56,27 @@ export default function Product({
             </svg>
           </Link>
         </div>
-        <div className="saleBox d-flex align-items-center justify-content-center ">
+        {/*    <div className="saleBox d-flex align-items-center justify-content-center ">
           <p>{offerPercent}</p>
+        </div> */}
+        <div className="saleBox d-flex align-items-center justify-content-center ">
+          <span className="saleBoxp">
+            <p>12% off</p>
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="45"
+            viewBox="0 0 46 45"
+            fill="none"
+          >
+            <path
+              d="M12.7757 1.87039C13.8326 0.936145 15.1848 0.404152 16.595 0.367841L27.9629 0.0751163C29.373 0.0388059 30.7509 0.500497 31.8544 1.37911L40.7509 8.46199C41.8545 9.3406 42.6132 10.5799 42.8938 11.9624L45.1561 23.1067C45.4367 24.4891 45.2213 25.9262 44.5477 27.1656L39.1173 37.1568C38.4436 38.3962 37.3549 39.3586 36.0422 39.875L25.46 44.0381C24.1473 44.5545 22.6947 44.5919 21.3571 44.1438L10.5747 40.5308C9.23719 40.0826 8.10034 39.1775 7.36382 37.9744L1.42639 28.276C0.689864 27.0729 0.400772 25.6488 0.609882 24.2538L2.29561 13.0078C2.50472 11.6127 3.19866 10.336 4.25556 9.40174L12.7757 1.87039Z"
+              fill="#DD2590"
+            />
+          </svg>
         </div>
+
         <div className="productImage">
           <Image src={productImage} />
         </div>

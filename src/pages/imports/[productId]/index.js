@@ -1,5 +1,8 @@
 import ProductDetails from "@/components/productDetails/ProductDetails";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import Image from "next/image";
+import arrowLeft from "../../../assets/icons/arrow-left black.png";
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request
@@ -13,7 +16,7 @@ function productItem() {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="">
       <ProductDetails segment={router.query.productId} />
     </div>
   );

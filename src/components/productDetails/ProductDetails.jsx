@@ -10,6 +10,8 @@ import Link from "next/link";
 import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import productImage from "../../assets/icons/Featured icon.png";
+import arrowLeft from "../../assets/icons/arrow-left black.png";
+import TitleHeader from "../titleHeader/TitleHeader";
 
 export default function ProductDetails({ paramsId, segment }) {
   const [show, setShow] = useState(false);
@@ -22,6 +24,9 @@ export default function ProductDetails({ paramsId, segment }) {
       <div className="main">
         <div className="container3">
           <div className="container1">
+            <Link href="/imports" className="backLink mt-3">
+              <Image src={arrowLeft} />
+            </Link>
             <div className="mainContent ">
               <Offcanvas
                 show={show}
@@ -30,14 +35,13 @@ export default function ProductDetails({ paramsId, segment }) {
                 className="w-50"
               >
                 <div>
-                  <Offcanvas.Header closeButton>
-                    <Offcanvas.Title></Offcanvas.Title>
+                  <Offcanvas.Header>
+                    <div className="ProductStatisticsIcon">
+                      <Image src={productImage} />
+                    </div>
                   </Offcanvas.Header>
                   <Offcanvas.Body>
                     <div className="ProductStatisticsContainer d-flex flex-column">
-                      <div className="ProductStatisticsIcon">
-                        <Image src={productImage} />
-                      </div>
                       <div>
                         <h3 className="ProductStatisticsHeading">
                           Product statistics
