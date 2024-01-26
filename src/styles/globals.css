@@ -1104,8 +1104,6 @@ p.forgetpassworddescription {
 .orderSearchBox button:hover {
   background-color: var(--white-color);
 }
-.filterBtn {
-}
 
 .orderSearchBox .inputBox input {
   width: 100%;
@@ -1113,7 +1111,24 @@ p.forgetpassworddescription {
 .orderSearchBox .inputBox button {
   margin-top: 1rem !important;
 }
+.customerData {
+  border-bottom: 1px solid #f2f4f7;
+  padding-bottom: 23px;
+}
+.end {
+  margin-top: 30rem !important;
+}
+.customerData p {
+  color: #101828;
 
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.customerData p.whatData {
+  color: #667085;
+}
 @media (max-width: 576px) {
   .orderSearchBox {
     width: 90%;
@@ -1248,6 +1263,11 @@ p.forgetpassworddescription {
 }
 .toOrder {
   color: #c11574;
+  margin-top: 0.7rem;
+}
+.toOrder p {
+  margin: 0 !important;
+  margin-top: -0.3rem !important;
 }
 .toOrder2 {
   background-color: #c11574;

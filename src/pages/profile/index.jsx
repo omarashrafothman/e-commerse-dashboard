@@ -163,6 +163,14 @@ function index() {
                 <option value="3">All Time</option>
               </select>
             </div>
+            <div className="d-flex justify-content-end align-items-center my-2 py-3 saveChangesBox">
+              <div className="btnWithIcon  mx-1">
+                <button className="btn ">Cancel</button>
+              </div>
+              <div className="btnBox mx-1">
+                <button className="btn">View profile</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
