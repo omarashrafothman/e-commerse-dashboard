@@ -120,6 +120,7 @@ button:focus {
 .main {
   width: 100%;
   min-height: 100vh;
+
   display: flex;
   justify-content: end;
 }
@@ -129,6 +130,7 @@ button:focus {
 .container1 {
   flex-basis: 100%;
   padding: 0 22px;
+  padding-top: 4rem;
 }
 .container2 {
   flex-basis: 83%;
@@ -255,9 +257,6 @@ input[type="checkbox"]:checked {
 
 /*global inputs style start*/
 
-.input-group-prepend {
-  /* margin-bottom: 10px; */
-}
 .input-group-prepend label,
 .form-group label {
   font-size: 14px;
@@ -565,6 +564,12 @@ input[type="checkbox"]:checked::before {
   background-color: var(--white-color);
   border-right: 1px solid #eaecf0;
 }
+.sideBarsvg {
+  fill: #667085;
+}
+.sideBarsvg.active {
+  fill: var(--main-color) !important;
+}
 .sideBar .setting {
   width: inherit;
 }
@@ -717,10 +722,10 @@ input[type="checkbox"]:checked::before {
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 100%;
+  width: 83%;
 
   margin-left: auto;
-  margin-right: auto;
+
   background-color: var(--white-color);
   padding: 0.6rem 1rem;
   margin-bottom: 1rem;
@@ -728,7 +733,8 @@ input[type="checkbox"]:checked::before {
 
   top: 14.1%;
   right: 0;
-  position: sticky;
+  left: 0;
+  position: fixed;
   z-index: 1000;
 }
 .titleHeaderp h2 {
@@ -741,24 +747,32 @@ input[type="checkbox"]:checked::before {
   .titleHeaderp {
     width: 100% !important;
     position: sticky;
-    top: 14.1%;
+    top: 11.1%;
     z-index: 1000;
   }
 }
 @media (max-width: 576px) {
   .titleHeaderp {
     width: 100%;
-    position: sticky;
+
     top: 14.1%;
     z-index: 1000;
   }
 }
 @media (max-width: 999px) {
   .titleHeaderp {
-    width: 100%;
-    position: sticky;
     top: 13.9%;
     z-index: 1000;
+  }
+}
+@media (max-width: 1200px) {
+  .titleHeaderp {
+    top: 14.1%;
+    z-index: 1000;
+  }
+}
+@media (max-width: 2000px) {
+  .titleHeaderp {
   }
 }
 /* titleHeader style end*/
@@ -2367,11 +2381,41 @@ input[type="file"] {
   border-top: 1px solid #f2f4f7;
 }
 
+.profileNew label {
+  color: #344054;
+
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.profileNew .input-group .input-group-append {
+}
+.profileNew .input-group .input-group-text {
+  color: #667085;
+  padding: 7px 14px !important;
+  font-size: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-weight: 400;
+  line-height: 24px;
+}
+.charactersNumb {
+  color: #667085;
+
+  font-size: 14px !important;
+
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+.profileNew select {
+  border: 1px solid #d0d5dd !important;
+}
+
 /* profile style end*/
 
 /*inbox style Start*/
-.inboxDataContainer {
-}
+
 .inboxDataContainer {
   margin-top: 24px;
 
@@ -2393,8 +2437,6 @@ input[type="file"] {
   margin: 12px 0;
 }
 
-.inboxItemsBox .inboxItem .productStatusAndName {
-}
 .inboxItemsBox .inboxItem .productStatusAndName .productStatus {
   border-radius: 4px;
 
