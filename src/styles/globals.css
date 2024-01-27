@@ -168,6 +168,18 @@ select.form-select option {
   align-items: center;
   justify-content: center;
 }
+select.form-select:focus option {
+  border: 1px solid #eaecf0 !important;
+  background: #fff !important;
+  padding: 1rem 0 !important;
+}
+.AccordionSideBarList.active {
+  background-color: red !important;
+}
+
+.AccordionSideBarList {
+  background-color: #000 !important;
+}
 
 /* checkbox input start */
 .control {
@@ -579,6 +591,11 @@ input[type="checkbox"]:checked::before {
   width: 100%;
   margin: 0;
   padding: 0;
+  border: 1px solid #fff;
+}
+.accordion-item {
+  border-bottom: none !important;
+  border-right: none !important;
 }
 .AccordionSideBarList a {
   text-decoration: none;
