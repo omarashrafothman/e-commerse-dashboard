@@ -25,7 +25,7 @@ button {
   border-radius: 8px;
 }
 option {
-  border-radius: 0 !important;
+  text-align: center;
 }
 
 h4 {
@@ -154,33 +154,20 @@ select.form-select {
   font-weight: 600;
   line-height: 20px;
 }
-
-/* input[type="checkbox"] {
-  border-color: #d0d5dd;
-  border-radius: 6px;
+select.form-select option {
+  font-size: 14px;
+  color: #344054;
+  font-weight: 600;
+  line-height: 20px !important;
+  padding: 0.5rem 0 !important;
+  box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1) !important;
+  border: 1px solid #eaecf0 !important;
+  background: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-input[type="checkbox"]:checked {
-  appearance: none;
-  -webkit-appearance: none;
-  border-color: #53d2b7;
-  border-radius: 6px;
-  background-color: #fff;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-} */
-/* input[type="checkbox"]:focus {
-  box-shadow: none;
-  border-radius: 6px;
-} */
-/* input[type="checkbox"] {
-  border: 2px solid #d0d5dd;
-  border-radius: 6px !important;
-}
-input[type="checkbox"]:active,
-input[type="checkbox"]:focus {
-}
-input[type="checkbox"]:checked {
-  border: 2px solid #53d2b7;
-} */
 
 /* checkbox input start */
 .control {
@@ -297,12 +284,7 @@ select {
   color: #667085;
   width: 100%;
 }
-li svg.active {
-  stroke: var(--main-color) !important;
-}
-.form-select:focus option {
-  border-radius: 0 !important;
-}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,

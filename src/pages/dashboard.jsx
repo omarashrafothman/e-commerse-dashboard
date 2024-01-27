@@ -65,7 +65,7 @@ export default function dashboard() {
                   <option value="1" selected>
                     30 Days
                   </option>
-                  <option value="2">30 - 60 Days</option>
+                  <option value="2">50 Days</option>
                   <option value="3">All Time</option>
                 </select>
               </div>
