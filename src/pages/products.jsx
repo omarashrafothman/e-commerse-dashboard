@@ -250,42 +250,6 @@ export default function products() {
                       <button className="btn deleteVariant">Delete</button>
                     </td>
                   </tr>
-                  <tr className="w-100">
-                    <td>
-                      <div className="productDesc d-flex align-items-center ">
-                        <Image src={ProductImage} className="productImage" />
-                        <div className="productDescText d-flex flex-column">
-                          <Link href="#" onClick={handleShow}>
-                            <span>
-                              <p className="bigp">Knot18</p>
-                            </span>
-                            <span className="d-flex">
-                              <p className="smallp">in 0 orders</p>
-                            </span>
-                          </Link>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <Input
-                        classes={"form-control"}
-                        id={"sourceProduct"}
-                        value={"Free shipping Black Cuffli..."}
-                        type={"text"}
-                      />
-                    </td>
-                    <td>
-                      <Input
-                        classes={"form-control"}
-                        id={"sourceVariant"}
-                        value={"Knot18"}
-                        type={"text"}
-                      />
-                    </td>
-                    <td>
-                      <button className="btn deleteVariant">Delete</button>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -309,11 +273,34 @@ export default function products() {
         <TitleHeader title={"Products"} />
         <div className="container1">
           <div className="orderSearchBox d-flex  align-items-center ">
-            <Input
-              holder={"Enter key words"}
-              type={"text"}
-              classes={"form-control"}
-            />
+            <div className="searchBox ">
+              <span className="searchSvgIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                >
+                  <path
+                    d="M17.7637 17.5L14.1387 13.875M16.097 9.16667C16.097 12.8486 13.1122 15.8333 9.43034 15.8333C5.74844 15.8333 2.76367 12.8486 2.76367 9.16667C2.76367 5.48477 5.74844 2.5 9.43034 2.5C13.1122 2.5 16.097 5.48477 16.097 9.16667Z"
+                    stroke="#667085"
+                    stroke-width="1.66667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <div class="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter key words"
+                  aria-label="Search"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+            </div>
           </div>
           <div className="tableBox">
             <table class=" billingHistoryTable">

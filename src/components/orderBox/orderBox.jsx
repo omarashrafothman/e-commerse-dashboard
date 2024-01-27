@@ -248,15 +248,18 @@ function OrderBox({ selected }) {
           <div className="ordersPrice">
             <p>$99.98 USD</p>
           </div>
-          <div className="ordersCustomer">
+          <div className="d-flex align-items-center">
             <p className="mx-2">Customer:</p>
-            <div className="customerInfo d-flex  ">
-              <Image src={au} />
-              <h5>
-                <Link href="#" onClick={handleShow}>
-                  Tony Soprano
-                </Link>
-              </h5>
+
+            <div className="ordersCustomer">
+              <div className="customerInfo d-flex align-items-center ">
+                <Image src={au} />
+                <h5>
+                  <Link href="#" onClick={handleShow}>
+                    Tony Soprano
+                  </Link>
+                </h5>
+              </div>
             </div>
           </div>
         </div>

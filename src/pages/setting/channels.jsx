@@ -21,7 +21,7 @@ function channels() {
                 </select>
               </div>
               <div className="importsBtns">
-                <button className="editBtn btn">Edit on import list</button>
+                <button className="editBtn btn">Add account</button>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ function channels() {
           <div className="channelTabelHeading d-flex justify-content-between">
             <h4>Funnels</h4>
             <div className="d-flex">
-              <div className="selectBox ">
+              <div className="selectBox mx-2">
                 <select class="form-select" aria-label="Default select example">
                   <option value="1" selected>
                     More Actions
@@ -86,7 +86,7 @@ function channels() {
                 </select>
               </div>
               <div className="importsBtns">
-                <button className="editBtn btn">Edit on import list</button>
+                <button className="editBtn btn">Add account</button>
               </div>
             </div>
           </div>
