@@ -599,6 +599,8 @@ input[type="checkbox"]:checked::before {
 .accordion-body {
   position: absolute;
   width: 100%;
+  background-color: #000 !important;
+  top: 10%;
 }
 
 .AccordionSideBarList a {
