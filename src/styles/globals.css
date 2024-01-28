@@ -557,8 +557,6 @@ input[type="checkbox"]:checked::before {
   .searchBox {
     width: 290px;
   }
-  .offerBox p {
-  }
 }
 /*header style end*/
 
@@ -597,8 +595,21 @@ input[type="checkbox"]:checked::before {
   border-bottom: none !important;
   border-right: none !important;
 }
+
+.accordion-body {
+  position: absolute;
+  width: 100%;
+}
+
 .AccordionSideBarList a {
   text-decoration: none;
+}
+.AccordionSideBarList {
+  border: 1px solid #fff !important;
+}
+
+.accordion-body {
+  border: 1px solid #fff !important;
 }
 .AccordionSideBarList .AccordionSideBarListItem {
   display: flex;
@@ -607,6 +618,7 @@ input[type="checkbox"]:checked::before {
   background-color: var(--white-color);
   transition: var(--transition);
   width: 100%;
+  border-color: #fff !important ;
 }
 .AccordionSideBarListItem svg,
 .AccordionSideBarListItem img {

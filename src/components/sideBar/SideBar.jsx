@@ -12,6 +12,7 @@ function SideBar() {
   return (
     <div className="sideBar d-flex flex-column justify-content-between">
       <AccordionSideBar />
+
       <div className="setting w-100">
         <ul className="AccordionSideBarList w-100">
           <Link href="/setting" className="">
