@@ -11,7 +11,8 @@ function MainOrderTable({ selected }) {
         <tr className="d-flex toprow">
           <th>
             <div className="toOrder statusBox  ">
-              <span className="statusFlag toOrder2"></span> <p>To order</p>
+              <span className="statusFlag toOrder2"></span>{" "}
+              <p className="">To order</p>
             </div>
           </th>
           <th>

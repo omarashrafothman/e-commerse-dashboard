@@ -390,33 +390,40 @@ function AccordionSideBar() {
         <Accordion.Item eventKey="0">
           <Accordion.Header>All Stores</Accordion.Header>
           <Accordion.Body>
-            <ul className="AccordionSideBarList">
-              {navigation.map((item) => {
-                return (
-                  <Link href={item.to} key={item.name}>
-                    <li
-                      className={
-                        route.pathname.split("/")[1] === item.name
-                          ? "AccordionSideBarListItem active"
-                          : "AccordionSideBarListItem"
-                      }
-                    >
-                      {item.svg}
-                      <p
-                        className={
-                          route.pathname.split("/")[1] === item.name
-                            ? "active"
-                            : ""
-                        }
-                      >
-                        {item.name}
-                      </p>
-                    </li>
-                  </Link>
-                );
-              })}
+            <li>
+              <Link href="#">AliExpress</Link>
+            </li>
+            <li>
+              <Link href="#">Amazon</Link>
+            </li>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+      <ul className="AccordionSideBarList">
+        {navigation.map((item) => {
+          return (
+            <Link href={item.to} key={item.name}>
+              <li
+                className={
+                  route.pathname.split("/")[1] === item.name
+                    ? "AccordionSideBarListItem active"
+                    : "AccordionSideBarListItem"
+                }
+              >
+                {item.svg}
+                <p
+                  className={
+                    route.pathname.split("/")[1] === item.name ? "active" : ""
+                  }
+                >
+                  {item.name}
+                </p>
+              </li>
+            </Link>
+          );
+        })}
 
-              {/* 
+        {/* 
             
               {navigation.map((item) => (
               <NavLink key={item.name} href={item.to}>
@@ -429,10 +436,7 @@ function AccordionSideBar() {
             
             
             */}
-            </ul>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+      </ul>
     </div>
   );
 }

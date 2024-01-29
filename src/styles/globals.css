@@ -25,11 +25,10 @@ button {
   border-radius: 8px;
 }
 option {
-  text-align: center;
 }
 
 h4 {
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-weight: 600 !important;
   line-height: 28px !important;
 }
@@ -108,11 +107,7 @@ p.warning {
   border-color: #bcfff1 !important;
   box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
 }
-button:focus {
-  /* -webkit-box-shadow: 0px 1px 15px 6px rgba(16, 24, 40, 0.2);
-  -moz-box-shadow: 0px 1px 15px 6px rgba(16, 24, 40, 0.2);
-  box-shadow: 0px 1px 15px 6px rgba(16, 24, 40, 0.2); */
-}
+
 /* chart start*/
 .recharts-cartesian-axis-line,
 .recharts-cartesian-axis-tick-line {
@@ -163,22 +158,17 @@ select.form-select option {
   box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
     0px 1px 3px 0px rgba(16, 24, 40, 0.1) !important;
   border: 1px solid #eaecf0 !important;
-  background: #fff !important;
   display: flex;
   align-items: center;
+  height: 2rem !important;
+  background-color: #fff !important;
   justify-content: center;
 }
+
 select.form-select:focus option {
   border: 1px solid #eaecf0 !important;
   background: #fff !important;
-  padding: 1rem 0 !important;
-}
-.AccordionSideBarList.active {
-  background-color: red !important;
-}
-
-.AccordionSideBarList {
-  background-color: #000 !important;
+  padding: 2rem 0 !important;
 }
 
 /* checkbox input start */
@@ -579,9 +569,7 @@ input[type="checkbox"]:checked::before {
 .sideBar .setting {
   width: inherit;
 }
-.accordion-body {
-  padding: 0 !important;
-}
+
 .accordion-button:not(.collapsed) {
   background-color: var(--white-color) !important;
 }
@@ -598,9 +586,34 @@ input[type="checkbox"]:checked::before {
 
 .accordion-body {
   position: absolute;
-  width: 100%;
-  background-color: #000 !important;
-  top: 10%;
+  width: 90%;
+  margin-left: 5% !important;
+  margin-top: 5%;
+  border-radius: 6px;
+  border: 1px solid #fff !important;
+  transition: all 0.3s ease-in;
+  z-index: 500;
+  background-color: #fff;
+  padding: 0.5rem !important;
+  text-align: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+}
+
+.accordion-body li {
+  list-style: none !important;
+
+  width: 100% !important;
+  padding: 0.2rem 0;
+  margin-bottom: 0.2rem;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+}
+.accordion-body li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 0.4rem;
 }
 
 .AccordionSideBarList a {
@@ -610,9 +623,6 @@ input[type="checkbox"]:checked::before {
   border: 1px solid #fff !important;
 }
 
-.accordion-body {
-  border: 1px solid #fff !important;
-}
 .AccordionSideBarList .AccordionSideBarListItem {
   display: flex;
   align-items: center;
@@ -630,7 +640,7 @@ input[type="checkbox"]:checked::before {
 .AccordionSideBarList .AccordionSideBarListItem p {
   color: #667085;
   margin-top: 0.7rem;
-  font-size: 15px;
+  font-size: 16px !important;
 
   font-weight: 500;
 }
@@ -643,9 +653,10 @@ input[type="checkbox"]:checked::before {
 }
 
 .AccordionSideBarList .AccordionSideBarListItem:hover,
+.accordion-body li:hover,
 .AccordionSideBarList .AccordionSideBarListItem.active {
   background-color: #f4f9f8;
-  border-left: 3px solid var(--main-color);
+  border-left: 3px solid var(--main-color) !important;
 }
 .AccordionSideBarList .AccordionSideBarListItem a.active {
   color: var(--main-color);
@@ -758,7 +769,7 @@ input[type="checkbox"]:checked::before {
   margin-left: auto;
 
   background-color: var(--white-color);
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #eaecf0;
 
@@ -768,8 +779,8 @@ input[type="checkbox"]:checked::before {
   position: fixed;
   z-index: 1000;
 }
-.titleHeaderp h2 {
-  font-size: 20px;
+.titleHeaderp h1 {
+  font-size: 30px;
   font-weight: 600;
   line-height: 32px;
   margin: 0;
@@ -2667,7 +2678,7 @@ input[type="file"] {
 .generalContent .generalOrderContainer h3 {
   color: #000;
 
-  font-size: 24px;
+  font-size: 22px;
 
   font-weight: 500;
   line-height: 32px;
@@ -2680,10 +2691,10 @@ input[type="file"] {
   line-height: 24px;
 }
 .generalContent .generalOrderContainer .generalOrderItem p {
-  font-size: 16px;
-  color: #667085;
-  font-weight: 400;
-  line-height: 24px;
+  font-size: 14px !important;
+  color: #667085 !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
   margin: 0;
 }
 .generalOrderItem {
