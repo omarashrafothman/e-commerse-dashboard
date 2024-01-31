@@ -14,7 +14,7 @@ function MainOrderTable({
   return (
     <div className="">
       <thead>
-        <tr className="d-flex toprow align-items-center">
+        <tr className="d-flex toprow align-items-center mb-2">
           <th>
             <div className={status}>
               <span className="statusFlag toOrder2"></span>
@@ -24,17 +24,17 @@ function MainOrderTable({
           <th>
             <div className="lifeStore d-flex align-items-center">
               <Image src={bag} />
-              <p>Magical life’s Store</p>
+              <p className="pb">Magical life’s Store</p>
             </div>
           </th>
           <th>
             <div>
-              <p>All order no:</p>
+              <p className="pb">All order no:</p>
             </div>
           </th>
           <th>
             <div>
-              <p>Tracking no:</p>
+              <p className="pb">Tracking no:</p>
             </div>
           </th>
         </tr>
