@@ -6,6 +6,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import PhoneNumberInput from "@/components/phoneNumberInput/PhoneNumberInput";
 import plus from "../../../assets/icons/plus.png";
+import Editor from "../../../components/textEditor/TextEditor";
+import React, { useState, useRef, useMemo } from "react";
+import JoditEditor from "jodit-react";
+
 // import TextEditor from "@/components/textEditor/TextEditor";
 
 // edge  start
@@ -18,6 +22,17 @@ export function GET(request) {
 // edge  end
 
 function Suppliersetting() {
+  const editor = useRef(null);
+  const [content, setContent] = useState("");
+
+  const config = useMemo(
+    {
+      readonly: false, // all options from https://xdsoft.net/jodit/docs/,
+      placeholder: placeholder || "Start typings...",
+    },
+    [placeholder]
+  );
+
   const route = useRouter();
   return (
     <Layout>
@@ -108,7 +123,16 @@ function Suppliersetting() {
             information.
           </p>
         </div>
-        <div className="my-5 w-75">{/**  <TextEditor /> */}</div>
+        <div className="my-5 w-75">
+          <JoditEditor
+            ref={editor}
+            value={content}
+            config={config}
+            tabIndex={1} // tabIndex of textarea
+            onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+            onChange={(newContent) => {}}
+          />
+        </div>
       </div>
     </Layout>
   );

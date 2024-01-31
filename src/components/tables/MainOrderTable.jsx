@@ -3,16 +3,22 @@ import Image from "next/image";
 import bag from "../../assets/icons/icons8-aliexpress 1.png";
 import product from "../../assets/images/webp/product.webp";
 
-function MainOrderTable({ selected }) {
-  console.log(selected);
+function MainOrderTable({
+  selected,
+  type,
+  btnAdded,
+  status,
+  btnContent,
+  statusCountent,
+}) {
   return (
     <div className="">
       <thead>
-        <tr className="d-flex toprow">
+        <tr className="d-flex toprow align-items-center">
           <th>
-            <div className="toOrder statusBox  ">
-              <span className="statusFlag toOrder2"></span>{" "}
-              <p className="">To order</p>
+            <div className={status}>
+              <span className="statusFlag toOrder2"></span>
+              <p className="">{statusCountent}</p>
             </div>
           </th>
           <th>

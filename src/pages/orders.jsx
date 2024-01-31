@@ -5,7 +5,10 @@ import Input from "../components/inputs/Input";
 import Image from "next/image";
 import OrderBox from "@/components/orderBox/orderBox";
 import { useState, useEffect } from "react";
-import { Offcanvas } from "react-bootstrap";
+
+import OffcanvasComponent from "../components/offcanvas/RightOffcanvas";
+
+import dangerIcon from "../assets/icons/Featured icon (3).png";
 
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
@@ -17,12 +20,237 @@ export function GET(request) {
 // edge  end
 
 export default function orders() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  function handleShow() {
+    setShow(true);
+  }
+
+  const [show2, setShowTwo] = useState(true);
+  const handleClose2 = () => setShowTwo(false);
+  const handleShow2 = () => setShowTwo(true);
+
+  const [show3, setShowThree] = useState(true);
+  const handleClose3 = () => setShowThree(false);
+  const handleShow3 = () => setShowThree(true);
+
+  const [show4, setShowFour] = useState(true);
+  const handleClose4 = () => setShowFour(false);
+  const handleShow4 = () => setShowFour(true);
+
+  const [show5, setShowFive] = useState(true);
+  const handleClose5 = () => setShowFive(false);
+  const handleShow5 = () => setShowFive(true);
+
   const [allSelected, setAllSelected] = useState(false);
   useEffect(() => {
     document.title = "Orders";
   }, []);
   return (
     <div className="main grayBgColor">
+      <div className=" ">
+        <OffcanvasComponent
+          plasment={"end"}
+          close={handleClose}
+          component={
+            <div className="d-flex flex-column ">
+              <div>
+                <div className="customerName">
+                  <h4>Customer: Tony Saprano</h4>
+                </div>
+                <div className="d-flex customerData justify-content-between">
+                  <div className="d-flex flex-column">
+                    <p className="whatData m-0">Contact Information</p>
+                    <p className="m-0">asiclari@gmail.com +68423877</p>
+                  </div>
+                  <div className="d-flex flex-column">
+                    <p className="whatData m-0">Shipping Address</p>
+                    <p className="m-0">
+                      230 Sydney Road New South Wales Australia 2000
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-3">
+                  <Input
+                    classes={"form-control"}
+                    holder={"ex.6852314"}
+                    label={"Tax ID number"}
+                    type={"number"}
+                  />
+                </div>
+              </div>
+              <div className="shippingBtns  d-flex align-items-center end ">
+                <div className="btnWithIcon  mx-2">
+                  <button className="btn" onClick={handleClose}>
+                    Cancel
+                  </button>
+                </div>
+                <div className="importsBtns">
+                  <button className="editBtn btn">Save</button>
+                </div>
+              </div>
+            </div>
+          }
+          w={"w-25"}
+          showState={show}
+        />
+        <OffcanvasComponent
+          plasment={"end"}
+          close={handleClose2}
+          component={
+            <div className="d-flex flex-column ">
+              <div>
+                <div className="customerName">
+                  <h4>Add order number</h4>
+                </div>
+                <div className="customerData">
+                  <p className="m-0 whatData">
+                    Add AliExpress or CJ Dropshipping order number if you
+                    manually ordered items on these suppliers. Learn more about
+                    order fulfillment in DS Ninja.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <Input
+                    classes={"form-control"}
+                    holder={"ex.6852314"}
+                    label={"Order number"}
+                    type={"number"}
+                  />
+                </div>
+              </div>
+              <div className="shippingBtns  d-flex align-items-center end ">
+                <div className="btnWithIcon  mx-2">
+                  <button className="btn" onClick={handleClose2}>
+                    Cancel
+                  </button>
+                </div>
+                <div className="importsBtns">
+                  <button className="editBtn btn">Save</button>
+                </div>
+              </div>
+            </div>
+          }
+          w={"w-25"}
+          showState={show2}
+        />
+
+        <OffcanvasComponent
+          plasment={"end"}
+          close={handleClose3}
+          component={
+            <div className="d-flex flex-column ">
+              <div>
+                <div className="customerName">
+                  <h4>Edit order number</h4>
+                </div>
+                <div className="customerData">
+                  <p className="m-0 whatData">
+                    Are you sure to change the order number #1894174518972?
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <Input
+                    classes={"form-control"}
+                    holder={"ex.6852314"}
+                    label={"New number"}
+                    type={"number"}
+                  />
+                </div>
+              </div>
+              <div className="shippingBtns  d-flex align-items-center end ">
+                <div className="btnWithIcon  mx-2">
+                  <button className="btn" onClick={handleClose3}>
+                    Cancel
+                  </button>
+                </div>
+                <div className="importsBtns">
+                  <button className="editBtn btn">Save</button>
+                </div>
+              </div>
+            </div>
+          }
+          w={"w-25"}
+          showState={show3}
+        />
+
+        <OffcanvasComponent
+          plasment={"end"}
+          close={handleClose5}
+          component={
+            <div className="d-flex flex-column ">
+              <div>
+                <div className="customerName">
+                  <h4>Add note</h4>
+                </div>
+                <div className="customerData">
+                  <p className="m-0 whatData">
+                    Note is visible only in DS Ninja
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <Input
+                    classes={"form-control"}
+                    holder={"ex.hellothere"}
+                    label={"Enter note"}
+                    type={"number"}
+                  />
+                </div>
+              </div>
+              <div className="shippingBtns  d-flex align-items-center end ">
+                <div className="btnWithIcon  mx-2">
+                  <button className="btn" onClick={handleClose4}>
+                    Cancel
+                  </button>
+                </div>
+                <div className="importsBtns">
+                  <button className="editBtn btn">Save</button>
+                </div>
+              </div>
+            </div>
+          }
+          w={"w-25"}
+          showState={show5}
+        />
+        <OffcanvasComponent
+          plasment={"end"}
+          close={handleClose4}
+          component={
+            <div>
+              <div className="ProductStatisticsContainer d-flex flex-column">
+                <div className="ProductStatisticsIcon">
+                  <Image src={dangerIcon} />
+                </div>
+                <div>
+                  <h3 className="ProductStatisticsHeading">
+                    Delete order number
+                  </h3>
+                </div>
+                <div className="my-2">
+                  <p className="m-0">
+                    Are you sure you want to delete the order number?
+                  </p>
+                </div>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div className="d-flex justify-content-end cancelAndDelete">
+                <div className="deleteAndEdit d-flex align-items-center">
+                  <div className="btnWithIcon  mx-2">
+                    <button className="btn" onClick={handleClose5}>
+                      Cancel
+                    </button>
+                  </div>
+                  <button className="btn delete">Delete</button>
+                </div>
+              </div>
+            </div>
+          }
+          w={"w-25"}
+          showState={show4}
+        />
+      </div>
       <div className="container3 ">
         <TitleHeader title={"Orders"} />
         <div className="container1 ">
@@ -99,7 +327,25 @@ export default function orders() {
                 </button>
               </div>
 
-              <OrderBox selected={allSelected} />
+              <OrderBox
+                selected={allSelected}
+                statusCountent={"To order"}
+                status={"statusBox toOrder"}
+                statusColor={"btn toOrder2"}
+              />
+              <OrderBox
+                selected={allSelected}
+                statusCountent={"Awaiting Payment"}
+                status={"statusBox Awaiting"}
+                statusColor={"btn Awaiting2"}
+              />
+              <OrderBox
+                selected={allSelected}
+                statusCountent={"In Processing"}
+                status={"statusBox Processing"}
+                statusColor={"btn Processing2"}
+                btnAdded={<button className="btn">hello</button>}
+              />
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@
   --pink-color: #dd2590;
   --white-color: #fff;
   --gray-color: #eaecf0;
-  --warning-color: #b54708;
+  --warning-color: #c4320a;
   --transition: all 0.2s ease-in-out;
 }
 
@@ -596,7 +596,12 @@ input[type="checkbox"]:checked::before {
   background-color: #fff;
   padding: 0.5rem !important;
   text-align: center;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
+  -webkit-box-shadow: 0px 0px 19px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 19px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 19px 2px rgba(0, 0, 0, 0.3);
+  /* -webkit-box-shadow: 0px -1px 46px -1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 46px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -1px 46px -1px rgba(0, 0, 0, 0.3); */
 }
 
 .accordion-body li {
@@ -606,7 +611,7 @@ input[type="checkbox"]:checked::before {
   padding: 0.2rem 0;
   margin-bottom: 0.2rem;
   text-align: left;
-  transition: all 0.2s ease-in-out;
+  transition: all 0s ease-in-out;
 }
 .accordion-body li a {
   text-decoration: none;
@@ -763,7 +768,7 @@ input[type="checkbox"]:checked::before {
 .titleHeaderp {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: left;
   width: 83%;
 
   margin-left: auto;
@@ -1222,10 +1227,10 @@ p.forgetpassworddescription {
   width: 100%;
 }
 .orderBox p {
-  font-size: 14px;
+  font-size: 14px !important;
 
-  font-weight: 500;
-  line-height: 20px;
+  font-weight: 500 !important;
+  line-height: 20px !important;
   margin-top: 7px;
 }
 .orderBox .orderBoxHeading {
@@ -1307,21 +1312,54 @@ p.forgetpassworddescription {
 }
 .toprow .statusBox {
   display: flex;
-  padding: 5px 5px 0px 5px;
+  padding: 3px 5px 3px 5px;
   justify-content: center;
   border-radius: 16px;
   align-items: center;
 }
+.toprow .statusBox p {
+  margin-top: 0 !important;
+  margin-left: 6px;
+}
 .toOrder {
   color: #c11574;
-  margin-top: 0.7rem;
 }
 .toOrder p {
   margin: 0 !important;
   margin-top: -0.3rem !important;
+  margin-left: 6px !important;
+}
+button {
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 .toOrder2 {
   background-color: #c11574;
+}
+.Awaiting2 {
+  background-color: var(--warning-color) !important;
+}
+.Processing2 {
+  background-color: #0288d1 !important;
+}
+.Awaiting {
+  background-color: var(--warning-color);
+  margin-top: 0.7rem;
+}
+.Awaiting p {
+  color: var(--warning-color);
+}
+.Awaiting span {
+  background-color: var(--warning-color);
+}
+.Processing {
+  background-color: #0288d1;
+  margin-top: 0.7rem;
+}
+.Processing p {
+  color: #0288d1;
+}
+.Processing span {
+  background-color: #0288d1;
 }
 
 .toprow .statusBox p {
@@ -1337,8 +1375,7 @@ p.forgetpassworddescription {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-
-  margin-right: 0.5rem;
+  margin-top: 2px;
 }
 
 thead {
@@ -2618,7 +2655,7 @@ input[type="file"] {
 .settingContent .settingNav {
   width: 100%;
   display: flex;
-  padding: 0.3rem 0;
+  padding: 0.1rem 0;
   border-bottom: 1px solid #eaecf0;
   margin-bottom: 40px;
 }
@@ -2647,6 +2684,13 @@ input[type="file"] {
 }
 .settingContent .settingNav ul li a.active {
   color: #000;
+}
+.settingNavItem {
+  position: relative;
+}
+
+.settingContent .settingNav ul li.settingNavItem.active {
+  border-bottom: 2px solid var(--main-color);
 }
 
 .generalContent input[type="radio"] {

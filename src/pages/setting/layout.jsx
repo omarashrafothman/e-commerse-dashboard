@@ -55,7 +55,13 @@ const Layout = ({ children }) => {
             <nav className="settingNav">
               <ul>
                 {settingNavigation.map((item) => (
-                  <li>
+                  <li
+                    className={
+                      route.pathname === item.to
+                        ? "settingNavItem active"
+                        : "settingNavItem"
+                    }
+                  >
                     <Link
                       href={item.to}
                       className={route.pathname === item.to ? "active" : ""}

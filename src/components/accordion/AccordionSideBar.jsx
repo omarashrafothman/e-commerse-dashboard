@@ -386,7 +386,7 @@ function AccordionSideBar() {
   const [isActive, setIsactive] = useState(false);
   return (
     <div>
-      <Accordion defaultActiveKey="0">
+      <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>All Stores</Accordion.Header>
           <Accordion.Body>
