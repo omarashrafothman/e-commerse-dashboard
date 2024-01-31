@@ -39,8 +39,8 @@ function MainOrderTable({
           </th>
         </tr>
       </thead>
-      <table className="mainOrderTable">
-        <tr>
+      <table className="mainOrderTable ttable">
+        <tr className="orderRow">
           <td className="">
             <div className="d-flex align-items-center justify-content-between">
               <label class="control control-checkbox  ">
@@ -78,7 +78,7 @@ function MainOrderTable({
             </div>
           </td>
         </tr>
-        <tr>
+        <tr className="orderRow">
           <td className="">
             <div className="d-flex align-items-center justify-content-between">
               <label class="control control-checkbox  ">
