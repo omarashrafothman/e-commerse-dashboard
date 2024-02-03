@@ -111,7 +111,19 @@ function Suppliersetting() {
             information.
           </p>
         </div>
-        <div className="my-5 w-75"></div>
+        <div className="my-5 w-100 ">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Enter Your Message</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="4"
+            ></textarea>
+          </div>
+          <div className="importsBtns d-flex justify-content-end my-4">
+            <button className="editBtn btn">Edit</button>
+          </div>
+        </div>
       </div>
     </Layout>
   );

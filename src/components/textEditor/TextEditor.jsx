@@ -1,26 +1,26 @@
-import React, { useState, useRef, useMemo } from "react";
-import JoditEditor from "jodit-react";
+import { createContext, useContext, useRef } from "react";
+import EditorJS from "@editorjs/editorjs";
+export const EditorContext = useContext();
+function TextEditor(props) {
+  const editorInstanceRef = useRef(null);
+  const initEditor = () => {
+    const editor = new EditorJS({
+      /**
+       * Id of Element that should contain Editor instance
+       */
 
-const Example = ({ placeholder }) => {
-  const editor = useRef(null);
-  const [content, setContent] = useState("");
-
-  const config = useMemo(
-    {
-      readonly: false, // all options from https://xdsoft.net/jodit/docs/,
-      placeholder: placeholder || "Start typings...",
-    },
-    [placeholder]
-  );
+      tools: {
+        header: Header,
+        list: List,
+      },
+    });
+    editorInstanceRef.current = editor;
+  };
 
   return (
-    <JoditEditor
-      ref={editor}
-      value={content}
-      config={config}
-      tabIndex={1} // tabIndex of textarea
-      onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
-      onChange={(newContent) => {}}
-    />
+    <TextEditor.Provider
+      value={{ initEditor, editorInstanceRef }}
+    ></TextEditor.Provider>
   );
-};
+}
+export default TextEditor;

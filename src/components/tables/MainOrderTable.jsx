@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import bag from "../../assets/icons/icons8-aliexpress 1.png";
 import product from "../../assets/images/webp/product.webp";
+import Input from "../inputs/Input";
 
 function MainOrderTable({
   selected,
@@ -11,6 +12,7 @@ function MainOrderTable({
   btnContent,
   statusCountent,
 }) {
+  const [payment, setPayment] = useState(false);
   return (
     <div className="">
       <thead>
@@ -62,20 +64,45 @@ function MainOrderTable({
             </div>
           </td>
           <td>
-            <div className="orderPrice">
-              <p>1 X $40.99 USD</p>
-            </div>
+            {payment ? (
+              <td className="bigBag">
+                <Image src={bag} />
+              </td>
+            ) : (
+              <div className="orderPrice">
+                <p>1 X $40.99 USD</p>
+              </div>
+            )}
           </td>
-          <td>
-            <div>
-              <select class="form-select" aria-label="Default select example">
-                <option value="1" selected>
-                  More Actions
-                </option>
-                <option value="2">delete</option>
-                <option value="3">add</option>
-              </select>
-            </div>
+          {payment ? (
+            <td>
+              <div className="orderPrice">
+                <p>Override</p>
+              </div>
+            </td>
+          ) : (
+            " "
+          )}
+          <td className=" ">
+            {payment ? (
+              <div className="inputNew">
+                <Input
+                  type={"text"}
+                  classes={"form-control w-100"}
+                  holder={"Sellers Shipping"}
+                />
+              </div>
+            ) : (
+              <div>
+                <select class="form-select" aria-label="Default select example">
+                  <option value="1" selected>
+                    More Actions
+                  </option>
+                  <option value="2">delete</option>
+                  <option value="3">add</option>
+                </select>
+              </div>
+            )}
           </td>
         </tr>
         <tr className="orderRow">
