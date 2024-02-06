@@ -35,63 +35,66 @@ function Pricingrules() {
           </div>
         </div>
         <div className="dsNinjaContainer">
-          <div className="dsNinjaHead d-flex align-items-center justify-content-between px-2">
-            <h4>ds-ninja</h4>
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input "
-                type="checkbox"
-                id="flexSwitchCheckChecked"
-              />
-            </div>
-          </div>
-          <br />
-          <div className="generalOrderItem d-flex my-3">
-            <div class="form-check form-switch">
-              <input
-                class="form-check-input "
-                type="checkbox"
-                id="flexSwitchCheckChecked"
-              />
-            </div>
-            <div className="generalOrderItemData d-flex flex-column">
-              <h4>Canceled orders optimization</h4>
-              <p>
-                Activate this feature to automatically optimize an order
-                cancelled by Ali Express. The optimization by DSers will greatly
-                reduce the probability for the order to be cancelled again.
-              </p>
-            </div>
-          </div>
-          <WarningBox />
-          <div className="productCostBox">
-            <div className="productCostBoxItem d-flex align-items-center">
-              <div className="productItemCost">
-                <p>Product cost X</p>
-              </div>
-              <div className="productItemInput">
-                <input type="number" className="form-control" />
-              </div>
-              <div>
-                <p className="productItemPrice">= your product price</p>
+          <div className="dsNinjaContainerMini">
+            <div className="dsNinjaHead d-flex align-items-center justify-content-between px-2">
+              <h4>ds-ninja</h4>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input "
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                />
               </div>
             </div>
-            <div className="productCostBoxItem d-flex align-items-center">
-              <div className="productItemCost d-flex align-items-center">
-                {/*      <div class="form-check form-switch">
+            <br />
+            <div className="generalOrderItem d-flex my-3">
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input "
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                />
+              </div>
+              <div className="generalOrderItemData d-flex flex-column">
+                <h4>Canceled orders optimization</h4>
+                <p>
+                  Activate this feature to automatically optimize an order
+                  cancelled by Ali Express. The optimization by DSers will
+                  greatly reduce the probability for the order to be cancelled
+                  again.
+                </p>
+              </div>
+            </div>
+            <WarningBox />
+            <div className="productCostBox">
+              <div className="productCostBoxItem d-flex align-items-center">
+                <div className="productItemCost">
+                  <p>Product cost X</p>
+                </div>
+                <div className="productItemInput">
+                  <input type="number" className="form-control" />
+                </div>
+                <div>
+                  <p className="productItemPrice">= your product price</p>
+                </div>
+              </div>
+              <div className="productCostBoxItem d-flex align-items-center">
+                <div className="productItemCost d-flex align-items-center">
+                  {/*      <div class="form-check form-switch">
                   <input
                     class="form-check-input "
                     type="checkbox"
                     id="flexSwitchCheckChecked"
                   />
                 </div>*/}
-                <p className="m-0">Product cost X</p>
-              </div>
-              <div className="productItemInput">
-                <input type="number" className="form-control" />
-              </div>
-              <div className="">
-                <p className="productItemPrice">= your product price</p>
+                  <p className="m-0">Product cost X</p>
+                </div>
+                <div className="productItemInput">
+                  <input type="number" className="form-control" />
+                </div>
+                <div className="">
+                  <p className="productItemPrice">= your product price</p>
+                </div>
               </div>
             </div>
           </div>

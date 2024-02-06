@@ -4,8 +4,13 @@ import Input from "@/components/inputs/Input";
 import dolarSign from "../assets/icons/dollar-sign.png";
 import help from "../assets/icons/help-circle (1).png";
 import alert from "../assets/icons/alert-circle.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import InboxItem from "@/components/inboxitem/InboxItem";
+import { Offcanvas } from "react-bootstrap";
+import Image from "next/image";
+import featuredIcon from "../assets/images/webp/Featured icon.png";
+import infoCost from "../assets/icons/info (1).png";
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request
@@ -15,11 +20,67 @@ export function GET(request) {
 }
 // edge  end
 function inbox() {
+  const [show, setShow] = useState(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   useEffect(() => {
     document.title = "Inbox";
   }, []);
   return (
     <div className="main">
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        placement={"end"}
+        className="w-50"
+      >
+        <div>
+          <Offcanvas.Header>
+            <Image src={featuredIcon} />
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <div className="">
+              <h4>Product variant is missing</h4>
+              <div className="costChanged d-flex align-items-center w-100 costChangeIbnox">
+                <Image src={infoCost} />
+                <div className="d-flex  flex-column">
+                  <h5>Cost changed</h5>
+                  <p className="">
+                    Shopify product Patience Games 3D Cube Puzzle Maze variants
+                    are not available. Make sure keep your product up to date.
+                    the following variants are not available:
+                  </p>
+                </div>
+              </div>
+              <div className="d-flex align-items-center justify-content-between missingItem">
+                <p>Variants</p>
+                <p>SKU</p>
+                <p>Color</p>
+                <p>Shopify ID</p>
+              </div>
+              <div className="d-flex align-items-center justify-content-between missingItem">
+                <p>In Shop</p>
+                <p>454654-blue</p>
+                <p>Blue</p>
+                <p>4564654564</p>
+              </div>
+            </div>
+            <div className="d-flex justify-content-end btnsforUpdate ">
+              <div className="d-flex align-items-center">
+                <div className="deleteAndEdit">
+                  <button className="btn " onClick={handleClose}>
+                    Cancel
+                  </button>
+
+                  <button className="btn edit ">Put offine</button>
+                  <button className="btn edit ">Mapping</button>
+                  <button className="btn edit ">Ok</button>
+                </div>
+              </div>
+            </div>
+          </Offcanvas.Body>
+        </div>
+      </Offcanvas>
       <div className="container3">
         <TitleHeader title={"Inbox"} />
         <div className="container1">

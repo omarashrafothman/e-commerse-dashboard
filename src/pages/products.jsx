@@ -30,6 +30,10 @@ export default function products() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [show2, setShow2] = useState(false);
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
+
   const [show3, setshow3] = useState(false);
   const closeCnvas3 = () => setshow3(false);
   const showCnvas3 = () => setshow3(true);
@@ -165,7 +169,7 @@ export default function products() {
               <p className="twop">18 of 29 variants linked</p>
             </div>
             <div className="sourceProducts d-flex align-items-center justify-content-end my-2 ">
-              <button onClick={showCnvas3}>Manage variants</button>
+              <button onClick={showCnvas3}>Add variant</button>
             </div>
             <div className="tableBox">
               <table class=" billingHistoryTable">
@@ -268,6 +272,131 @@ export default function products() {
           </Offcanvas.Body>
         </div>
       </Offcanvas>
+      <Offcanvas
+        show={show2}
+        onHide={handleClose2}
+        placement={"end"}
+        className="w-50"
+      >
+        <div>
+          <Offcanvas.Header>
+            <OffcanvasTitle>Map Product</OffcanvasTitle>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <div className="sourceProducts d-flex align-items-center justify-content-between">
+              <h4>Source Products</h4>
+              <button onClick={showCnvas3}>Manage variants</button>
+            </div>
+            <div className="freeShippingOffCanvas d-flex flex-column">
+              <div className="freeShippingOffCanvasItem d-flex">
+                <div className="freeShippingOffCanvasItemImage">
+                  <Image src={ProductImage} />
+                </div>
+                <p>
+                  Free shipping Black Cufflinks for men fashion knot design top
+                  quality copper hotsale cufflinks whoelse&retail by igame
+                  official store
+                </p>
+              </div>
+              <p className="twop">18 of 29 variants linked</p>
+            </div>
+            <div className="sourceProducts d-flex align-items-center justify-content-end my-2 ">
+              <button onClick={showCnvas3}>Map product</button>
+            </div>
+            <div className="tableBox">
+              <table class=" billingHistoryTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Variants</th>
+                    <th scope="col">Source product</th>
+                    <th scope="col">Source variant</th>
+                    <th scope="col">Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="w-100">
+                    <td>
+                      <div className="productDesc d-flex align-items-center ">
+                        <input type="radio" style={{ marginRight: "1rem" }} />
+                        <Image src={ProductImage} className="productImage" />
+                      </div>
+                    </td>
+                    <td>
+                      <Input
+                        classes={"form-control"}
+                        id={"sourceProduct"}
+                        value={"Free shipping Black Cuffli..."}
+                        type={"text"}
+                      />
+                    </td>
+                    <td>
+                      <Input
+                        classes={"form-control"}
+                        id={"sourceVariant"}
+                        value={"Knot18"}
+                        type={"text"}
+                      />
+                    </td>
+                    <td style={{ width: "6rem" }}>
+                      <Input
+                        classes={"form-control w-50"}
+                        id={"quantity"}
+                        type={"number"}
+                      />
+                    </td>
+                  </tr>
+                  <tr className="w-100">
+                    <td>
+                      <div className="productDesc d-flex align-items-center ">
+                        <input
+                          type="radio"
+                          style={{ marginRight: "1rem", width: "20px" }}
+                        />
+                        <Image src={ProductImage} className="productImage" />
+                      </div>
+                    </td>
+                    <td>
+                      <Input
+                        classes={"form-control"}
+                        id={"sourceProduct"}
+                        value={"Free shipping Black Cuffli..."}
+                        type={"text"}
+                      />
+                    </td>
+                    <td>
+                      <Input
+                        classes={"form-control"}
+                        id={"sourceVariant"}
+                        value={"Knot18"}
+                        type={"text"}
+                      />
+                    </td>
+                    <td style={{ width: "6rem" }}>
+                      <Input
+                        classes={"form-control w-50"}
+                        id={"quantity"}
+                        type={"number"}
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="d-flex justify-content-end btnsforUpdate">
+              <div className="d-flex align-items-center">
+                <div className="deleteAndEdit">
+                  <button className="btn " onClick={handleClose2}>
+                    Cancel
+                  </button>
+
+                  <button className="btn edit ">Override</button>
+                  <button className="btn delete  ">Delete</button>
+                </div>
+              </div>
+            </div>
+          </Offcanvas.Body>
+        </div>
+      </Offcanvas>
 
       <div className="container3">
         <TitleHeader title={"Products"} />
@@ -350,8 +479,8 @@ export default function products() {
                     <p className="m-0 profit">US$10.00 - US$10.00</p>
                   </td>
                 </tr>
-                <tr className="w-100">
-                  <td>
+                <tr className="w-100 ">
+                  <td className="mapped">
                     <div className="productDesc d-flex align-items-center ">
                       <Image src={ProductImage} className="productImage" />
                       <div className="productDescText d-flex flex-column">
@@ -361,28 +490,22 @@ export default function products() {
                               Chopper Vegetable Salad Cutter
                             </p>
                           </span>
-                          <span className="d-flex">
-                            <Image src={bag} />
-                            <p className="smallp">Genkent Official store</p>
-                          </span>
                         </Link>
                       </div>
                     </div>
                   </td>
-                  <td>
-                    <p className="m-0">8641</p>
-                  </td>
-                  <td>
-                    <p className="m-0">1962</p>
-                  </td>
-                  <td>
+                  <td className="mapped"></td>
+                  <td className="mapped"></td>
+                  <td className="mapped">
                     <p className="m-0">US$19.97 - US$23.97</p>
                   </td>
-                  <td>
-                    <p className="m-0 cost">US$9.97 - US$13.97</p>
-                  </td>
-                  <td>
-                    <p className="m-0 profit">US$10.00 - US$10.00</p>
+                  <td className="mapped"></td>
+                  <td className="mapped">
+                    <div className="deleteAndEdit">
+                      <button className="btn edit " onClick={handleShow2}>
+                        MAP PRODUCT
+                      </button>
+                    </div>
                   </td>
                 </tr>
                 <tr className="w-100">
@@ -466,7 +589,7 @@ export default function products() {
               </div>
               <div className="d-flex align-items-center ">
                 <div className="pageNumber d-flex align-items-center justify-content-center mx-3">
-                  <NavLink className="w-100 " to="/">
+                  <NavLink className="w-100 active " to="/">
                     <span className="w-100">1</span>
                   </NavLink>
                 </div>

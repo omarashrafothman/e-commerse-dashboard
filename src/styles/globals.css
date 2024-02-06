@@ -2461,7 +2461,12 @@ tbody tr td input {
   background-color: var(--btn-bg);
   color: #fff;
 }
-.profileForm .billingAddressBox .billingAddressBoxHeader {
+.deleteAndEdit button.edit:hover {
+  background-color: var(--btn-bg);
+  color: #fff;
+}
+.mapped {
+  background-color: var(--gray-color);
 }
 .addNewAddressBox {
   border-radius: 5px;
@@ -2579,6 +2584,8 @@ input[type="file"] {
   margin-top: 24px;
 
   padding: 24px 0;
+}
+.costChangeIbnox {
 }
 .inboxDataContainer .dayOfInbox {
   margin-bottom: 70px;
@@ -2740,8 +2747,14 @@ input[type="file"] {
   font-weight: 400;
   line-height: 20px;
 }
+.generalContent {
+  margin-bottom: 0rem !important;
+}
 .generalContent .generalOrderContainer {
   width: 65%;
+}
+.boxWithRadio div {
+  margin-bottom: 0 !important;
 }
 .generalContent .generalOrderContainer h3 {
   color: #000;
@@ -2894,13 +2907,30 @@ td.expiryDate {
 .dsNinjaHead {
   margin-bottom: 1rem;
 }
+.dsNinjaContainerMini {
+  background-color: #fcfcfd !important;
+  border: 1px solid #eaecf0;
+  border-radius: 4px;
+  padding: 16px;
+}
+.productCostBoxItem {
+  background-color: var(--gray-color) !important;
+}
+.dsNinjaContainerMini .warningBox {
+  background-color: #fcfcfd !important;
+}
+
 .dsNinjaContainer .generalOrderItem {
   margin-bottom: 1rem;
+}
+.channelTable tbody tr {
+  border-bottom: 1px solid var(--gray-color);
 }
 .warningBox {
   padding: 8px 10px 8px 8px;
   background-color: var(--white-color);
 }
+
 .helpIconBox {
   margin-right: 1rem;
 }
@@ -3359,6 +3389,16 @@ td.expiryDate {
 }
 .costChanged {
   margin-top: 1rem;
+  background-color: #b5470831;
+  padding: 0.2rem;
+  border-radius: 2px;
+}
+.missingItem {
+  margin-top: 1.5rem;
+}
+.missingItem p {
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
 .costChanged img {
   margin-right: 1rem;

@@ -15,11 +15,8 @@ export function GET(request) {
 function Layout({ children }) {
   const route = useRouter();
   const { productId } = route.query;
+  console.log(route.pathname);
 
-  // route.push(
-  //   `/imports/[productId]/editproduct/description`,
-  //   `/imports/${route.query}/editproduct/description`
-  // );
   const editProductgNavigation = [
     { name: "product", to: `/imports/${productId}/editproduct` },
     {
