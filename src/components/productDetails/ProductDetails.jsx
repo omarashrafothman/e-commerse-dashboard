@@ -23,7 +23,7 @@ export default function ProductDetails({ paramsId, segment }) {
     <div>
       <div className="main">
         <div className="container3">
-          <div className="container1 py-0">
+          <div className="container1 py-0" style={{ marginLeft: "2rem" }}>
             <Link href="/imports" className="backLink mt-3">
               <Image src={arrowLeft} />
             </Link>

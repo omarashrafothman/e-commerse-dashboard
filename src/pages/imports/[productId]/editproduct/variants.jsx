@@ -316,7 +316,6 @@ function variant() {
               <th scope="col" className="dataWithImage">
                 <div className="d-flex align-items-center">
                   <label class="control control-checkbox m-0 ">
-                    Use all
                     <input type="checkbox" />
                     <div class="control_indicator"></div>
                   </label>

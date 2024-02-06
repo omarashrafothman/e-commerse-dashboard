@@ -11,7 +11,16 @@ export function GET(request) {
 function Description() {
   return (
     <Layout>
-      <div className="w-75">{/* <TextEditor /> */}Description</div>
+      <div className="w-75">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+      </div>
     </Layout>
   );
 }

@@ -20,7 +20,6 @@ function Layout({ children }) {
   //   `/imports/[productId]/editproduct/description`,
   //   `/imports/${route.query}/editproduct/description`
   // );
-
   const editProductgNavigation = [
     { name: "product", to: `/imports/${productId}/editproduct` },
     {

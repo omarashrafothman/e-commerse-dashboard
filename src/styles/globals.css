@@ -128,6 +128,7 @@ p.warning {
 }
 .container1 {
   flex-basis: 100%;
+
   padding: 0 22px;
   padding-top: 4rem;
 }
@@ -1489,7 +1490,8 @@ tr td div .orderImage img {
   width: 100%;
 }
 .productBox {
-  width: 209px;
+  /* width: 209px; */
+  width: 22%;
   background-color: var(--white-color);
   margin-bottom: 3rem;
   position: relative;
@@ -1530,14 +1532,14 @@ tr td div .orderImage img {
   text-decoration-line: strikethrough !important;
 }
 .productReview {
-  margin-top: -1rem;
+  margin-top: -1.5rem;
 }
 .productReview p {
   font-size: 15px !important;
 
   font-weight: 400 !important;
   color: var(--black-color);
-  line-height: 35px !important;
+  margin-top: 1.2rem;
   margin-left: 0.5rem !important;
 }
 
@@ -1545,7 +1547,8 @@ tr td div .orderImage img {
   width: 100%;
 }
 .addBtnBox button {
-  font-size: 15px;
+  font-size: 12px;
+  color: #344054;
   width: 98%;
   font-weight: 500;
   line-height: 18px;
@@ -1576,7 +1579,7 @@ tr td div .orderImage img {
   /* transform: rotate(-15deg); */
   /* border-radius: 10px; */
   top: -4%;
-  left: 84%;
+  left: 89%;
 }
 .saleBoxp {
   position: absolute;
@@ -1667,15 +1670,16 @@ tr td div .orderImage img {
 .productDetailsContainer {
   margin-top: 24px;
 
+  margin-left: 2rem;
   flex-wrap: wrap;
   display: flex;
 }
 .productDetailsContainer .productDetailsMedia {
-  width: 35%;
+  width: 40%;
 }
 .productDetailsContainer .productDetailsMedia .bigMediaBox {
-  width: 426px;
-  height: 406px;
+  width: 426px !important;
+  height: 406px !important;
 }
 .productDetailsContainer .productDetailsMedia .bigMediaBox img {
   width: 100%;
@@ -1696,7 +1700,7 @@ tr td div .orderImage img {
   justify-content: space-between;
 }
 .productDetailsContainer .productDetailsContent {
-  width: 60%;
+  width: 50%;
 }
 .productDetailsContainer .productDetailsContent h3 {
   color: var(--price-color);

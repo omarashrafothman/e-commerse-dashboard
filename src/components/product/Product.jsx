@@ -85,12 +85,12 @@ export default function Product({
           <p className="price">
             ${price} <s className="sale">${sale}</s>
           </p>
-          <div className="productReview d-flex">
+          <div className="productReview d-flex align-items-center">
             <StarRating rating={rate} Dimension={21} spacing={1} />
             <p className="">{reviews} reviews</p>
           </div>
           <div className="addBtnBox">
-            <button className="btn w-100 text-center">
+            <button className="btn w-100 text-center d-flex align-items-center justify-content-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
