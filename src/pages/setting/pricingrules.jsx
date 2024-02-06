@@ -2,8 +2,17 @@ import React from "react";
 import Layout from "./layout";
 import WarningBox from "@/components/warningBox/WarningBox";
 import Input from "@/components/inputs/Input";
-
+import { useState } from "react";
+import Image from "next/image";
+import shopify from "../../assets/images/shopify.png";
 function Pricingrules() {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked); // Toggle the checked state
+    console.log(isChecked);
+  };
+
   return (
     <Layout>
       <div className="pricingRuleContainer">
@@ -40,9 +49,11 @@ function Pricingrules() {
               <h4>ds-ninja</h4>
               <div class="form-check form-switch">
                 <input
-                  class="form-check-input "
+                  className="form-check-input "
                   type="checkbox"
                   id="flexSwitchCheckChecked"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
                 />
               </div>
             </div>
@@ -66,37 +77,106 @@ function Pricingrules() {
               </div>
             </div>
             <WarningBox />
-            <div className="productCostBox">
-              <div className="productCostBoxItem d-flex align-items-center">
-                <div className="productItemCost">
-                  <p>Product cost X</p>
-                </div>
-                <div className="productItemInput">
-                  <input type="number" className="form-control" />
-                </div>
-                <div>
-                  <p className="productItemPrice">= your product price</p>
-                </div>
+
+            {isChecked ? (
+              <div className="tableBox">
+                <table class=" channelTable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Cost Range</th>
+                      <th scope="col">Markup</th>
+                      <th
+                        scope="col"
+                        className="d-flex align-items-center lastTh"
+                      >
+                        <input type="checkbox" />
+                        <label> Compare at price markup</label>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="w-100">
+                      <td className=" d-flex align-items-center advansedInput">
+                        <Input classes={"form-control"} type={"number"} />
+                        <p>-</p>
+                        <Input classes={"form-control"} type={"number"} />
+                        <p>x</p>
+                      </td>
+
+                      <td className="otherAdvancedInput ">
+                        <input type="number" className="form-control" />
+                      </td>
+                      <td className="otherAdvancedInput ">
+                        <input type="number" className="form-control" />
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr className="w-100">
+                      <td className=" d-flex align-items-center advansedInput">
+                        <Input classes={"form-control"} type={"number"} />
+                        <p>-</p>
+                        <Input classes={"form-control"} type={"number"} />
+                        <p>x</p>
+                      </td>
+
+                      <td className="otherAdvancedInput ">
+                        <input type="number" className="form-control" />
+                      </td>
+                      <td className="otherAdvancedInput ">
+                        <input type="number" className="form-control" />
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr className="w-100">
+                      <td className=" d-flex align-items-center justify-content-between advansedInput priceRanges">
+                        <p>Rest of the price ranges</p>
+                        <p className="">x</p>
+                      </td>
+
+                      <td className="otherAdvancedInput ">
+                        <input type="number" className="form-control" />
+                      </td>
+                      <td className="otherAdvancedInput ">
+                        <input type="number" className="form-control" />
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div className="productCostBoxItem d-flex align-items-center">
-                <div className="productItemCost d-flex align-items-center">
-                  {/*      <div class="form-check form-switch">
+            ) : (
+              <div className="productCostBox">
+                <div className="productCostBoxItem d-flex align-items-center">
+                  <div className="productItemCost">
+                    <p>Product cost X</p>
+                  </div>
+                  <div className="productItemInput">
+                    <input type="number" className="form-control" />
+                  </div>
+                  <div>
+                    <p className="productItemPrice">= your product price</p>
+                  </div>
+                </div>
+                <div className="productCostBoxItem d-flex align-items-center">
+                  <div className="productItemCost d-flex align-items-center">
+                    {/*      <div class="form-check form-switch">
                   <input
                     class="form-check-input "
                     type="checkbox"
                     id="flexSwitchCheckChecked"
                   />
                 </div>*/}
-                  <p className="m-0">Product cost X</p>
-                </div>
-                <div className="productItemInput">
-                  <input type="number" className="form-control" />
-                </div>
-                <div className="">
-                  <p className="productItemPrice">= your product price</p>
+                    <p className="m-0">Product cost X</p>
+                  </div>
+                  <div className="productItemInput">
+                    <input type="number" className="form-control" />
+                  </div>
+                  <div className="">
+                    <p className="productItemPrice">= your product price</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
           <div className="supplierSettingOptions">
             <h4>Assign cents</h4>

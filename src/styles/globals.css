@@ -2771,6 +2771,34 @@ input[type="file"] {
   font-weight: 500;
   line-height: 24px;
 }
+.advansedInput {
+  width: 300px;
+}
+.advansedInput .input-group-prepend {
+  display: none;
+}
+.advansedInput p {
+  margin: -6px 10px 0 -7px;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  color: #101828;
+}
+.otherAdvancedInput {
+  width: 195px;
+}
+.otherAdvancedInput input {
+  margin-top: -0.5rem;
+}
+.channelTable .lastTh {
+  width: 15rem;
+}
+
+.channelTable .lastTh input {
+  margin-right: 0.7rem;
+}
+.advansedInput input {
+  width: 126px !important;
+}
 .generalContent .generalOrderContainer .generalOrderItem p {
   font-size: 14px !important;
   color: #667085 !important;
@@ -3389,7 +3417,7 @@ td.expiryDate {
 }
 .costChanged {
   margin-top: 1rem;
-  background-color: #b5470831;
+  background-color: #fef0c7;
   padding: 0.2rem;
   border-radius: 2px;
 }
