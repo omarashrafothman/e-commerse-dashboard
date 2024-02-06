@@ -89,8 +89,16 @@ function Pricingrules() {
                         scope="col"
                         className="d-flex align-items-center lastTh"
                       >
-                        <input type="checkbox" />
-                        <label> Compare at price markup</label>
+                        <div class="form-check ">
+                          <input
+                            class="form-check-input "
+                            type="checkbox"
+                            id="flexSwitchCheckChecked"
+                          />
+                          <label htmlFor="flexSwitchCheckChecked">
+                            Compare at price markup
+                          </label>
+                        </div>
                       </th>
                     </tr>
                   </thead>
@@ -192,8 +200,14 @@ function Pricingrules() {
           <div className="assignBoxContainer d-flex align-items-center justify-content-between">
             <div className="assignBox d-flex flex-column">
               <div className="d-flex align-items-center assignBoxLeft">
-                <input type="checkbox" checked />
-                <p className="m-0">Assign cents</p>
+                <div class="form-check ">
+                  <input
+                    class="form-check-input "
+                    type="checkbox"
+                    id="flexSwitchCheckChecked"
+                  />
+                  <label htmlFor="flexSwitchCheckChecked">Assign cents</label>
+                </div>
               </div>
 
               <div class="input-group assignBoxRight">
@@ -202,8 +216,16 @@ function Pricingrules() {
             </div>
             <div className="assignBox d-flex flex-column">
               <div className="d-flex align-items-center assignBoxLeft">
-                <input type="checkbox" />
-                <p className="m-0">Assign compare at cents</p>
+                <div class="form-check ">
+                  <input
+                    class="form-check-input "
+                    type="checkbox"
+                    id="flexSwitchCheckChecked"
+                  />
+                  <label htmlFor="flexSwitchCheckChecked">
+                    Assign compare at cents
+                  </label>
+                </div>
               </div>
 
               <div class="input-group assignBoxRight">
