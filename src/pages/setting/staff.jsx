@@ -126,7 +126,15 @@ function staff() {
             <tbody>
               <tr className="w-100">
                 <td className=" ">
-                  <input type="checkbox" /> <Image src={shopify} />
+                  <div className="d-flex align-items-center settingTable">
+                    <label class="control control-checkbox m-0 ">
+                      <input type="checkbox" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label>
+                      <Image src={shopify} htmlFor="productCheck" />
+                    </label>
+                  </div>
                 </td>
                 <td>Max Smith</td>
                 <td>mygmail.com</td>
@@ -143,7 +151,15 @@ function staff() {
               </tr>
               <tr className="w-100">
                 <td className=" ">
-                  <input type="checkbox" /> <Image src={shopify} />
+                  <div className="d-flex align-items-center settingTable">
+                    <label class="control control-checkbox m-0 ">
+                      <input type="checkbox" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label>
+                      <Image src={shopify} htmlFor="productCheck" />
+                    </label>
+                  </div>
                 </td>
                 <td>Max Smith</td>
                 <td>mygmail.com</td>

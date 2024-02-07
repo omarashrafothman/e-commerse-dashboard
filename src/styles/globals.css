@@ -2761,7 +2761,12 @@ input[type="file"] {
 .settingNavItem {
   position: relative;
 }
-
+.settingTable {
+  margin-top: -1rem;
+}
+.settingTable img {
+  margin-top: 1rem;
+}
 .settingContent .settingNav ul li.settingNavItem.active {
   border-bottom: 2px solid var(--main-color);
 }

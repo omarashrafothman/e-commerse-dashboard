@@ -66,8 +66,15 @@ function Index() {
               <tbody>
                 <tr className="w-100">
                   <td className="">
-                    <input type="checkbox" />
-                    <Image src={shopify} />
+                    <div className="d-flex align-items-center settingTable">
+                      <label class="control control-checkbox m-0 ">
+                        <input type="checkbox" />
+                        <div class="control_indicator"></div>
+                      </label>
+                      <label>
+                        <Image src={shopify} htmlFor="productCheck" />
+                      </label>
+                    </div>
                   </td>
                   <td>Max Smith</td>
                   <td className="expiryDate">10 Mar 2023, 9:65 pm</td>
@@ -81,8 +88,15 @@ function Index() {
                 </tr>
                 <tr className="w-100">
                   <td className="">
-                    <input type="checkbox" />
-                    <Image src={shopify} />
+                    <div className="d-flex align-items-center settingTable">
+                      <label class="control control-checkbox m-0 ">
+                        <input type="checkbox" />
+                        <div class="control_indicator"></div>
+                      </label>
+                      <label>
+                        <Image src={shopify} htmlFor="productCheck" />
+                      </label>
+                    </div>
                   </td>
                   <td>Max Smith</td>
                   <td className="expiryDate">10 Mar 2023, 9:65 pm</td>
