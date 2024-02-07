@@ -43,8 +43,8 @@ function MainOrderTable({
       </thead>
       <table className="mainOrderTable ttable">
         <tr className="orderRow">
-          <td className="">
-            <div className="d-flex align-items-center justify-content-between">
+          <td className="firstTd">
+            <div className="d-flex align-items-center justify-content-between firstTd">
               <label class="control control-checkbox  ">
                 <input type="checkbox" />
                 <div class="control_indicator"></div>

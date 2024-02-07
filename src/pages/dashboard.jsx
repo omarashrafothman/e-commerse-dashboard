@@ -61,8 +61,8 @@ export default function dashboard() {
                 <h5>New Signups</h5>
               </div>
               <div>
-                <select className="form-select dashSelect">
-                  <option value="1" selected>
+                <select className="form-select dashSelect border-0">
+                  <option value="1" selected className="rounded-0">
                     30 Days
                   </option>
                   <option value="2">50 Days</option>

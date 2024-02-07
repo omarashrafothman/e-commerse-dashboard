@@ -7,9 +7,9 @@ import OrderBox from "@/components/orderBox/orderBox";
 import { useState, useEffect } from "react";
 
 import OffcanvasComponent from "../components/offcanvas/RightOffcanvas";
-
+import shippingMethod from "../assets/images/webp/Featured icon (1).png";
 import dangerIcon from "../assets/icons/Featured icon (3).png";
-
+import productImage from "../assets/images/webp/product.webp";
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request
@@ -41,6 +41,14 @@ export default function orders() {
   const [show5, setShowFive] = useState(true);
   const handleClose5 = () => setShowFive(false);
   const handleShow5 = () => setShowFive(true);
+
+  const [show6, setShowSix] = useState(true);
+  const handleClose6 = () => setShowSix(false);
+  const handleShow6 = () => setShowSix(true);
+
+  const [show7, setShowSeven] = useState(false);
+  const handleClose7 = () => setShowSeve(false);
+  const handleShow7 = () => setShowSeve(true);
 
   const [allSelected, setAllSelected] = useState(false);
   useEffect(() => {
@@ -204,6 +212,314 @@ export default function orders() {
           }
           w={"w-25"}
           showState={show4}
+        />
+        <OffcanvasComponent
+          plasment={"end"}
+          close={handleClose6}
+          component={
+            <div>
+              <div>
+                <Image src={shippingMethod} />
+              </div>
+              <br />
+              <div className="shippingMethods">
+                <h4>Available shipping methods</h4>
+                <p>
+                  The selected shipping method is displayed in the price table.
+                  This is provided be the supplier and based on your country
+                  selection and a standard delivery method (eg ePacket).
+                </p>
+              </div>
+              <br />
+              <br />
+              <br />
+
+              <div className="shippingData d-flex flex-column">
+                <div className="shippingDataHeader d-flex align-items-center justify-content-between">
+                  <p>Shipping Method</p>
+                  <p>Estimated Delivery Time</p>
+                  <p>Shipping Cost</p>
+                  <p>Tracking</p>
+                </div>
+                <div className="shippingDataBody d-flex flex-column">
+                  <div className="shippingDataBodyItem d-flex align-items-center justify-content-between">
+                    <div>
+                      <div class="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="ePacket"
+                          id="ePacket"
+                        />
+                        <label class="form-check-label" for="ePacket">
+                          ePacket
+                        </label>
+                      </div>
+                    </div>
+                    <p className="m-0">37-37 days</p>
+                    <p className="m-0">US $0</p>
+                    <div className="mx-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="20"
+                        viewBox="0 0 22 20"
+                        fill="none"
+                      >
+                        <rect
+                          x="-0.00976562"
+                          width="22.0194"
+                          height="20"
+                          rx="10"
+                          fill="#D1FADF"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.6757 6.15838L9.1066 11.9167L7.3634 10.2251C7.04228 9.95005 6.53767 9.93338 6.17068 10.1667C5.81286 10.4084 5.71194 10.8334 5.93214 11.1751L7.99646 14.2251C8.1983 14.5084 8.54694 14.6834 8.94146 14.6834C9.31762 14.6834 9.67544 14.5084 9.87728 14.2251C10.2076 13.8334 16.5106 7.00838 16.5106 7.00838C17.3364 6.24172 16.3363 5.56672 15.6757 6.15005V6.15838Z"
+                          fill="#12B76A"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="shippingDataBodyItem d-flex align-items-center justify-content-between">
+                    <div>
+                      <div class="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="ePacket"
+                          id="ePacket"
+                        />
+                        <label class="form-check-label" for="ePacket">
+                          ePacket
+                        </label>
+                      </div>
+                    </div>
+                    <p className="m-0">37-37 days</p>
+                    <p className="m-0">US $0</p>
+                    <div className="mx-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="20"
+                        viewBox="0 0 22 20"
+                        fill="none"
+                      >
+                        <rect
+                          x="-0.00976562"
+                          width="22.0194"
+                          height="20"
+                          rx="10"
+                          fill="#D1FADF"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.6757 6.15838L9.1066 11.9167L7.3634 10.2251C7.04228 9.95005 6.53767 9.93338 6.17068 10.1667C5.81286 10.4084 5.71194 10.8334 5.93214 11.1751L7.99646 14.2251C8.1983 14.5084 8.54694 14.6834 8.94146 14.6834C9.31762 14.6834 9.67544 14.5084 9.87728 14.2251C10.2076 13.8334 16.5106 7.00838 16.5106 7.00838C17.3364 6.24172 16.3363 5.56672 15.6757 6.15005V6.15838Z"
+                          fill="#12B76A"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="shippingDataBodyItem d-flex align-items-center justify-content-between">
+                    <div>
+                      <div class="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="ePacket"
+                          id="ePacket"
+                        />
+                        <label class="form-check-label" for="ePacket">
+                          ePacket
+                        </label>
+                      </div>
+                    </div>
+                    <p className="m-0">37-37 days</p>
+                    <p className="m-0">US $0</p>
+                    <div className="mx-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="20"
+                        viewBox="0 0 22 20"
+                        fill="none"
+                      >
+                        <rect
+                          x="-0.00976562"
+                          width="22.0194"
+                          height="20"
+                          rx="10"
+                          fill="#D1FADF"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.6757 6.15838L9.1066 11.9167L7.3634 10.2251C7.04228 9.95005 6.53767 9.93338 6.17068 10.1667C5.81286 10.4084 5.71194 10.8334 5.93214 11.1751L7.99646 14.2251C8.1983 14.5084 8.54694 14.6834 8.94146 14.6834C9.31762 14.6834 9.67544 14.5084 9.87728 14.2251C10.2076 13.8334 16.5106 7.00838 16.5106 7.00838C17.3364 6.24172 16.3363 5.56672 15.6757 6.15005V6.15838Z"
+                          fill="#12B76A"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="shippingDataBodyItem d-flex align-items-center justify-content-between">
+                    <div>
+                      <div class="form-check">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="ePacket"
+                          id="ePacket"
+                        />
+                        <label class="form-check-label" for="ePacket">
+                          ePacket
+                        </label>
+                      </div>
+                    </div>
+                    <p className="m-0">37-37 days</p>
+                    <p className="m-0">US $0</p>
+                    <div className="mx-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="20"
+                        viewBox="0 0 22 20"
+                        fill="none"
+                      >
+                        <rect
+                          x="-0.00976562"
+                          width="22.0194"
+                          height="20"
+                          rx="10"
+                          fill="#D1FADF"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.6757 6.15838L9.1066 11.9167L7.3634 10.2251C7.04228 9.95005 6.53767 9.93338 6.17068 10.1667C5.81286 10.4084 5.71194 10.8334 5.93214 11.1751L7.99646 14.2251C8.1983 14.5084 8.54694 14.6834 8.94146 14.6834C9.31762 14.6834 9.67544 14.5084 9.87728 14.2251C10.2076 13.8334 16.5106 7.00838 16.5106 7.00838C17.3364 6.24172 16.3363 5.56672 15.6757 6.15005V6.15838Z"
+                          fill="#12B76A"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+
+              <div className="shippingBtns  d-flex align-items-center ">
+                <div className="btnWithIcon  mx-2">
+                  <button className="btn" onClick={handleClose}>
+                    Cancel
+                  </button>
+                </div>
+                <div className="importsBtns">
+                  <button className="editBtn btn" onClick={handleShow}>
+                    Ok
+                  </button>
+                </div>
+              </div>
+            </div>
+          }
+          w={"w-50"}
+          showState={show6}
+        />
+        <OffcanvasComponent
+          plasment={"end"}
+          close={handleClose7}
+          component={
+            <div className="shipped">
+              <h4>Marked as Shipped</h4>
+              <p>
+                Supplier:<span> BestStore Store</span>
+              </p>
+              <div className="shippedBox d-flex justify-content-between text-align-center">
+                <div className=" d-flex align-items-center">
+                  <div className="d-flex align-items-center imageShippeBox ">
+                    <Image src={productImage} />
+                  </div>
+                  <p>Easy salad cutter bowl</p>
+                </div>
+
+                <div className="d-flex align-items-center outOf">
+                  <Input type={"number"} />
+                  <p>out of 1</p>
+                </div>
+              </div>
+              <div className="shippedBox d-flex justify-content-between text-align-center">
+                <div className=" d-flex align-items-center">
+                  <div className="d-flex align-items-center imageShippeBox ">
+                    <Image src={productImage} />
+                  </div>
+                  <p>Easy salad cutter bowl</p>
+                </div>
+
+                <div className="d-flex align-items-center outOf">
+                  <Input type={"number"} />
+                  <p>out of 1</p>
+                </div>
+              </div>
+              <div className="shippedBox d-flex justify-content-between text-align-center">
+                <div className=" d-flex align-items-center">
+                  <div className="d-flex align-items-center imageShippeBox ">
+                    <Image src={productImage} />
+                  </div>
+                  <p>Easy salad cutter bowl</p>
+                </div>
+
+                <div className="d-flex align-items-center outOf">
+                  <Input type={"number"} />
+                  <p>out of 1</p>
+                </div>
+              </div>
+              <div className="shippedBox d-flex justify-content-between text-align-center">
+                <div className=" d-flex align-items-center">
+                  <div className="d-flex align-items-center imageShippeBox ">
+                    <Image src={productImage} />
+                  </div>
+                  <p>Easy salad cutter bowl</p>
+                </div>
+
+                <div className="d-flex align-items-center outOf">
+                  <Input type={"number"} />
+                  <p>out of 1</p>
+                </div>
+              </div>
+              <div className="w-75 d-flex flex-column">
+                <Input
+                  label={"Tracking number"}
+                  holder={"Enter tracking number"}
+                  type={"text"}
+                  id={"trackingNumber"}
+                />
+              </div>
+              <div class="form-check ">
+                <input
+                  class="form-check-input "
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+                <label htmlFor="flexSwitchCheckChecked">
+                  Send a notification email to the customer
+                </label>
+              </div>
+              <div className="shippingBtns  d-flex align-items-center ">
+                <div className="btnWithIcon  mx-2">
+                  <button className="btn" onClick={handleClose}>
+                    Cancel
+                  </button>
+                </div>
+                <div className="importsBtns">
+                  <button className="editBtn btn" onClick={handleShow}>
+                    Mark as shipped
+                  </button>
+                </div>
+              </div>
+            </div>
+          }
+          w={"w-25"}
+          showState={show7}
         />
       </div>
       <div className="container3 ">

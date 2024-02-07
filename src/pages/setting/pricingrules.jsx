@@ -79,8 +79,8 @@ function Pricingrules() {
             <WarningBox />
 
             {isChecked ? (
-              <div className="tableBox">
-                <table class=" channelTable">
+              <div className="tableBox ">
+                <table class=" channelTable w-100">
                   <thead>
                     <tr>
                       <th scope="col">Cost Range</th>
@@ -105,36 +105,65 @@ function Pricingrules() {
                   <tbody>
                     <tr className="w-100">
                       <td className=" d-flex align-items-center advansedInput">
-                        <Input classes={"form-control"} type={"number"} />
+                        <span className="withUsd">
+                          <span className="usd">usd</span>
+                          <Input classes={"form-control"} type={"number"} />
+                        </span>
                         <p>-</p>
-                        <Input classes={"form-control"} type={"number"} />
+                        <div>
+                          <span className="withUsd">
+                            <span className="usd">usd</span>
+                            <Input classes={"form-control"} type={"number"} />
+                          </span>
+                        </div>
                         <p>x</p>
                       </td>
 
                       <td className="otherAdvancedInput ">
-                        <input type="number" className="form-control" />
+                        <span className="multiBox">
+                          <span className="multi2">MULTIPLIER</span>
+                          <input type="number" className="form-control" />
+                        </span>
                       </td>
                       <td className="otherAdvancedInput ">
-                        <input type="number" className="form-control" />
+                        <span className="multiBox">
+                          <span className="multi2">MULTIPLIER</span>
+                          <input type="number" className="form-control" />
+                        </span>
                       </td>
                       <td></td>
                     </tr>
                     <tr className="w-100">
                       <td className=" d-flex align-items-center advansedInput">
-                        <Input classes={"form-control"} type={"number"} />
+                        <span className="withUsd">
+                          <span className="usd">usd</span>
+                          <Input classes={"form-control"} type={"number"} />
+                        </span>
                         <p>-</p>
-                        <Input classes={"form-control"} type={"number"} />
+                        <div>
+                          <span className="withUsd">
+                            <span className="usd">usd</span>
+                            <Input classes={"form-control"} type={"number"} />
+                          </span>
+                        </div>
                         <p>x</p>
                       </td>
 
                       <td className="otherAdvancedInput ">
-                        <input type="number" className="form-control" />
+                        <span className="multiBox">
+                          <span className="multi2">MULTIPLIER</span>
+                          <input type="number" className="form-control" />
+                        </span>
                       </td>
                       <td className="otherAdvancedInput ">
-                        <input type="number" className="form-control" />
+                        <span className="multiBox">
+                          <span className="multi2">MULTIPLIER</span>
+                          <input type="number" className="form-control" />
+                        </span>
                       </td>
                       <td></td>
                     </tr>
+
                     <tr className="w-100">
                       <td className=" d-flex align-items-center justify-content-between advansedInput priceRanges">
                         <p>Rest of the price ranges</p>
@@ -142,10 +171,16 @@ function Pricingrules() {
                       </td>
 
                       <td className="otherAdvancedInput ">
-                        <input type="number" className="form-control" />
+                        <span className="multiBox">
+                          <span className="multi2">MULTIPLIER</span>
+                          <input type="number" className="form-control" />
+                        </span>
                       </td>
                       <td className="otherAdvancedInput ">
-                        <input type="number" className="form-control" />
+                        <span className="multiBox">
+                          <span className="multi2">MULTIPLIER</span>
+                          <input type="number" className="form-control" />
+                        </span>
                       </td>
                       <td></td>
                     </tr>
@@ -159,6 +194,7 @@ function Pricingrules() {
                     <p>Product cost X</p>
                   </div>
                   <div className="productItemInput">
+                    <span className="multiplier">MULTIPLIER</span>
                     <input type="number" className="form-control" />
                   </div>
                   <div>
@@ -167,16 +203,18 @@ function Pricingrules() {
                 </div>
                 <div className="productCostBoxItem d-flex align-items-center">
                   <div className="productItemCost d-flex align-items-center">
-                    {/*      <div class="form-check form-switch">
-                  <input
-                    class="form-check-input "
-                    type="checkbox"
-                    id="flexSwitchCheckChecked"
-                  />
-                </div>*/}
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input "
+                        type="checkbox"
+                        id="flexSwitchCheckChecked"
+                        checked
+                      />
+                    </div>
                     <p className="m-0">Product cost X</p>
                   </div>
                   <div className="productItemInput">
+                    <span className="multiplier">MULTIPLIER</span>
                     <input type="number" className="form-control" />
                   </div>
                   <div className="">

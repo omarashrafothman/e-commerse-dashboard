@@ -36,7 +36,7 @@ function notification() {
           <h4>Price</h4>
           <p>Get notified when an order is cancelled on AliExpress</p>
         </div>
-      </div>{" "}
+      </div>
       <div className="generalOrderItem d-flex ">
         <div class="form-check form-switch">
           <input

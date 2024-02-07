@@ -144,6 +144,7 @@ p.warning {
 .container3 {
   flex-basis: 83%;
 }
+
 select.form-select {
   font-size: 14px;
   color: #344054;
@@ -164,12 +165,16 @@ select.form-select option {
   height: 2rem !important;
   background-color: #fff !important;
   justify-content: center;
+  border-radius: 0 !important;
 }
-
+select.form-select option {
+  border-radius: 0 !important;
+}
 select.form-select:focus option {
   border: 1px solid #eaecf0 !important;
   background: #fff !important;
   padding: 2rem 0 !important;
+  border-radius: 0 !important;
 }
 
 /* checkbox input start */
@@ -246,7 +251,35 @@ select.form-select:focus option {
 .dataWithImage .control_indicator {
   margin-top: 0.5rem;
 }
-
+.shipped p {
+  color: #667085;
+}
+.shipped p span {
+  text-decoration: underline;
+}
+.shippedBox .imageShippeBox {
+  width: 35px;
+  height: 35px;
+}
+.shippedBox .imageShippeBox img {
+  width: 100%;
+  height: 100%;
+}
+.shippedBox p {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin: 0;
+  margin-left: 8px;
+}
+.outOf input {
+  width: 54px !important;
+  height: 44px !important;
+  padding: 0.3rem !important;
+}
+.outOf p {
+  margin: 0;
+  font-size: 14px !important;
+}
 /* checkbox input end*/
 
 /*global inputs style start*/
@@ -291,8 +324,8 @@ select {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-textarea:focus,
-select:focus {
+textarea:focus
+/* select:focus  */ {
   border-color: #bcfff1 !important;
   box-shadow: 0px 0px 0px 4px #f4ebff, 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
   outline: none;
@@ -1233,6 +1266,9 @@ p.forgetpassworddescription {
   background-color: #f9fafb;
   border: 1px solid #eaeaea;
 }
+.orderRow .firstTd {
+  width: 300px;
+}
 .ttable {
   /* -webkit-box-shadow: 0px 0px 5px -2px rgba(16, 24, 40, 1);
   -moz-box-shadow: 0px 0px 5px -2px rgba(16, 24, 40, 1);
@@ -1327,7 +1363,10 @@ p.forgetpassworddescription {
 .mainOrderTable p {
   margin-top: 15px;
 }
-
+thead .toprow {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
 .toprow div {
   margin-right: 32px;
 }
@@ -1895,6 +1934,9 @@ tr td div .orderImage img {
   font-weight: 500 !important;
   font-size: 14px !important;
   line-height: 20px !important;
+}
+.ProductStatisticsContainer p.shipping {
+  color: #667085;
 }
 .ProductStatisticsContainer .ProductStatisticsIcon {
   margin-bottom: 0.5rem;
@@ -2688,7 +2730,7 @@ input[type="file"] {
   display: flex;
   padding: 0.1rem 0;
   border-bottom: 1px solid #eaecf0;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 .settingContent .settingNav ul {
   display: flex;
@@ -2765,6 +2807,12 @@ input[type="file"] {
   line-height: 32px;
   margin-bottom: 40px;
 }
+
+.selectpicker {
+  border: none !important;
+  background-color: red !important;
+}
+
 .generalContent .generalOrderContainer .generalOrderItem h4 {
   font-size: 16px;
   color: #344054;
@@ -2777,11 +2825,24 @@ input[type="file"] {
 .advansedInput .input-group-prepend {
   display: none;
 }
+.MuiSelect-select {
+  padding: 0.5rem !important;
+  border: 0px !important;
+
+  outline: none !important;
+}
 .advansedInput p {
-  margin: -6px 10px 0 -7px;
+  margin: -6px 30px 0 25px;
   font-weight: 500 !important;
   font-size: 14px !important;
   color: #101828;
+}
+.priceRanges {
+  width: 100%;
+  padding-right: 2.9rem !important;
+}
+.priceRanges P {
+  margin: 0 !important;
 }
 .otherAdvancedInput {
   width: 195px;
@@ -2807,8 +2868,8 @@ input[type="file"] {
   margin: 0;
 }
 .generalOrderItem {
-  margin-bottom: 35px;
-  padding-bottom: 24px;
+  margin-bottom: 5px;
+  padding-bottom: 4px;
   border-bottom: 1px solid #f2f4f7;
 }
 .generalOrderItem input {
@@ -2875,7 +2936,6 @@ td.expiryDate {
   line-height: 20px;
 }
 .supplierSettingOptions {
-  margin: 35px 0;
 }
 
 .supplierSettingOptions h4 {
@@ -2971,14 +3031,59 @@ td.expiryDate {
     0px 1px 3px 0px rgba(16, 24, 40, 0.1);
   margin-top: 2rem;
 }
-.productCostBox .productCostBoxItem .productItemCost,
+
 .productItemInput,
 .productItemPrice {
   padding: 16px 20px;
   text-align: center;
 }
+.productItemInput input {
+  width: 155px;
+}
+.productCostBox .productCostBoxItem .productItemCost {
+  padding: 14px 19px;
+}
 .productCostBoxItem {
   border-bottom: 1px solid #eaecf0;
+}
+.productItemCost {
+  width: 200px;
+}
+.productItemCost input {
+  margin-right: 12px;
+  margin-left: -3rem !important;
+  width: 30px !important;
+}
+.productItemInput {
+  position: relative;
+}
+.multiplier {
+  position: absolute;
+  top: 33%;
+  font-size: 16px;
+  font-weight: 400;
+  left: 30%;
+}
+.withUsd {
+  position: relative;
+}
+.usd {
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 10;
+  font-size: 16px;
+  font-weight: 400;
+  color: #98a2b3;
+  left: 43%;
+  top: 15%;
+}
+.multiBox {
+  position: relative;
+}
+.multiBox .multi2 {
+  position: absolute;
+  left: 22%;
+  top: 20%;
 }
 .productCostBox .productCostBoxItem div p {
   font-weight: 500 !important;
