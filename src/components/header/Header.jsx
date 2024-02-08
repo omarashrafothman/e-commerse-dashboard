@@ -88,7 +88,7 @@ function Header() {
           </div>
         </div>
       </nav>
-      <OfferBox />
+      {/*   <OfferBox /> */}
     </header>
   );
 }

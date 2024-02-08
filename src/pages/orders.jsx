@@ -232,7 +232,6 @@ export default function orders() {
               </div>
               <br />
               <br />
-              <br />
 
               <div className="shippingData d-flex flex-column">
                 <div className="shippingDataHeader d-flex align-items-center justify-content-between">
@@ -404,7 +403,6 @@ export default function orders() {
                   </div>
                 </div>
               </div>
-              <br />
               <br />
 
               <div className="shippingBtns  d-flex align-items-center ">

@@ -390,6 +390,7 @@ function AccordionSideBar() {
         <Accordion.Item eventKey="0">
           <Accordion.Header>All Stores</Accordion.Header>
           <Accordion.Body>
+            <p>all stores</p>
             <Link href="#">
               <li>AliExpress</li>
             </Link>
