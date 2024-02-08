@@ -588,7 +588,7 @@ input[type="checkbox"]:checked::before {
 .sideBar {
   width: 17%;
   position: fixed;
-  min-height: 85.5vh;
+  min-height: 92vh;
   left: 0;
   z-index: 1;
   background-color: var(--white-color);
