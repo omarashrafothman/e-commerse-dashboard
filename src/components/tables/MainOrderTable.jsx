@@ -6,6 +6,7 @@ import Input from "../inputs/Input";
 
 function MainOrderTable({
   selected,
+  handle,
   type,
   btnAdded,
   status,
@@ -46,7 +47,7 @@ function MainOrderTable({
           <td className="firstTd">
             <div className="d-flex align-items-center justify-content-between firstTd">
               <label class="control control-checkbox  ">
-                <input type="checkbox" />
+                <input type="checkbox" checked={selected} onChange={handle} />
                 <div class="control_indicator"></div>
               </label>
               <div className="orderImage">
@@ -109,7 +110,7 @@ function MainOrderTable({
           <td className="">
             <div className="d-flex align-items-center justify-content-between">
               <label class="control control-checkbox  ">
-                <input type="checkbox" />
+                <input type="checkbox" checked={selected} onChange={handle} />
                 <div class="control_indicator"></div>
               </label>
               <div className="orderImage">

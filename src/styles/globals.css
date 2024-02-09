@@ -3878,6 +3878,13 @@ td p {
 .shippingDataBodyItem {
   margin-bottom: 1rem;
 }
+.shippingDataHeader p {
+  font-weight: 500 !important;
+}
+.leftBack {
+  margin-left: -1rem !important;
+  margin-right: 2rem;
+}
 .shippingBtns {
   display: flex;
   justify-content: end;

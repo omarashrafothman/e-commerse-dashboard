@@ -9,6 +9,7 @@ import Input from "../inputs/Input";
 
 function OrderBox({
   selected,
+  handle,
   status,
   type,
   btnAdded,
@@ -72,7 +73,7 @@ function OrderBox({
           <div className="ordersNumber">
             <label class="control control-checkbox  d-flex align-items-center ">
               <p className="m-0 mt-1"> Order</p> <span className="">#1011</span>
-              <input type="checkbox" />
+              <input type="checkbox" onChange={handle} checked={selected} />
               <div class="control_indicator"></div>
             </label>
           </div>
@@ -104,6 +105,7 @@ function OrderBox({
         </div>
       </div>
       <MainOrderTable
+        handle={handle}
         selected={selected}
         status={status}
         type={type}
@@ -112,6 +114,7 @@ function OrderBox({
         statusCountent={statusCountent}
       />
       <MainOrderTable
+        handle={handle}
         selected={selected}
         status={status}
         type={type}

@@ -10,6 +10,7 @@ import OffcanvasComponent from "../components/offcanvas/RightOffcanvas";
 import shippingMethod from "../assets/images/webp/Featured icon (1).png";
 import dangerIcon from "../assets/icons/Featured icon (3).png";
 import productImage from "../assets/images/webp/product.webp";
+
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
 export const dynamic = "force-dynamic"; // static by default, unless reading the request
@@ -50,7 +51,11 @@ export default function orders() {
   const handleClose7 = () => setShowSeve(false);
   const handleShow7 = () => setShowSeve(true);
 
-  const [allSelected, setAllSelected] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
   useEffect(() => {
     document.title = "Orders";
   }, []);
@@ -255,7 +260,7 @@ export default function orders() {
                         </label>
                       </div>
                     </div>
-                    <p className="m-0">37-37 days</p>
+                    <p className=" leftBack">37-37 days</p>
                     <p className="m-0">US $0</p>
                     <div className="mx-3">
                       <svg
@@ -295,7 +300,7 @@ export default function orders() {
                         </label>
                       </div>
                     </div>
-                    <p className="m-0">37-37 days</p>
+                    <p className=" leftBack">37-37 days</p>
                     <p className="m-0">US $0</p>
                     <div className="mx-3">
                       <svg
@@ -335,7 +340,7 @@ export default function orders() {
                         </label>
                       </div>
                     </div>
-                    <p className="m-0">37-37 days</p>
+                    <p className=" leftBack">37-37 days</p>
                     <p className="m-0">US $0</p>
                     <div className="mx-3">
                       <svg
@@ -369,13 +374,14 @@ export default function orders() {
                           type="radio"
                           name="ePacket"
                           id="ePacket"
+                          checked={true}
                         />
                         <label class="form-check-label" for="ePacket">
                           ePacket
                         </label>
                       </div>
                     </div>
-                    <p className="m-0">37-37 days</p>
+                    <p className=" leftBack">37-37 days</p>
                     <p className="m-0">US $0</p>
                     <div className="mx-3">
                       <svg
@@ -537,11 +543,7 @@ export default function orders() {
               <div
                 className="btnBox"
                 onClick={() => {
-                  if (allSelected == false) {
-                    setAllSelected(true);
-                  } else {
-                    setAllSelected(false);
-                  }
+                  handleCheckboxChange();
                 }}
               >
                 <Button content={"Order all products"} classes={"btn"} />
@@ -597,19 +599,22 @@ export default function orders() {
               </div>
 
               <OrderBox
-                selected={allSelected}
+                handle={handleCheckboxChange}
+                selected={isChecked}
                 statusCountent={"To order"}
                 status={"statusBox toOrder"}
                 statusColor={"btn toOrder2"}
               />
               <OrderBox
-                selected={allSelected}
+                handle={handleCheckboxChange}
+                selected={isChecked}
                 statusCountent={"Awaiting Payment"}
                 status={"statusBox Awaiting"}
                 statusColor={"btn Awaiting2"}
               />
               <OrderBox
-                selected={allSelected}
+                handle={handleCheckboxChange}
+                selected={isChecked}
                 statusCountent={"In Processing"}
                 status={"statusBox Processing"}
                 statusColor={"btn Processing2"}

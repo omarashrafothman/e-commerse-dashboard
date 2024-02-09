@@ -42,7 +42,7 @@ export default function tracking() {
                 </div>
               </div>
               <div className="shipmentsItem d-flex flex-column">
-                <div className="statusBox ">
+                <div className="statusBox gray2">
                   <p>In transit</p>
                 </div>
                 <div className="shipmentsItemCount">
