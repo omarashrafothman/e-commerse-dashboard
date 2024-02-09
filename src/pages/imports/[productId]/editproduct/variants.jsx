@@ -100,7 +100,7 @@ function variant() {
                       </label>
                     </div>
                   </div>
-                  <p className="m-0">37-37 days</p>
+                  <p className="leftBack">37-37 days</p>
                   <p className="m-0">US $0</p>
                   <div className="mx-3">
                     <svg
@@ -140,7 +140,7 @@ function variant() {
                       </label>
                     </div>
                   </div>
-                  <p className="m-0">37-37 days</p>
+                  <p className="leftBack">37-37 days</p>
                   <p className="m-0">US $0</p>
                   <div className="mx-3">
                     <svg
@@ -180,7 +180,7 @@ function variant() {
                       </label>
                     </div>
                   </div>
-                  <p className="m-0">37-37 days</p>
+                  <p className="leftBack">37-37 days</p>
                   <p className="m-0">US $0</p>
                   <div className="mx-3">
                     <svg
@@ -220,7 +220,7 @@ function variant() {
                       </label>
                     </div>
                   </div>
-                  <p className="m-0">37-37 days</p>
+                  <p className="leftBack">37-37 days</p>
                   <p className="m-0">US $0</p>
                   <div className="mx-3">
                     <svg
