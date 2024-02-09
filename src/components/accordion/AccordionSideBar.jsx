@@ -390,7 +390,7 @@ function AccordionSideBar() {
         <Accordion.Item eventKey="0">
           <Accordion.Header>All Stores</Accordion.Header>
           <Accordion.Body>
-            <p>all stores</p>
+            <p>All Stores</p>
             <Link href="#">
               <li>AliExpress</li>
             </Link>
@@ -415,7 +415,9 @@ function AccordionSideBar() {
                 {item.svg}
                 <p
                   className={
-                    route.pathname.split("/")[1] === item.name ? "active" : ""
+                    route.pathname.split("/")[1] === item.name
+                      ? "active cap"
+                      : "cap"
                   }
                 >
                   {item.name}

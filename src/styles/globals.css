@@ -13,6 +13,7 @@
   --gray-color: #eaecf0;
   --warning-color: #c4320a;
   --transition: all 0.2s ease-in-out;
+  --bs-accordion-btn-icon-transform: rotate(0deg) !important;
 }
 
 ul {
@@ -24,9 +25,14 @@ li {
 button {
   border-radius: 8px;
 }
-option {
+.cap {
+  text-transform: capitalize;
 }
 
+input[type="number"]:focus-visible {
+  border: 1px solid var(--main-color) !important;
+  outline: var(--main-color) !important;
+}
 h4 {
   font-size: 16px !important;
   font-weight: 600 !important;
@@ -90,7 +96,7 @@ p.warning {
 
 .phoneNumberInbutBox input {
   width: 320px;
-  border: 1px solid #d0d5dd;
+  border: 1px solid #d0d5dd !important;
   background: #fff;
   border-left: 0;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
@@ -504,7 +510,7 @@ input[type="checkbox"]:checked::before {
   padding: 1.5rem 4rem;
 }
 .navBarLogo {
-  padding-top: 0.5rem;
+  padding-top: 0.3rem;
 }
 .headerContainer {
   width: 97%;
@@ -532,8 +538,9 @@ input[type="checkbox"]:checked::before {
   border-radius: 50%;
 }
 .avatarImage {
-  width: 3rem;
-  height: 3rem;
+  width: 2.4rem;
+  margin-top: 0.2rem;
+  height: 2.4rem;
   border-radius: 50%;
 }
 .infoItem {
@@ -617,13 +624,15 @@ input[type="checkbox"]:checked::before {
 .accordion-item {
   border-bottom: none !important;
   border-right: none !important;
+
+  /* border: 1px solid #eaecf0 !important; */
 }
 
 .accordion-body {
   position: absolute;
   width: 90%;
   margin-left: 5% !important;
-  margin-top: 5%;
+  margin-top: -1.5%;
   border-radius: 6px;
   border: 1px solid #e4e7eb !important;
   transition: all 0.3s ease-in;
@@ -636,6 +645,10 @@ input[type="checkbox"]:checked::before {
   box-shadow: 0px 0px 4px 3px rgba(192, 198, 204, 0.5); */
   box-shadow: 0px 18px 22px -4px rgba(25, 27, 31, 0.08),
     0px 4px 8px -4px rgba(25, 27, 31, 0.02);
+}
+.accordion-button::after {
+  background-image: url(../assets/icons/chevron-down.png) !important;
+  transform: rotate(0deg) !important;
 }
 
 .accordion-body p {
@@ -654,7 +667,8 @@ input[type="checkbox"]:checked::before {
   transition: all 0s ease-in-out;
 }
 .accordion-body li:hover {
-  background-color: var(--gray-color);
+  /* background-color: var(--gray-color); */
+  background-color: #f8f8f886;
 }
 .accordion-body a {
   text-decoration: none;
@@ -685,6 +699,8 @@ input[type="checkbox"]:checked::before {
 .AccordionSideBarListItem svg,
 .AccordionSideBarListItem img {
   margin-right: 0.7rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .AccordionSideBarList .AccordionSideBarListItem p {
@@ -823,7 +839,7 @@ input[type="checkbox"]:checked::before {
   border-bottom: 1px solid #eaecf0;
   border-top: 1px solid #eaecf0;
 
-  top: 8.2%;
+  top: 7.6%;
   right: 0;
   left: 0;
   position: sticky;
@@ -1969,6 +1985,7 @@ tr td div .orderImage img {
 /* offcanvas style end*/
 .accordion-button {
   border-radius: 0px !important;
+  border: 1px solid #eaecf0 !important;
 }
 .accordion-button.collapsed {
 }
