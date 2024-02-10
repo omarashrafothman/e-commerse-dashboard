@@ -51,7 +51,7 @@ export default function orders() {
   const handleClose7 = () => setShowSeve(false);
   const handleShow7 = () => setShowSeve(true);
 
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
