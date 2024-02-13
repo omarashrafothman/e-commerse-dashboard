@@ -17,7 +17,12 @@ function images() {
         <p className="my-3">Please choose Images</p>
         <div className="d-flex align-items-center justify-content-between flex-wrap  productGallery">
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option1" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options1"
+              id="option1"
+            />
             <label class="btn " for="option1">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -42,7 +47,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option2" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options2"
+              id="option2"
+            />
             <label class="btn " for="option2">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -67,7 +77,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option3" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options3"
+              id="option3"
+            />
             <label class="btn " for="option3">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -92,7 +107,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option4" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options4"
+              id="option4"
+            />
             <label class="btn " for="option4">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -117,7 +137,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option5" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options5"
+              id="option5"
+            />
             <label class="btn " for="option5">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -142,7 +167,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option6" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options6"
+              id="option6"
+            />
             <label class="btn " for="option6">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -167,7 +197,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option7" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options7"
+              id="option7"
+            />
             <label class="btn " for="option7">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -192,7 +227,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option8" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options8"
+              id="option8"
+            />
             <label class="btn " for="option8">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -217,7 +257,12 @@ function images() {
             </label>
           </div>
           <div className="productGalleryImage">
-            <input type="radio" class="btn-check" name="options" id="option9" />
+            <input
+              type="radio"
+              class="btn-check"
+              name="options9"
+              id="option9"
+            />
             <label class="btn " for="option9">
               <div className="blurBox">
                 <span className="selectedFlag">
@@ -245,7 +290,7 @@ function images() {
             <input
               type="radio"
               class="btn-check"
-              name="options"
+              name="options10"
               id="option10"
             />
             <label class="btn " for="option10">
