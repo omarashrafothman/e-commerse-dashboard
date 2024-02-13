@@ -99,7 +99,7 @@ export default function orders() {
               </div>
             </div>
           }
-          w={"w-25"}
+          w={"smallModal"}
           showState={show2}
         />
 
@@ -138,7 +138,7 @@ export default function orders() {
               </div>
             </div>
           }
-          w={"w-25"}
+          w={"smallModal"}
           showState={show3}
         />
 
@@ -177,7 +177,7 @@ export default function orders() {
               </div>
             </div>
           }
-          w={"w-25"}
+          w={"smallModal"}
           showState={show5}
         />
         <OffcanvasComponent
@@ -215,7 +215,7 @@ export default function orders() {
               </div>
             </div>
           }
-          w={"w-25"}
+          w={"smallModal"}
           showState={show4}
         />
         <OffcanvasComponent
@@ -409,7 +409,6 @@ export default function orders() {
                   </div>
                 </div>
               </div>
-              <br />
 
               <div className="shippingBtns  d-flex align-items-center ">
                 <div className="btnWithIcon  mx-2">
@@ -425,7 +424,7 @@ export default function orders() {
               </div>
             </div>
           }
-          w={"w-50"}
+          w={"bigModal"}
           showState={show6}
         />
         <OffcanvasComponent
@@ -522,7 +521,7 @@ export default function orders() {
               </div>
             </div>
           }
-          w={"w-25"}
+          w={"smallModal"}
           showState={show7}
         />
       </div>
@@ -608,7 +607,7 @@ export default function orders() {
               <OrderBox
                 handle={handleCheckboxChange}
                 selected={isChecked}
-                statusCountent={"Awaiting Payment"}
+                statusCountent={"Pay for order"}
                 status={"statusBox Awaiting"}
                 statusColor={"btn Awaiting2"}
               />

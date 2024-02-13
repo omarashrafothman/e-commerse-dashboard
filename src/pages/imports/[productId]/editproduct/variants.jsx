@@ -206,46 +206,6 @@ function variant() {
                     </svg>
                   </div>
                 </div>
-                <div className="shippingDataBodyItem d-flex align-items-center justify-content-between">
-                  <div>
-                    <div class="form-check">
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="ePacket"
-                        id="ePacket"
-                      />
-                      <label class="form-check-label" for="ePacket">
-                        ePacket
-                      </label>
-                    </div>
-                  </div>
-                  <p className="leftBack">37-37 days</p>
-                  <p className="m-0">US $0</p>
-                  <div className="mx-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="20"
-                      viewBox="0 0 22 20"
-                      fill="none"
-                    >
-                      <rect
-                        x="-0.00976562"
-                        width="22.0194"
-                        height="20"
-                        rx="10"
-                        fill="#D1FADF"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M15.6757 6.15838L9.1066 11.9167L7.3634 10.2251C7.04228 9.95005 6.53767 9.93338 6.17068 10.1667C5.81286 10.4084 5.71194 10.8334 5.93214 11.1751L7.99646 14.2251C8.1983 14.5084 8.54694 14.6834 8.94146 14.6834C9.31762 14.6834 9.67544 14.5084 9.87728 14.2251C10.2076 13.8334 16.5106 7.00838 16.5106 7.00838C17.3364 6.24172 16.3363 5.56672 15.6757 6.15005V6.15838Z"
-                        fill="#12B76A"
-                      />
-                    </svg>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="shippingBtns  d-flex align-items-center ">

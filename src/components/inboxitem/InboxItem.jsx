@@ -94,7 +94,9 @@ function InboxItem({ statusClases, statusImage, data }) {
                 <div className="my-3">
                   <p>
                     Product cost has changed:
-                    <Link href="#">Joint Support Knee Pads</Link>
+                    <Link href="#" className="black">
+                      Joint Support Knee Pads
+                    </Link>
                   </p>
                 </div>
                 <div className="updateBox d-flex align-items-center">
@@ -139,33 +141,6 @@ function InboxItem({ statusClases, statusImage, data }) {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="w-100 bg-white">
-                        <td>6512654-china-1-pair</td>
-                        <td>US$7.23</td>
-                        <td>US$18.46</td>
-                        <td className=" text-danger">
-                          <Image src={arrowDown} /> US$1.23 (5%)
-                        </td>
-                        <td>USD$0.00</td>
-                        <td className="">
-                          <div className="tdInput1">
-                            <Input
-                              type={"text"}
-                              value={"$15.26"}
-                              classes={"form-control"}
-                            />
-                          </div>
-                        </td>
-                        <td className="">
-                          <div className="tdInput2">
-                            <Input
-                              type={"text"}
-                              value={"$15.26"}
-                              classes={"form-control "}
-                            />
-                          </div>
-                        </td>
-                      </tr>
                       <tr className="w-100 bg-white">
                         <td>6512654-china-1-pair</td>
                         <td>US$7.23</td>

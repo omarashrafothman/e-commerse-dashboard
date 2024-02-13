@@ -25,6 +25,12 @@ li {
 button {
   border-radius: 8px;
 }
+.smallModal {
+  width: 475px !important;
+}
+.bigModal {
+  width: 680px !important;
+}
 .cap {
   text-transform: capitalize;
 }
@@ -150,7 +156,9 @@ p.warning {
 .container3 {
   flex-basis: 83%;
 }
-
+.container3 {
+  margin-left: 7rem !important;
+}
 select.form-select {
   font-size: 14px;
   color: #344054;
@@ -1410,6 +1418,7 @@ thead .toprow {
 }
 .toOrder {
   color: #c11574;
+  background-color: rgba(253, 242, 250, 1) !important;
 }
 .toOrder p {
   margin: 0 !important;
@@ -1429,7 +1438,7 @@ button {
   background-color: #0288d1 !important;
 }
 .Awaiting {
-  background-color: var(--warning-color);
+  background-color: rgba(255, 246, 237, 1) !important;
   margin-top: 0.7rem;
 }
 .Awaiting p {
@@ -1439,7 +1448,7 @@ button {
   background-color: var(--warning-color);
 }
 .Processing {
-  background-color: #0288d1;
+  background-color: rgba(240, 249, 255, 1) !important;
   margin-top: 0.7rem;
 }
 .Processing p {
@@ -1662,7 +1671,9 @@ tr td div .orderImage img {
   position: absolute;
   margin-top: 8px;
 }
-
+.productIcons {
+  padding: 0 15px;
+}
 .productIcons span a img {
   width: 16px;
   height: 16px;
@@ -1728,7 +1739,9 @@ tr td div .orderImage img {
   font-weight: 500;
   line-height: 20px;
 }
-
+.black {
+  color: #000;
+}
 /* navigationFooter style end*/
 
 /* productDetails style start*/
@@ -1736,7 +1749,7 @@ tr td div .orderImage img {
 .productDetailsContainer {
   margin-top: 24px;
 
-  margin-left: 2rem;
+  margin-left: 0;
   flex-wrap: wrap;
   display: flex;
 }
@@ -3177,7 +3190,7 @@ td.expiryDate {
   padding: 2px 8px;
   justify-content: center;
   align-items: center;
-  background-color: #f4fffd !important;
+  background-color: #f4fffd;
   border-radius: 9999px;
 }
 .statusBox p {
