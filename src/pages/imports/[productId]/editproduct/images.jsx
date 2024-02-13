@@ -18,7 +18,7 @@ function images() {
         <div className="d-flex align-items-center justify-content-between flex-wrap  productGallery">
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options1"
               id="option1"
@@ -48,7 +48,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options2"
               id="option2"
@@ -108,7 +108,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options4"
               id="option4"
@@ -138,7 +138,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options5"
               id="option5"
@@ -168,7 +168,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options6"
               id="option6"
@@ -198,7 +198,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options7"
               id="option7"
@@ -228,7 +228,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options8"
               id="option8"
@@ -258,7 +258,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options9"
               id="option9"
@@ -288,7 +288,7 @@ function images() {
           </div>
           <div className="productGalleryImage">
             <input
-              type="radio"
+              type="checkbox"
               class="btn-check"
               name="options10"
               id="option10"
