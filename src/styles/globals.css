@@ -2337,7 +2337,7 @@ tr td div .orderImage img {
   text-decoration: none;
 }
 .btnactive {
-  background-color: #d0d5dd !important;
+  background-color: rgba(249, 250, 251, 1) !important;
 }
 .leftRightBtnBox button.leftBtn {
   border-bottom-left-radius: 8px;
