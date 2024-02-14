@@ -431,6 +431,12 @@ export default function products() {
               </div>
             </div>
           </div>
+          <div className="unmappedBox d-flex align-items-center">
+            <Image src={infoCost} />
+            <p className="m-0">
+              Unmapped product. Click Map Product to link a supplier’s product
+            </p>
+          </div>
           <div className="tableBox">
             <table class=" billingHistoryTable">
               <thead>
@@ -627,12 +633,6 @@ export default function products() {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="unmappedBox d-flex align-items-center">
-            <Image src={info} />
-            <p className="m-0">
-              Unmapped product. Click Map Product to link a supplier’s product
-            </p>
           </div>
         </div>
       </div>

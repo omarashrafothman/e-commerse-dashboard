@@ -614,7 +614,7 @@ export default function orders() {
               <OrderBox
                 handle={handleCheckboxChange}
                 selected={isChecked}
-                statusCountent={"In Processing"}
+                statusCountent={"Get tracking code"}
                 status={"statusBox Processing"}
                 statusColor={"btn Processing2"}
                 btnAdded={<button className="btn">hello</button>}

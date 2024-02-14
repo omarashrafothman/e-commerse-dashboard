@@ -12,6 +12,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import productImage from "../../assets/icons/Featured icon.png";
 import arrowLeft from "../../assets/icons/arrow-left black.png";
 import TitleHeader from "../titleHeader/TitleHeader";
+import arrowbotom from "../../assets/icons/Icon (1).png";
 
 export default function ProductDetails({ paramsId, segment }) {
   const [show, setShow] = useState(false);
@@ -170,6 +171,15 @@ export default function ProductDetails({ paramsId, segment }) {
                             <Image src={product} />
                           </div>
                         </div>
+                        <div className="seeMore">
+                          <Link href="#">
+                            <span className="arrowBottom">
+                              <Image src={arrowbotom} />
+                            </span>
+                            See more
+                          </Link>
+                        </div>
+                        <hr className="divider" />
                       </div>
                       <div className="shippingDetails productBrand">
                         <div className="brandName d-flex">
