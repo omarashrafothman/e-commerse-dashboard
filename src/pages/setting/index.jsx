@@ -86,7 +86,7 @@ function Index() {
           </div>
         </div>
         <div className="d-flex flex-column boxWithRadio ">
-          <h4 className="">Fulfillment</h4>
+          <h3 className="">Fulfillment</h3>
           <div className="d-flex align-items-center radioBox">
             <input className="form-check-input" type="radio" />
             <label>Fulfill order and upload tracking number after</label>
