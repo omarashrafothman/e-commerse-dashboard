@@ -85,14 +85,14 @@ function Index() {
             </div>
           </div>
         </div>
-        <div className="d-flex flex-column boxWithRadio leftOver">
+        <div className="d-flex flex-column boxWithRadio ">
           <h4 className="">Fulfillment</h4>
           <div className="d-flex align-items-center radioBox">
-            <input type="radio" className="" />
+            <input className="form-check-input" type="radio" />
             <label>Fulfill order and upload tracking number after</label>
           </div>
           <div className="d-flex align-items-center radioBox">
-            <input type="radio" className="" />
+            <input className="form-check-input" type="radio" />
 
             <label>Fulfill order and upload tracking number after</label>
             <div className="selectBox m-3">
@@ -110,7 +110,7 @@ function Index() {
           <h5 className="">Auto fulfill delay</h5>
           <p>When the purchase order is shipped from the supplier:</p>
           <div className="d-flex  radioBox">
-            <input type="radio" className="" />
+            <input className="form-check-input" type="radio" />
             <div className="d-flex flex-column">
               <label>Fulfill order and upload tracking number after</label>
               <p>
@@ -125,7 +125,7 @@ function Index() {
           </div>
 
           <div className="d-flex  radioBox">
-            <input type="radio" className="" />
+            <input className="form-check-input" type="radio" />
             <div className="d-flex flex-column">
               <label>Fulfill order and upload tracking number after</label>
               <p>
