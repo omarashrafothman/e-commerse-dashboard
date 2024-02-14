@@ -2872,6 +2872,9 @@ input[type="file"] {
   width: 20px;
   height: 20px;
 }
+.ma {
+  margin-top: 11.5rem !important;
+}
 
 .generalContent {
   margin-bottom: 0rem !important;

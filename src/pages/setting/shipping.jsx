@@ -31,7 +31,7 @@ function shipping() {
         <div className="generalContent">
           <div className="d-flex flex-column boxWithRadio">
             <div className="d-flex  radioBox">
-              <input type="radio" className="" />
+              <input className="form-check-input" type="radio" />
               <div className="d-flex flex-column">
                 <label>Add global shipping method card</label>
                 <p>

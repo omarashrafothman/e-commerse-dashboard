@@ -257,7 +257,7 @@ export default function products() {
                 </tbody>
               </table>
             </div>
-            <div className="d-flex justify-content-end btnsforUpdate">
+            <div className="d-flex justify-content-end btnsforUpdate ma">
               <div className="d-flex align-items-center">
                 <div className="deleteAndEdit">
                   <button className="btn " onClick={closeCnvas3}>
@@ -317,7 +317,15 @@ export default function products() {
                   <tr className="w-100">
                     <td>
                       <div className="productDesc d-flex align-items-center ">
-                        <input type="radio" style={{ marginRight: "1rem" }} />
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          style={{
+                            marginRight: "1rem",
+                            width: "20px",
+                            height: "20px",
+                          }}
+                        />
                         <Image src={ProductImage} className="productImage" />
                       </div>
                     </td>
@@ -349,9 +357,15 @@ export default function products() {
                     <td>
                       <div className="productDesc d-flex align-items-center ">
                         <input
+                          className="form-check-input"
                           type="radio"
-                          style={{ marginRight: "1rem", width: "20px" }}
+                          style={{
+                            marginRight: "1rem",
+                            width: "20px",
+                            height: "20px",
+                          }}
                         />
+
                         <Image src={ProductImage} className="productImage" />
                       </div>
                     </td>
@@ -382,7 +396,7 @@ export default function products() {
                 </tbody>
               </table>
             </div>
-            <div className="d-flex justify-content-end btnsforUpdate">
+            <div className="d-flex justify-content-end btnsforUpdate ma">
               <div className="d-flex align-items-center">
                 <div className="deleteAndEdit">
                   <button className="btn " onClick={handleClose2}>
