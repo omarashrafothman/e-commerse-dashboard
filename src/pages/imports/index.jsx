@@ -3,7 +3,10 @@ import Input from "@/components/inputs/Input";
 import Product from "@/components/product/Product";
 import NavigationFooter from "@/components/navFooter/NavigationFooter";
 import products from "../../local-json/products.json";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import OffcanvasComponent from "../../components/offcanvas/RightOffcanvas";
+import Image from "next/image";
+import shippingMethod from "../../assets/images/webp/Featured icon (1).png";
 
 // edge  start
 export const runtime = "experimental-edge"; // 'nodejs' is the default
@@ -14,6 +17,10 @@ export function GET(request) {
 }
 // edge  end
 function index() {
+  const [show6, setShowSix] = useState(true);
+  const handleClose6 = () => setShowSix(false);
+  const handleShow6 = () => setShowSix(true);
+
   useEffect(() => {
     document.title = "Imports";
   }, []);
@@ -21,6 +28,193 @@ function index() {
     <div>
       <div className="main">
         <div className="container3">
+          <OffcanvasComponent
+            plasment={"end"}
+            close={handleClose6}
+            component={
+              <div>
+                <div>
+                  <Image src={shippingMethod} />
+                </div>
+                <br />
+                <div className="shippingMethods">
+                  <h4>Split product</h4>
+                </div>
+
+                <div className="generalContent">
+                  <div className="d-flex flex-column boxWithRadio">
+                    <div className="d-flex  radioBox">
+                      <input className="form-check-input" type="radio" />
+                      <div className="d-flex flex-column">
+                        <label>Split by option</label>
+                        <p>
+                          Select variants you wish to split to another product.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mx-3">
+                  <div className="generalContent">
+                    <div className="d-flex flex-column boxWithRadio">
+                      <div className="d-flex  radioBox">
+                        <input className="form-check-input" type="radio" />
+                        <div className="d-flex flex-column">
+                          <label>Ships from</label>
+                          <p>
+                            We will create 3 products each containing only
+                            distinct
+                            <br /> “ships” From” variants (China, USA and
+                            Russian Federation).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="generalContent">
+                    <div className="d-flex flex-column boxWithRadio">
+                      <div className="d-flex  radioBox">
+                        <input className="form-check-input" type="radio" />
+                        <div className="d-flex flex-column">
+                          <label>Color</label>
+                          <p>
+                            We will create 2 products each containing only
+                            distinct “Color variants (1Pair, 1 PC).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="generalContent">
+                  <div className="d-flex flex-column boxWithRadio">
+                    <div className="d-flex  radioBox">
+                      <input className="form-check-input" type="radio" />
+                      <div className="d-flex flex-column">
+                        <label>Split manually</label>
+                        <p>
+                          Select which option you want to use for splitting the
+                          product.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="shipsFrom">
+                  <h4>Ships from</h4>
+                  <div className="d-flex align-items-center flex-wrap w-75">
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p
+                        className="m-0 fromC"
+                        style={{ color: "rgba(52, 64, 84, 1) " }}
+                      >
+                        china
+                      </p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox from ">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> USA</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Russian</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Argentina</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Australia</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> France</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Germany</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Canada</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+                <div className="shipsFrom">
+                  <h4>Color</h4>
+                  <div className="d-flex align-items-center flex-wrap w-75">
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC">Gray</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox from ">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Pink</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> White</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Black</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Yellow</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Green</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Blue</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-checkbox  from">
+                      <input type="checkbox" />
+                      <p className="m-0 fromC"> Orange</p>
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="shippingBtns  d-flex align-items-center ">
+                  <div className="btnWithIcon  mx-2">
+                    <button className="btn" onClick={handleClose6}>
+                      Cancel
+                    </button>
+                  </div>
+                  <div className="importsBtns">
+                    <button className="editBtn btn" onClick={handleShow6}>
+                      Split
+                    </button>
+                  </div>
+                </div>
+              </div>
+            }
+            w={"bigModal"}
+            showState={show6}
+          />
           <TitleHeader title={"Imports"} />
           <div className="container1">
             <div className="mainContent">
