@@ -450,7 +450,7 @@ export default function orders() {
                 </div>
 
                 <div className="d-flex align-items-center outOf">
-                  <Input type={"number"} />
+                  <Input type={"number"} value={1} />
                   <p>out of 1</p>
                 </div>
               </div>
@@ -463,7 +463,7 @@ export default function orders() {
                 </div>
 
                 <div className="d-flex align-items-center outOf">
-                  <Input type={"number"} />
+                  <Input type={"number"} value={1} />
                   <p>out of 1</p>
                 </div>
               </div>
@@ -476,7 +476,7 @@ export default function orders() {
                 </div>
 
                 <div className="d-flex align-items-center outOf">
-                  <Input type={"number"} />
+                  <Input type={"number"} value={1} />
                   <p>out of 1</p>
                 </div>
               </div>
@@ -489,7 +489,7 @@ export default function orders() {
                 </div>
 
                 <div className="d-flex align-items-center outOf">
-                  <Input type={"number"} />
+                  <Input type={"number"} value={1} />
                   <p>out of 1</p>
                 </div>
               </div>
@@ -512,6 +512,8 @@ export default function orders() {
                   Send a notification email to the customer
                 </label>
               </div>
+              <br />
+              <br />
               <div className="shippingBtns  d-flex align-items-center ">
                 <div className="btnWithIcon  mx-2">
                   <button className="btn" onClick={handleClose7}>
@@ -696,21 +698,24 @@ export default function orders() {
                 statusCountent={"To order"}
                 status={"statusBox toOrder"}
                 statusColor={"btn toOrder2"}
+                bttStatus={"toOrder"}
               />
               <OrderBox
                 handle={handleCheckboxChange}
                 selected={isChecked}
-                statusCountent={"Pay for order"}
+                statusCountent={"Awaiting Payment"}
                 status={"statusBox Awaiting"}
                 statusColor={"btn Awaiting2"}
+                bttStatus={"Awaiting"}
               />
               <OrderBox
                 handle={handleCheckboxChange}
                 selected={isChecked}
-                statusCountent={"Get tracking code"}
+                statusCountent={"In Processing"}
                 status={"statusBox Processing"}
                 statusColor={"btn Processing2"}
                 btnAdded={<button className="btn">hello</button>}
+                bttStatus={"Processing"}
               />
             </div>
           </div>

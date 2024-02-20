@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import PhoneNumberInput from "@/components/phoneNumberInput/PhoneNumberInput";
 import plus from "../../../assets/icons/plus.png";
-
+import { NavLink } from "@/components/navLink/NavLink";
 import React, { useState, useRef } from "react";
 
 // edge  start
@@ -26,24 +26,16 @@ function Suppliersetting() {
     <Layout>
       <div className="w-100">
         <div className="leftRightBtnBox my-3">
-          <button
-            className={
-              route.pathname === "/setting/suppliers/suppliersetting"
-                ? "btnactive leftBtn"
-                : "leftBtn"
-            }
+          <NavLink
+            href={"/setting/suppliers/suppliersetting"}
+            exact
+            className=""
           >
-            <Link href="/setting/suppliers/suppliersetting/">Setting</Link>
-          </button>
-          <button
-            className={
-              route.pathname === "/setting/suppliers"
-                ? "btnactive rightBtn"
-                : "rightBtn"
-            }
-          >
-            <Link href="/setting/suppliers/">Suppliers</Link>
-          </button>
+            Setting
+          </NavLink>
+          <NavLink href={"/setting/suppliers"} exact className="">
+            Suppliers
+          </NavLink>
         </div>
       </div>
       <div className="supplierSettingContent">

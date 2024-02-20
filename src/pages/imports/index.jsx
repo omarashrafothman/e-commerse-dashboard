@@ -198,7 +198,7 @@ function index() {
                   </div>
                 </div>
 
-                <div className="shippingBtns  d-flex align-items-center ">
+                <div className="shippingBtns  d-flex align-items-center split">
                   <div className="btnWithIcon  mx-2">
                     <button className="btn" onClick={handleClose6}>
                       Cancel

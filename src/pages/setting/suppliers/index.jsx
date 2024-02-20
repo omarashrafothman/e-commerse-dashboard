@@ -4,31 +4,26 @@ import Image from "next/image";
 import shopify from "../../../assets/images/shopify.png";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { NavLink } from "@/components/navLink/NavLink";
 
 function Index() {
   const route = useRouter();
   return (
     <Layout>
       <div className="w-100">
-        <div className="leftRightBtnBox my-3">
-          <button
-            className={
-              route.pathname === "/setting/suppliers/suppliersetting"
-                ? "btnactive leftBtn"
-                : "leftBtn"
-            }
-          >
-            <Link href="/setting/suppliers/suppliersetting">Setting</Link>
-          </button>
-          <button
-            className={
-              route.pathname === "/setting/suppliers"
-                ? "btnactive rightBtn"
-                : "rightBtn"
-            }
-          >
-            <Link href="/setting/suppliers/">Suppliers</Link>
-          </button>
+        <div className="editProductNavigationBtns">
+          <div className="leftRightBtnBox my-3">
+            <NavLink
+              href={"/setting/suppliers/suppliersetting"}
+              exact
+              className=""
+            >
+              Setting
+            </NavLink>
+            <NavLink href={"/setting/suppliers"} exact className="">
+              Suppliers
+            </NavLink>
+          </div>
         </div>
 
         <div className="channelTabel">

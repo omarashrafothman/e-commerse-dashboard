@@ -16,6 +16,7 @@ function OrderBox({
   btnContent,
   statusCountent,
   statusColor,
+  bttStatus,
 }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -100,7 +101,15 @@ function OrderBox({
         </div>
         <div className="orderAllProducts">
           <button className={statusColor}>
-            {selected ? "Place order" : "Order all products"}
+            {bttStatus === "toOrder"
+              ? "Order all products"
+              : bttStatus === "Awaiting"
+              ? "Pay for order"
+              : bttStatus === "Processing"
+              ? "Get tracking code"
+              : ""}
+
+            {/* {selected ? "Place order" : "Order all products"} */}
           </button>
         </div>
       </div>

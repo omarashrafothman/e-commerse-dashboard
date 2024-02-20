@@ -25,6 +25,9 @@ li {
 button {
   border-radius: 8px;
 }
+.split {
+  margin-top: 5.5rem !important;
+}
 .smallModal {
   width: 475px !important;
 }
@@ -218,6 +221,9 @@ select.form-select:focus option {
 
   border-radius: 6px;
 }
+.control .fromC {
+  color: rgba(52, 64, 84, 1) !important;
+}
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {
   background: #cccccc;
@@ -271,6 +277,9 @@ select.form-select:focus option {
 .shipped p span {
   text-decoration: underline;
 }
+.shippedBox {
+  border-bottom: 1px solid rgba(242, 244, 247, 1);
+}
 .shippedBox .imageShippeBox {
   width: 35px;
   height: 35px;
@@ -288,7 +297,9 @@ select.form-select:focus option {
 .outOf input {
   width: 54px !important;
   height: 44px !important;
-  padding: 0.3rem !important;
+  padding: 0.3rem 0.3rem 0.3rem 0.9rem !important;
+
+  color: #000 !important;
 }
 .outOf p {
   margin: 0;
@@ -302,8 +313,8 @@ select.form-select:focus option {
 }
 
 .form-check-input:checked {
-  background-color: #53d2b7 !important;
-  border-color: #53d2b7 !important;
+  background-color: rgba(83, 210, 183, 1) !important;
+  border-color: rgba(83, 210, 183, 1) !important;
 }
 .input-group-prepend label,
 .form-group label {
@@ -2319,9 +2330,10 @@ tr td div .orderImage img {
   align-items: center;
   margin-right: 8px;
 }
-.leftRightBtnBox button {
+.leftRightBtnBox button,
+.leftRightBtnBox a {
   background-color: #fff;
-
+  text-decoration: none;
   border: 1px solid #d0d5dd;
   display: flex;
   padding: 10px 16px;
@@ -2403,6 +2415,18 @@ table th:first-child {
   border-radius: 8px 0 0 0;
   -moz-border-radius: 8px 0 0 0;
   -webkit-border-radius: 8px 0 0 0;
+}
+.firstTr {
+  background-color: rgba(242, 244, 247, 1) !important;
+}
+.closeIcon {
+  cursor: pointer;
+  margin-left: 3rem;
+  margin-top: -1rem;
+  position: absolute;
+}
+.small {
+  width: 159px !important;
 }
 
 table th:last-child {
@@ -2794,6 +2818,7 @@ input[type="file"] {
   display: flex;
   padding: 0.1rem 0;
   border-bottom: 1px solid #eaecf0;
+  margin-bottom: 40px;
 }
 .settingContent .settingNav ul {
   display: flex;
@@ -2993,7 +3018,7 @@ input[type="file"] {
   height: 72px;
   padding: 16px 24px;
   align-self: stretch;
-
+  width: 28rem !important;
   align-items: center;
 
   background-color: #f9fafb;
@@ -3025,16 +3050,18 @@ td.expiryDate {
 }
 
 .supplierSettingOptions h4 {
-  font-size: 16px;
-  color: #000;
-  font-weight: 400;
+  font-size: 18px !important;
+  color: rgba(16, 24, 40, 1);
+  font-weight: 600 !important;
   line-height: 24px;
+  margin-bottom: 0 !important;
 }
 .supplierSettingOptions p {
   font-size: 14px;
   color: #667085;
   font-weight: 400;
   line-height: 20px;
+  margin-bottom: 30px;
 }
 .addBox {
   width: 24px;
@@ -3079,7 +3106,33 @@ td.expiryDate {
   margin-top: 14rem;
 }
 .dsNinjaHead {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+.generalOrderItemData {
+  margin-bottom: 30px !important;
+}
+.generalOrderItemData p {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  margin: 0;
+  color: rgba(102, 112, 133, 1);
+}
+.generalOrderItemData {
+  margin-bottom: 0.5rem;
+}
+.withouBorder {
+  border-bottom: 0 !important;
+}
+.generalOrderItemData h4 {
+  margin-bottom: 0;
+  color: rgba(52, 64, 84, 1);
+  font-weight: 500;
+  font-size: 16px;
+}
+.dsNinjaHead h4 {
+  font-weight: 600 !important;
+
+  font-size: 20px !important;
 }
 .dsNinjaContainerMini {
   background-color: #fcfcfd !important;
@@ -3088,7 +3141,10 @@ td.expiryDate {
   padding: 16px;
 }
 .productCostBoxItem {
-  background-color: var(--gray-color) !important;
+  background-color: rgba(249, 250, 251, 1) !important;
+}
+.productItemCost {
+  background-color: rgba(249, 250, 251, 1) !important;
 }
 .dsNinjaContainerMini .warningBox {
   background-color: #fcfcfd !important;
@@ -3166,10 +3222,17 @@ td.expiryDate {
 .multiBox {
   position: relative;
 }
+.multiBox input {
+  width: 159px !important;
+}
+.multiBox input,
+.withUsd input {
+  color: #000 !important;
+}
 .multiBox .multi2 {
   position: absolute;
-  left: 22%;
-  top: 20%;
+  left: 17%;
+  top: 5%;
 }
 .productCostBox .productCostBoxItem div p {
   font-weight: 500 !important;
@@ -3580,7 +3643,7 @@ td.expiryDate {
   margin-right: 15px;
 }
 .unmappedBox p {
-  font-size: 17px !important;
+  font-size: 12px !important;
 
   font-weight: 500 !important;
   line-height: 28px !important;
@@ -4008,9 +4071,11 @@ td p {
     width: 100%;
     margin: 0 auto;
   }
-  .editProductNavigationBtns .leftRightBtnBox button {
+  .editProductNavigationBtns .leftRightBtnBox a {
     width: 25% !important;
     padding: 10px 10px !important;
+    font-size: 12px !important;
+    text-align: center;
   }
   .editProductNavigationBtns .leftRightBtnBox button a {
     font-size: 12px !important;
@@ -4058,6 +4123,12 @@ td p {
   .editProductNavigationBtns .leftRightBtnBox button a {
     font-size: 14px;
     text-align: center;
+    width: 25%;
+  }
+  .editProductNavigationBtns .leftRightBtnBox a {
+    font-size: 14px;
+    text-align: center;
+    width: 25%;
   }
   .editProductNavigationSelect {
     width: 100%;
@@ -4099,6 +4170,10 @@ td p {
     width: 25%;
   }
   .editProductNavigationBtns .leftRightBtnBox button a {
+    font-size: 14px;
+    text-align: center;
+  }
+  .editProductNavigationBtns .leftRightBtnBox a {
     font-size: 14px;
     text-align: center;
   }

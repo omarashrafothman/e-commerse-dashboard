@@ -3,6 +3,7 @@ import Layout from "./layout";
 import Link from "next/link";
 import Image from "next/image";
 import trash from "../../assets/icons/trash.png";
+import { NavLink } from "@/components/navLink/NavLink";
 function shipping() {
   return (
     <Layout>
@@ -20,14 +21,18 @@ function shipping() {
             <p>Set up your default shippping method for specific country.</p>
           </div>
         </div>
-        <div className="leftRightBtnBox my-3">
-          <button className="leftBtn">
-            <Link href="#">AliExpress</Link>
-          </button>
-          <button className="rightBtn">
-            <Link href="#">CJ</Link>
-          </button>
+
+        <div className="editProductNavigationBtns">
+          <div className="leftRightBtnBox my-3">
+            <NavLink href="#" exact className="">
+              AliExpress
+            </NavLink>
+            <NavLink href="#" exact className="">
+              CJ
+            </NavLink>
+          </div>
         </div>
+
         <div className="generalContent">
           <div className="d-flex flex-column boxWithRadio">
             <div className="d-flex  radioBox">

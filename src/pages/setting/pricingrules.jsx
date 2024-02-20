@@ -5,12 +5,18 @@ import Input from "@/components/inputs/Input";
 import { useState } from "react";
 import Image from "next/image";
 import shopify from "../../assets/images/shopify.png";
+import infoCost from "../../assets/icons/info (1).png";
+import close from "../../assets/icons/close.png";
 function Pricingrules() {
   const [isChecked, setIsChecked] = useState(false);
+  const [isCheckedOpen, setIsCheckedOpen] = useState(true);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked); // Toggle the checked state
     console.log(isChecked);
+  };
+  const handleCheckboxChange2 = () => {
+    setIsCheckedOpen(!isCheckedOpen); // Toggle the checked state
   };
 
   return (
@@ -24,7 +30,7 @@ function Pricingrules() {
           </p>
         </div>
         <div>
-          <div className="generalOrderItem d-flex ">
+          <div className="generalOrderItem d-flex withouBorder">
             <div class="form-check ">
               <input
                 class="form-check-input "
@@ -49,34 +55,37 @@ function Pricingrules() {
               <h4>ds-ninja</h4>
               <div class="form-check form-switch">
                 <input
-                  className="form-check-input "
+                  className="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckChecked"
+                  checked={isCheckedOpen}
+                  onChange={handleCheckboxChange2}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="generalOrderItem d-flex my-1 withouBorder">
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input "
                   type="checkbox"
                   id="flexSwitchCheckChecked"
                   checked={isChecked}
                   onChange={handleCheckboxChange}
                 />
               </div>
-            </div>
-            <br />
-            <div className="generalOrderItem d-flex my-3">
-              <div class="form-check form-switch">
-                <input
-                  class="form-check-input "
-                  type="checkbox"
-                  id="flexSwitchCheckChecked"
-                />
-              </div>
-              <div className="generalOrderItemData d-flex flex-column">
-                <h4>Canceled orders optimization</h4>
-                <p>
-                  Activate this feature to automatically optimize an order
-                  cancelled by Ali Express. The optimization by DSers will
-                  greatly reduce the probability for the order to be cancelled
-                  again.
-                </p>
+              <div className="generalOrderItemData d-flex flex-column ">
+                <h4>Advanced pricing rules</h4>
+                <p>Set your product markup depending on cost ranges.</p>
               </div>
             </div>
-            <WarningBox />
+            <div className="unmappedBox d-flex align-items-center">
+              <Image src={infoCost} />
+              <p className="m-0">
+                Compare at price needs to be higher than price. We will leave
+                the compare at price empty If it violates this rule.
+              </p>
+            </div>
 
             {isChecked ? (
               <div className="tableBox ">
@@ -102,9 +111,9 @@ function Pricingrules() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="firstTr">
                     <tr className="w-100">
-                      <td className=" d-flex align-items-center advansedInput">
+                      <td className=" d-flex align-items-center advansedInput firstTr">
                         <span className="withUsd">
                           <span className="usd">usd</span>
                           <Input classes={"form-control"} type={"number"} />
@@ -119,19 +128,23 @@ function Pricingrules() {
                         <p>x</p>
                       </td>
 
-                      <td className="otherAdvancedInput ">
+                      <td className="otherAdvancedInput  firstTr ">
                         <span className="multiBox">
                           <span className="multi2">MULTIPLIER</span>
                           <input type="number" className="form-control" />
                         </span>
                       </td>
-                      <td className="otherAdvancedInput ">
+                      <td className="otherAdvancedInput  firstTr">
                         <span className="multiBox">
                           <span className="multi2">MULTIPLIER</span>
-                          <input type="number" className="form-control" />
+                          <input type="number" className="form-control small" />
                         </span>
                       </td>
-                      <td></td>
+                      <td className="firstTr  ">
+                        <span className="closeIcon">
+                          <Image src={close} />
+                        </span>
+                      </td>
                     </tr>
                     <tr className="w-100">
                       <td className=" d-flex align-items-center advansedInput">
@@ -158,7 +171,7 @@ function Pricingrules() {
                       <td className="otherAdvancedInput ">
                         <span className="multiBox">
                           <span className="multi2">MULTIPLIER</span>
-                          <input type="number" className="form-control" />
+                          <input type="number" className="form-control small" />
                         </span>
                       </td>
                       <td></td>
@@ -179,7 +192,7 @@ function Pricingrules() {
                       <td className="otherAdvancedInput ">
                         <span className="multiBox">
                           <span className="multi2">MULTIPLIER</span>
-                          <input type="number" className="form-control" />
+                          <input type="number" className="form-control small" />
                         </span>
                       </td>
                       <td></td>
@@ -224,6 +237,7 @@ function Pricingrules() {
               </div>
             )}
           </div>
+          <br />
           <div className="supplierSettingOptions">
             <h4>Assign cents</h4>
             <br />
