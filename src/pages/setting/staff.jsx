@@ -95,21 +95,21 @@ function staff() {
                   <label class="control control-checkbox  ">
                     <input type="checkbox" />
                     <div class="control_indicator"></div>
-                    <p className="m-0">Dashboard</p>
+                    <p className="m-0">Orders</p>
                   </label>
                 </div>
                 <div className="d-flex limitedAccessItem">
                   <label class="control control-checkbox  ">
                     <input type="checkbox" />
                     <div class="control_indicator"></div>
-                    <p className="m-0">Dashboard</p>
+                    <p className="m-0">Products</p>
                   </label>
                 </div>
                 <div className="d-flex limitedAccessItem">
                   <label class="control control-checkbox  ">
                     <input type="checkbox" />
                     <div class="control_indicator"></div>
-                    <p className="m-0">Dashboard</p>
+                    <p className="m-0">Settings</p>
                   </label>
                 </div>
               </div>
