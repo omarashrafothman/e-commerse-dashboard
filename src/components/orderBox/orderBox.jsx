@@ -69,6 +69,7 @@ function OrderBox({
         w={"w-25"}
         showState={show}
       />
+
       <div className="orderBoxHeading d-flex justify-content-between align-items-center">
         <div className="d-flex orderBoxHeadingLeft  ">
           <div className="ordersNumber">

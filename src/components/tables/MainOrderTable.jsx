@@ -13,7 +13,7 @@ function MainOrderTable({
   btnContent,
   statusCountent,
 }) {
-  const [payment, setPayment] = useState(false);
+  const [payment, setPayment] = useState(true);
   return (
     <div className="">
       <thead>
@@ -65,7 +65,7 @@ function MainOrderTable({
             </div>
           </td>
           <td>
-            {payment ? (
+            {selected ? (
               <td className="bigBag">
                 <Image src={bag} />
               </td>
@@ -75,7 +75,7 @@ function MainOrderTable({
               </div>
             )}
           </td>
-          {payment ? (
+          {selected ? (
             <td>
               <div className="orderPrice">
                 <p>Override</p>
@@ -85,7 +85,7 @@ function MainOrderTable({
             " "
           )}
           <td className=" ">
-            {payment ? (
+            {selected ? (
               <div className="inputNew">
                 <Input
                   type={"text"}
@@ -104,44 +104,6 @@ function MainOrderTable({
                 </select>
               </div>
             )}
-          </td>
-        </tr>
-        <tr className="orderRow">
-          <td className="">
-            <div className="d-flex align-items-center justify-content-between">
-              <label class="control control-checkbox  ">
-                <input type="checkbox" checked={selected} onChange={handle} />
-                <div class="control_indicator"></div>
-              </label>
-              <div className="orderImage">
-                <Image src={product} />
-              </div>
-              <div className="d-flex flex-column tableProductDetails">
-                <h6>Easy salad cutter bowl</h6>
-                <p>54654648-United-States</p>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div className="country">
-              <p>United States / for iphone 0.9m</p>
-            </div>
-          </td>
-          <td>
-            <div className="orderPrice">
-              <p>1 X $40.99 USD</p>
-            </div>
-          </td>
-          <td>
-            <div>
-              <select class="form-select" aria-label="Default select example">
-                <option value="1" selected>
-                  More Actions
-                </option>
-                <option value="2">delete</option>
-                <option value="3">add</option>
-              </select>
-            </div>
           </td>
         </tr>
       </table>

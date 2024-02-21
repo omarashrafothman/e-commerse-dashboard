@@ -22,6 +22,7 @@ export function GET(request) {
 
 export default function orders() {
   const [show, setShow] = useState(true);
+
   const handleClose = () => setShow(false);
   function handleShow() {
     setShow(true);
@@ -691,7 +692,34 @@ export default function orders() {
                   </svg>
                 </button>
               </div>
-
+              {isChecked ? (
+                <div className="d-flex align-items-center justify-content-between total">
+                  <div className="orderTotal">
+                    <p>
+                      Order total :<span className="pink">$84.97 USD</span>
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="orderTotal totalItem">
+                      <p>
+                        Subtotal :<span className="">$12.68</span>
+                      </p>
+                    </div>
+                    <div className="orderTotal totalItem">
+                      <p>
+                        Shipping :<span className="">$12.68</span>
+                      </p>
+                    </div>
+                    <div className="orderTotal totalItem">
+                      <p>
+                        Total :<span className="pink">$30.04 USD</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
               <OrderBox
                 handle={handleCheckboxChange}
                 selected={isChecked}
