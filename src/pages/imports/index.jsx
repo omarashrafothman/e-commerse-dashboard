@@ -23,18 +23,15 @@ function index() {
   const handleClose6 = () => setShowSix(false);
   const handleShow6 = () => setShowSix(true);
 
-  const [splitOptionChecked, setSplitOptionChecked] = useState(true);
-  const openSplit = () => {
-    setSplitOptionChecked(!splitOptionChecked);
-  };
+  const [splitOptionChecked, setSplitOptionChecked] = useState(false);
   const [splitManuallyChecked, setSplitManuallyChecked] = useState(false);
-  const openSplitManually = () => {
-    setSplitManuallyChecked(!splitManuallyChecked);
-  };
+  const [shipsFrom, setShipsFrom] = useState(false);
+  const [color, setColor] = useState(false);
 
   useEffect(() => {
     document.title = "Imports";
   }, []);
+
   return (
     <div>
       <div className="main">
@@ -58,11 +55,15 @@ function index() {
                       <input
                         className="form-check-input"
                         type="radio"
-                        onClick={openSplit}
                         checked={splitOptionChecked}
+                        onChange={({ target: { checked } }) => {
+                          setSplitOptionChecked(checked);
+                          setSplitManuallyChecked(false);
+                        }}
+                        id="option1"
                       />
                       <div className="d-flex flex-column">
-                        <label>Split by option</label>
+                        <label htmlFor="option1">Split by option</label>
                         <p>
                           Select variants you wish to split to another product.
                         </p>
@@ -79,6 +80,11 @@ function index() {
                           className="form-check-input borderColor"
                           type="radio"
                           disabled={!splitOptionChecked}
+                          checked={shipsFrom}
+                          onChange={({ target: { checked } }) => {
+                            setShipsFrom(checked);
+                            setColor(false);
+                          }}
                         />
                         <div
                           className={
@@ -105,6 +111,11 @@ function index() {
                           className="form-check-input"
                           type="radio"
                           disabled={!splitOptionChecked}
+                          checked={color}
+                          onChange={({ target: { checked } }) => {
+                            setColor(checked);
+                            setShipsFrom(false);
+                          }}
                         />
                         <div
                           className={
@@ -131,10 +142,16 @@ function index() {
                         className="form-check-input"
                         type="radio"
                         checked={splitManuallyChecked}
-                        onClick={openSplitManually}
+                        onChange={({ target: { checked } }) => {
+                          setSplitManuallyChecked(checked);
+                          setSplitOptionChecked(false);
+                          setColor(false);
+                          setShipsFrom(false);
+                        }}
+                        id="option2"
                       />
                       <div className="d-flex flex-column">
-                        <label>Split manually</label>
+                        <label htmlFor="option2">Split manually</label>
                         <p>
                           Select which option you want to use for splitting the
                           product.
