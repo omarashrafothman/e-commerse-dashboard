@@ -7,6 +7,11 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Input from "../../components/inputs/Input";
 
 function staff() {
+  const [accessChecked, setSccessChecked] = useState(false);
+
+  const handleChecked = () => {
+    setSccessChecked(!accessChecked);
+  };
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -49,6 +54,7 @@ function staff() {
                 </div>
               </div>
             </div>
+
             <div className="generalContent">
               <div className="d-flex flex-column boxWithRadio">
                 <div className="d-flex  radioBox">
@@ -63,7 +69,12 @@ function staff() {
             <div className="generalContent">
               <div className="d-flex flex-column boxWithRadio">
                 <div className="d-flex  radioBox">
-                  <input type="radio" className="" />
+                  <input
+                    type="radio"
+                    className=""
+                    checked={accessChecked}
+                    onClick={handleChecked}
+                  />
                   <div className="d-flex flex-column">
                     <label>Limited access</label>
                     <p>Select pages they will have access to.</p>
@@ -71,6 +82,40 @@ function staff() {
                 </div>
               </div>
             </div>
+            {accessChecked ? (
+              <div className="d-flex align-items-center">
+                <div className="d-flex limitedAccessItem">
+                  <label class="control control-checkbox  ">
+                    <input type="checkbox" />
+                    <div class="control_indicator"></div>
+                    <p className="m-0">Dashboard</p>
+                  </label>
+                </div>
+                <div className="d-flex limitedAccessItem">
+                  <label class="control control-checkbox  ">
+                    <input type="checkbox" />
+                    <div class="control_indicator"></div>
+                    <p className="m-0">Dashboard</p>
+                  </label>
+                </div>
+                <div className="d-flex limitedAccessItem">
+                  <label class="control control-checkbox  ">
+                    <input type="checkbox" />
+                    <div class="control_indicator"></div>
+                    <p className="m-0">Dashboard</p>
+                  </label>
+                </div>
+                <div className="d-flex limitedAccessItem">
+                  <label class="control control-checkbox  ">
+                    <input type="checkbox" />
+                    <div class="control_indicator"></div>
+                    <p className="m-0">Dashboard</p>
+                  </label>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
             <div className="d-flex justify-content-end  cancelAndInviteBox">
               <div className="deleteAndEdit d-flex align-items-center">
                 <div className="btnWithIcon  mx-2">
