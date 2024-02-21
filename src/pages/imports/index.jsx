@@ -49,7 +49,7 @@ function index() {
                   <h4>Split product</h4>
                 </div>
 
-                <div className="generalContent">
+                <div className="generalContent withBottom">
                   <div className="d-flex flex-column boxWithRadio">
                     <div className="d-flex  radioBox">
                       <input
@@ -135,7 +135,7 @@ function index() {
                   </div>
                 </div>
 
-                <div className="generalContent">
+                <div className="generalContent withBottom">
                   <div className="d-flex flex-column boxWithRadio">
                     <div className="d-flex  radioBox">
                       <input

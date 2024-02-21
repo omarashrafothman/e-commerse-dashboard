@@ -30,6 +30,10 @@ button {
   left: 75%;
   top: 75%;
 }
+.withBottom {
+  border-bottom: 1px solid rgba(242, 244, 247, 1);
+  margin-bottom: 20px !important;
+}
 .disable {
   opacity: 50%;
 }
@@ -687,11 +691,12 @@ input[type="checkbox"]:checked::before {
   list-style: none !important;
 
   width: 100% !important;
-  padding: 0.4rem 1.5rem;
+  padding: 0.4rem 1rem;
   margin-bottom: 0.2rem;
   text-align: left;
   transition: all 0s ease-in-out;
 }
+
 .accordion-body li:hover {
   /* background-color: var(--gray-color); */
   background-color: #f8f8f886;
@@ -2936,7 +2941,7 @@ input[type="file"] {
 }
 
 .generalContent {
-  margin-bottom: 0rem !important;
+  margin-bottom: 0rem;
 }
 .generalContent .generalOrderContainer {
   width: 65%;
