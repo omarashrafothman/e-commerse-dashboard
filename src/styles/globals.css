@@ -26,8 +26,14 @@ button {
   border-radius: 8px;
 }
 .split {
-  margin-top: 5.5rem !important;
+  position: absolute;
+  left: 75%;
+  top: 75%;
 }
+.disable {
+  opacity: 50%;
+}
+
 .smallModal {
   width: 475px !important;
 }
@@ -309,7 +315,8 @@ select.form-select:focus option {
 
 /*global inputs style start*/
 .form-check-input {
-  background-color: #f2f4f7 !important;
+  background-color: rgba(255, 255, 255, 1) !important;
+  border-color: rgba(208, 213, 221, 1) !important;
 }
 
 .form-check-input:checked {
@@ -364,7 +371,7 @@ button.accordion-button:focus {
 
 input[type="radio"] {
   accent-color: var(--btn-bg);
-  border-color: #fff !important;
+  border-color: #fff;
 }
 .form-switch input {
   border-radius: 12px !important;
