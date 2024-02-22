@@ -308,10 +308,13 @@ select.form-select:focus option {
   width: 54px !important;
   height: 44px !important;
   padding: 0.3rem 0.3rem 0.3rem 0.9rem !important;
-
+  margin-left: 4rem;
   color: #000 !important;
 }
+.outOf {
+}
 .outOf p {
+  width: 6rem;
   margin: 0;
   font-size: 14px !important;
 }
@@ -3790,6 +3793,10 @@ td.expiryDate {
   font-weight: 500 !important;
   line-height: 20px !important;
 }
+.supplierBox {
+  width: 100%;
+  padding-bottom: 15px;
+}
 .supplierBox p {
   margin: 0 0.5rem 0 0;
 }
@@ -3799,6 +3806,10 @@ td.expiryDate {
   font-weight: 400;
   margin-top: -0.5rem;
 }
+.sourceProducts {
+  margin-top: -0.5rem !important;
+}
+
 .sourceProducts h4 {
   font-size: 16px;
 
@@ -3815,7 +3826,7 @@ td.expiryDate {
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 .officialStore {
-  margin-top: 1rem;
+  padding-bottom: 15px;
 }
 .officialStore a {
   color: #667085;
@@ -3842,7 +3853,6 @@ td.expiryDate {
   margin: 0 !important;
 }
 .variant {
-  margin-top: 1rem;
 }
 .variant p {
   margin: 0 0 8px 0;
@@ -3850,7 +3860,10 @@ td.expiryDate {
   font-weight: 500 !important;
 }
 .utomaticUpdate {
-  margin-top: 40px;
+  margin-top: -10px;
+}
+.nn {
+  margin-top: 1px !important;
 }
 .utomaticUpdate input {
   margin-right: 1rem;

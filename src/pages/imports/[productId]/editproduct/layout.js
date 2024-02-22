@@ -78,6 +78,9 @@ function Layout({ children }) {
                   exact
                   className=""
                 >
+                  <div className="numberOfItems">
+                    <p className="my-0 ">5</p>
+                  </div>
                   variants
                 </NavLink>
                 <NavLink
@@ -85,6 +88,9 @@ function Layout({ children }) {
                   exact
                   className=""
                 >
+                  <div className="numberOfItems">
+                    <p className="my-0 ">10</p>
+                  </div>
                   Images
                 </NavLink>
                 {/*     <button

@@ -75,7 +75,7 @@ export default function products() {
               <Image src={ProductImage} />
               <Image src={ProductImage} />
             </div>
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center withBottom">
               <div className="d-flex flex-column storePrice">
                 <h4>Store price US$53.97 - US$92.97</h4>
                 <p>
@@ -89,7 +89,7 @@ export default function products() {
                 </p>
               </div>
             </div>
-            <div className="supplierBox storePrice">
+            <div className="supplierBox storePrice withBottom">
               <div className="d-flex">
                 <p>Supplier:</p> <h4>Genkent Official Store (AliExpress)</h4>
               </div>
@@ -99,7 +99,7 @@ export default function products() {
               <h4>Source Products</h4>
               <button onClick={showCnvas3}>Manage variants</button>
             </div>
-            <div className="officialStore d-flex flex-column">
+            <div className="officialStore d-flex flex-column withBottom">
               <Link href="#">
                 Free shipping Black Cufflinks for men fashion knot design top
                 quality copper hotsale cufflinks whoelse&retail
@@ -112,7 +112,7 @@ export default function products() {
               </div>
               <p>18 of 29 variants linked . 189041 in stock</p>
             </div>
-            <div className="variant d-flex flex-column">
+            <div className="variant d-flex flex-column withBottom">
               <p>6 variants</p>
               <p>44462 available in stock</p>
             </div>
@@ -125,7 +125,7 @@ export default function products() {
                 </label>
               </div>
             </div>
-            <div className="d-flex justify-content-end btnsforUpdate">
+            <div className="d-flex justify-content-end btnsforUpdate nn">
               <div className="d-flex align-items-center">
                 <div className="deleteAndEdit">
                   <button className="btn " onClick={handleClose}>

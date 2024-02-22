@@ -452,7 +452,7 @@ export default function orders() {
 
                 <div className="d-flex align-items-center outOf">
                   <Input type={"number"} value={1} />
-                  <p>out of 1</p>
+                  <p className="">out of 1</p>
                 </div>
               </div>
               <div className="shippedBox d-flex justify-content-between text-align-center">
